@@ -26,6 +26,7 @@
   <link rel="stylesheet" href="{% static 'assets/css/meanmenu.min.css' %}">
   <link rel="stylesheet" href="{% static 'assets/css/master.css' %}">
   <link rel="stylesheet" href="{% static 'style.css' %}">
+  <link rel="stylesheet" href="{% static 'home/home.css' %}">
 </head>
 
 
@@ -144,14 +145,14 @@
             <li><a href="#">YouTube</a></li>
           </ul>
         </div>
-        <div class="offcanvas__links">
+        <!-- <div class="offcanvas__links">
           <ul>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">contact</a></li>
             <li><a href="career.html">Career</a></li>
             <li><a href="blog.html">blog</a></li>
           </ul>
-        </div>
+        </div> -->
       </div>
       <div class="offcanvas__mid">
         <div class="offcanvas__menu-wrapper">
@@ -179,13 +180,14 @@
         <div class="offcanvas__contact">
           <h3>Get in touch</h3>
           <ul>
-            <li><a href="tel:02094980547">+(02) - 094 980 547</a></li>
-            <li><a href="mailto:info@extradesign.com">info@extradesign.com</a></li>
-            <li>230 Norman Street New York, QC (USA) H8R 1A1</li>
+            <li>Phone: <a href="tel:02094980547">+(91) 90449 10449 </a></li>
+            <li>Email: <a href="mailto:info@extradesign.com">connect@magsmen.in</a></li>
+            <li>Address:  <a href="mailto:info@extradesign.com"> 211,212 AP COTTON ASSOCIATION BUILDING, OPP AVANTRA JEWELS, LAKSHMIPURAM MAIN ROAD, GUNTUR, ANDHRA PRADESH, 522007</a></li>
+            <!-- <li><p>211,212 AP COTTON ASSOCIATION BUILDING, OPP AVANTRA JEWELS, LAKSHMIPURAM MAIN ROAD, GUNTUR, ANDHRA PRADESH, 522007</li> -->
           </ul>
         </div>
-        <img src="assets/imgs/shape/11.png" alt="shape" class="shape-1">
-        <img src="assets/imgs/shape/12.png" alt="shape" class="shape-2">
+        <img src="{% static 'assets/imgs/shape/11.png' %}" alt="shape" class="shape-1">
+        <img src="{% static 'assets/imgs/shape/12.png' %}" alt="shape" class="shape-2">
       </div>
       <div class="offcanvas__close">
         <button type="button" id="close_offcanvas"><i class="fa-solid fa-xmark"></i></button>
