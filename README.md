@@ -4,10 +4,10 @@
 #install env
 #pip install virtualenv
 # create virtual environment
-#python -m venv magsmen
+#python -m venv env-magsmen
 
 # activate virtual environment
-#magsmen\Scripts\activate
+#env-magsmen\Scripts\activate
 
 # install libs
 pip freeze > requirements.txt 
