@@ -22796,6 +22796,7 @@ footer #btn_wrapper {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   z-index: 2;
+  
 }
 .loading .bar {
   width: 6px;
@@ -22806,12 +22807,14 @@ footer #btn_wrapper {
           transform-origin: bottom center;
   -webkit-animation: wcLoading 1.5s ease-in-out infinite;
           animation: wcLoading 1.5s ease-in-out infinite;
+
 }
 .loading .bar1 {
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s;
+  -webkit-animation-delay: 1.0s;
+          animation-delay: 1.0s;
+          background: url(/magsmen/static/assets/imgs/logo/magsmen-logo-pre-loader-gif.gif);
 }
-.loading .bar2 {
+/* .loading .bar2 {
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
 }
@@ -22838,7 +22841,7 @@ footer #btn_wrapper {
 .loading .bar8 {
   -webkit-animation-delay: 0.8s;
           animation-delay: 0.8s;
-}
+} */
 
 :root {
   --white-6: #d7d7d7;
