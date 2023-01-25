@@ -10583,8 +10583,8 @@ img {
   line-height: 1.1;
   text-transform: uppercase;
   color: var(--black-2);
-  width: 190px;
-  height: 190px;
+  width: 150px;
+  height: 150px;
   border: 3px solid;
   border-radius: 100%;
 }
@@ -10596,8 +10596,8 @@ img {
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .research__number span {
-    width: 160px;
-    height: 160px;
+    width: 150px;
+    height: 150px;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -10817,7 +10817,7 @@ img {
   background-repeat: no-repeat;
   background-position: 0 150px;
   position: relative;
-  padding-top: 410px;
+  padding-top: 350px;
   padding-bottom: 330px;
   overflow: hidden;
 }
@@ -27281,3 +27281,17 @@ body {
   padding-left: 110px;
 }
 /*# sourceMappingURL=master.css.map */
+
+@media only screen and (max-width: 480px) {
+  .banner-text h3{
+    font-size: 50px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1600px) {
+.banner-text h3{
+  font-size: 100px;
+}
+}
+.banner-text h3{
+  font-size: 100px !important;
+}
