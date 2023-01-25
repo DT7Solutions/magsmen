@@ -2939,7 +2939,7 @@ img {
 }
 .main-menu-3 > li {
   display: inline-block;
-  padding: 0 40px;
+  padding: 0 30px;
   margin: 0;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
