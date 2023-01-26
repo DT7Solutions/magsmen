@@ -27305,3 +27305,7 @@ body {
     font-size: 60px !important;
   }
 }
+
+.showcase__item-4 img{
+  height: 120px;
+}
