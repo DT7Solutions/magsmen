@@ -567,6 +567,9 @@
     freemode: true,
     slidesPerView: 1,
     speed: 2000,
+    autoplay: {
+      delay: 2000,
+      },
     breakpoints: {
       640: {
         slidesPerView: 2,
