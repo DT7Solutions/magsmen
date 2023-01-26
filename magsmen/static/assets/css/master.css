@@ -27282,9 +27282,17 @@ body {
 }
 /*# sourceMappingURL=master.css.map */
 
+
+/* custome edting css  */
+@media only screen and (max-width: 380px) {
+  .banner-text h3{
+    font-size: 10px !important;
+  }
+  
+}
 @media only screen and (max-width: 480px) {
   .banner-text h3{
-    font-size: 50px;
+    font-size: 40px;
   }
   
 }
@@ -27302,7 +27310,7 @@ body {
     text-align: left;
   }
   .banner-text h3{
-    font-size: 60px !important;
+    font-size: 40px !important;
   }
 }
 
