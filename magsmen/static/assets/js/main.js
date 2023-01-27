@@ -568,7 +568,7 @@
     slidesPerView: 1,
     speed: 2000,
     autoplay: {
-      delay: 2000,
+      delay: 500,
       },
     breakpoints: {
       640: {
