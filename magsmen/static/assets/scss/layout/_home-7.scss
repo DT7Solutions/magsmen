@@ -677,6 +677,15 @@
 }
 
 
+@media only screen and (min-width: 320px) and (max-width: 1200px){
+.service__area-7::after {
+    display: none !important;
+}
+.service__area-7::before {
+  display: none !important;
+}
+}
+
 .service {
   &__area-7 {
     background-color: #F9F9F9;
@@ -725,6 +734,7 @@
       left: 59%;
       bottom: 0;
       background: var(--white-6);
+      display: none;
 
       @media #{$xxl} {
         left: 62%;
@@ -740,6 +750,10 @@
 
       @media #{$md} {
         left: 64%;
+        display: none;
+      }
+      @media #{$sm} {
+       display: none;
       }
     }
   }

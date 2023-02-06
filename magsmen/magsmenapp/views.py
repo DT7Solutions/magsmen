@@ -17,7 +17,11 @@ def Blogs(request):
     return render(request, 'uifiles/blogs.html')
 
 def Service(request):
-    return render(request, 'uifiles/service1.html')
+    return render(request, 'uifiles/brandconsulting.html')
+
+def PersonalBrand(request):
+    return render(request, 'uifiles/personalbranding.html')
+
 
 def Casestudy(request):
     return render(request, 'uifiles/service1.html')
