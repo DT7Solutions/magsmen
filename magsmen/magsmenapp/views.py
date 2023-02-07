@@ -22,6 +22,13 @@ def Service(request):
 def PersonalBrand(request):
     return render(request, 'uifiles/personalbranding.html')
 
+def imageconsulting(request):
+    return render(request, 'uifiles/imageconsulting.html')
+
+def corporaterebranding(request):
+    return render(request, 'uifiles/corporaterebranding.html')
+
+
 
 def Casestudy(request):
     return render(request, 'uifiles/service1.html')

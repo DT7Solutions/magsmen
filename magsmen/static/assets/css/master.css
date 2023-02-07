@@ -6044,9 +6044,9 @@ img {
 @media only screen and (max-width: 550px) {
   .hero__area-3 img {
     object-fit: cover !important;
-     object-position: right right !important; 
+     object-position: center center !important; 
      background-position: center center !important;
-     width: 100%;
+     width: 100% !important;
      height: 250px!important;
      margin-top: -40px;
   }
@@ -27380,3 +27380,41 @@ body {
     margin-top: -130px;
   }
 }
+
+/* .rebranding-list li{
+  list-style: decimal !important;
+} */
+.blog__detail-content .rebranding-list li::before, .blog__detail-content ol li::before {
+  position: absolute;
+  content: "";
+  left: 100px;
+  font-size: 20px;
+  list-style: decimal !important;
+}
+
+
+.service__img.active {
+  opacity: 1;
+  -webkit-transform: rotate(15deg) translateX(60px) translateY(30px);
+  transform: rotate(0deg) translateX(60px) translateY(30px);
+}
+
+
+/* .faq__list .accordion-button.collapsed::after, .faq__list-6 .accordion-button.collapsed::after, .faq__list-3 .accordion-button.collapsed::after {
+  background-image: none;
+  content: "+";
+  font-weight: 300;
+  font-size: 40px;
+  top: 6px;
+  position: absolute;
+  right: 10%;
+  left: 90% !important;
+  -webkit-transform: rotate(0);
+  transform: rotate(0);
+}
+
+.faq__list-6 .accordion-body p {
+  font-size: 18px;
+  line-height: 1.4;
+  width: 85%;
+} */
