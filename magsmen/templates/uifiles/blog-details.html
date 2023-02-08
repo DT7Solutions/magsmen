@@ -1,0 +1,51 @@
+{% extends 'uifiles/base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<div id="smooth-wrapper">
+    <div id="smooth-content">
+      <main>
+      {% if selectpost %}
+        <!-- Blog detail start -->
+        <section class="blog__detail">
+          <div class="container g-0 line pt-140">
+            <span class="line-3"></span>
+            <div class="row">
+              <div class="col-xxl-8 col-xl-10 offset-xxl-2 offset-xl-1">
+                <div class="blog__detail-top">
+                  <h2 class="blog__detail-date animation__word_come">{{selectpost.Category}} <span>{{selectpost.Create_at}}</span></h2>
+                  <h3 class="blog__detail-title animation__word_come">{{selectpost.Title}}
+                  </h3>
+                  <!-- <div class="blog__detail-metalist">
+                    <div class="blog__detail-meta">
+                      <img src="{% static 'assets/imgs/blog/detail/author.png' %}" alt="Author Picture">
+                      <p>Writen by <span>Codexpand</span></p>
+                    </div>
+                  </div> -->
+                </div>
+              </div>
+              <div class="col-xxl-12">
+                <div class="blog__detail-thumb">
+                  <img src="/media/{{selectpost.Image2}}" alt="Blog Thumbnail" data-speed="0.5">
+                </div>
+              </div>
+              <div class="col-xxl-8 col-xl-10 offset-xxl-2 offset-xl-1">
+                <div class="blog__detail-content">
+                  <p>{{selectpost.Description1}}</p>
+                  <p>{{selectpost.Description2}}</p>
+                  <img src="/media/{{selectpost.Image1}}" alt="Blog Image">
+                  <!-- <h2>JavaScript</h2> -->
+                  <p>{{selectpost.Description3}}</p>
+                  <p>{{selectpost.Description4}}</p>
+                
+                </div>
+            
+              </div>
+            </div>
+          </div>
+        </section>
+        {% endif %}
+        <!-- Blog detail end -->
+        {% endblock %}

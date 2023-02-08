@@ -1,8 +1,9 @@
 from django.shortcuts import render
-
+from .models import BlogPost
 # Create your views here.
 def Home(request):
-    return render(request, 'uifiles/home.html')
+    blog_list = BlogPost.objects.filter().order_by('-Id')[:3]     #filter(status=1).order_by('Create_at')
+    return render(request, 'uifiles/home.html',{'blog_list':blog_list})
 
 def About(request):
     return render(request, 'uifiles/about.html')
@@ -14,7 +15,8 @@ def Contact(request):
     return render(request, 'uifiles/contact.html')
 
 def Blogs(request):
-    return render(request, 'uifiles/blogs.html')
+    blog = BlogPost.objects.filter().order_by('-Id')
+    return render(request, 'uifiles/blogs.html',{'blog':blog})
 
 def Service(request):
     return render(request, 'uifiles/brandconsulting.html')
@@ -30,5 +32,6 @@ def corporaterebranding(request):
 
 
 
-def Casestudy(request):
-    return render(request, 'uifiles/service1.html')
+def Blogdetails(request,id):
+    selectpost = BlogPost.objects.get(Id=id)
+    return render(request, 'uifiles/blog-details.html',{'selectpost':selectpost})

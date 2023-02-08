@@ -472,24 +472,26 @@
               </div>
   
               <div class="row reset-grid">
-                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4">
-                  <article class="blog__item">
-                    <div class="blog__img-wrapper">
-                      <a href="/blogs/">
-                        <div class="img-box">
-                          <img class="image-box__item" src="{% static 'home/images/blog1.jpg' %}" alt="Blog Thumbnail">
-                          <img class="image-box__item" src="{% static 'home/images/blog1.jpg' %}" alt="BLog Thumbnail">
-                        </div>
-                      </a>
-                    </div>
-                    <h4 class="blog__meta"><a href="category.html">24 january 2023</a>//admin </h4>
-                    <h5><a href="blog-details.html" class="blog__title">Here’s how you can prepare your BRAND for New Year</a></h5>
-                    <a href="/blogs/" class="blog__btn">Read More <span><i
-                          class="fa-solid fa-arrow-right"></i></span></a>
-                  </article>
-                </div>
+                {% for blogitem in blog_list %} 
+                  <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4">
+                    <article class="blog__item">
+                      <div class="blog__img-wrapper">
+                        <a href="/blogdetails/{{blogitem.Id}}">
+                          <div class="img-box">
+                            <img class="image-box__item" src="/media/{{blogitem.Image1}}" alt="Blog Thumbnail">
+                            <img class="image-box__item" src="/media/{{blogitem.Image1}}" alt="BLog Thumbnail">
+                          </div>
+                        </a>
+                      </div>
+                      <h4 class="blog__meta"><a href="#">24 january 2023</a>//admin </h4>
+                      <h5><a href="blog-details.html" class="blog__title">{{blogitem.Title}}</a></h5>
+                      <a href="/blogdetails/{{blogitem.Id}}" class="blog__btn">Read More <span><i
+                            class="fa-solid fa-arrow-right"></i></span></a>
+                    </article>
+                  </div>
+                {% endfor %}
   
-                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4">
+                <!-- <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4">
                   <article class="blog__item">
                     <div class="blog__img-wrapper">
                       <a href="/blogs/">
@@ -521,7 +523,7 @@
                     <a href="/blogs/" class="blog__btn">Read More <span><i
                           class="fa-solid fa-arrow-right"></i></span></a>
                   </article>
-                </div>
+                </div> -->
 
               </div>
               <div class="row ">
