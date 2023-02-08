@@ -7,8 +7,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Axtra HTML5 Template" />
-
+  {% if request.path == '/' %}
   <title>Magsmen</title>
+  <meta name="description" content="Magsmen is the best way to increase your brand growth. We offer brand consulting, Online brand management, and more. Contact us today and get a free audit for your brand">
+  <meta name="keywords" content="brand consultent">
+  {% endif %}
 
   <!-- Fav Icon -->
   <link rel="icon" type="image/x-icon" href="{% static 'assets/imgs/logo/favicon.png' %}">
