@@ -286,7 +286,7 @@
         --clip-path: circle(65px at left);
         --clip-path-hover: circle(70px at left);
         --clip-path-clicked: circle(100vw at left);
-        --duration: .4s;
+        --duration: 10ms;
         --timing-function: ease;
         display: flex;
         justify-content: center;

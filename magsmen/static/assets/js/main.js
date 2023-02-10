@@ -2250,7 +2250,7 @@
     spaceBetween: 20,
     loop: true,
     freemode: true,
-    slidesPerView: 3,
+    slidesPerView: 1,
     speed: 2000,
     pagination: {
       el: ".pagination",
@@ -2268,7 +2268,7 @@
         slidesPerView: 2,
       },
       1024: {
-        slidesPerView: 3,
+        slidesPerView: 1,
       }
     }
   });
@@ -2569,8 +2569,8 @@
   let split_solutions = new SplitText(eting, { type: "chars" })
   let split_text_animation = new SplitText(hero__text_animation, { type: "chars words" })
 
-  HomeDigital.from(split_creatives.chars, { duration: 2, x: 100, autoAlpha: 0, stagger: 0.2 });
-  HomeDigital.from(split_solutions.chars, { duration: 1, x: 100, autoAlpha: 0, stagger: 0.1 }, "-=1");
+  HomeDigital.from(split_creatives.chars, { duration: 0.1, x: 100, autoAlpha: 0, stagger: 0.1 });
+  HomeDigital.from(split_solutions.chars, { duration: 0.2, x: 100, autoAlpha: 0, stagger: 0.1 }, "-=1");
   HomeDigital.from(split_text_animation.words, { duration: 1, x: 50, autoAlpha: 0, stagger: 0.05 }, "-=1");
 
 
