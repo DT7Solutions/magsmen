@@ -1,5 +1,7 @@
 from django.db import models
 from datetime import datetime
+from ckeditor.fields import RichTextField
+
 # Create your models here.
 
 class Category(models.Model):
@@ -24,16 +26,17 @@ class BlogPost(models.Model):
     Title =  models.CharField(max_length=225,default="title")
     Description = models.CharField(max_length=2000,blank=True,null=True)
     Image1 = models.ImageField(upload_to='uploads/')
-    Image2 = models.ImageField(upload_to='uploads/')
-    Title1 =  models.CharField(max_length=225,blank=True,null=True)
-    Description1 = models.CharField(max_length=2000,blank=True,null=True)
-    Title2 =  models.CharField(max_length=225,blank=True,null=True)
-    Description2 = models.CharField(max_length=2000,blank=True,null=True)
-    Title3 =  models.CharField(max_length=225,blank=True,null=True)
-    Description3 = models.CharField(max_length=2000,blank=True,null=True)
-    Title14 =  models.CharField(max_length=225,blank=True,null=True)
-    Description4 = models.CharField(max_length=2000,blank=True,null=True)
-    Description5 = models.CharField(max_length=2000,blank=True,null=True)
+    Body = RichTextField(blank=True,null=True)
+    # Image2 = models.ImageField(upload_to='uploads/')
+    # Title1 =  models.CharField(max_length=225,blank=True,null=True)
+    # Description1 = models.CharField(max_length=2000,blank=True,null=True)  
+    # Title2 =  models.CharField(max_length=225,blank=True,null=True)
+    # Description2 = models.CharField(max_length=2000,blank=True,null=True)
+    # Title3 =  models.CharField(max_length=225,blank=True,null=True)
+    # Description3 = models.CharField(max_length=2000,blank=True,null=True)
+    # Title14 =  models.CharField(max_length=225,blank=True,null=True)
+    # Description4 = models.CharField(max_length=2000,blank=True,null=True)
+    # Description5 = models.CharField(max_length=2000,blank=True,null=True)
     Tags = models.CharField(max_length=100)
     CreatedName =  models.CharField(max_length=100)
     Create_at = models.DateTimeField(default=datetime.now)

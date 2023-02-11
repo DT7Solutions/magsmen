@@ -27,12 +27,12 @@
               </div>
               <div class="col-xxl-12">
                 <div class="blog__detail-thumb">
-                  <img src="/media/{{selectpost.Image2}}" alt="Blog Thumbnail" data-speed="0.5">
+                  <img src="/media/{{selectpost.Image1}}" alt="Blog Thumbnail" data-speed="0.5">
                 </div>
               </div>
               <div class="col-xxl-8 col-xl-10 offset-xxl-2 offset-xl-1">
                 <div class="blog__detail-content">
-                  <h4>{{selectpost.Title1}}</h4>
+                  <!-- <h4>{{selectpost.Title1}}</h4>
                   <p>{{selectpost.Description1}}</p>
                   <h4>{{selectpost.Title2}}</h4>
                   <p>{{selectpost.Description2}}</p>
@@ -41,8 +41,8 @@
                   <p>{{selectpost.Description3}}</p>
                   <h4>{{selectpost.Title4}}</h4>
                   <p>{{selectpost.Description4}}</p>
-                  <h4>Conclusion</h4>
-                  <p>{{selectpost.Description4}}</p>
+                  <h4>Conclusion</h4> -->
+                  {{selectpost.Body|safe}}
                 
                 </div>
             
