@@ -32,6 +32,6 @@ def corporaterebranding(request):
 
 
 
-def Blogdetails(request,id):
-    selectpost = BlogPost.objects.get(Id=id)
+def Blogdetails(request,slug):
+    selectpost = BlogPost.objects.get(Sluglink=slug)
     return render(request, 'uifiles/blog-details.html',{'selectpost':selectpost})

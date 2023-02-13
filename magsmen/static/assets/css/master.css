@@ -10124,7 +10124,7 @@ img {
 }
 .workflow__area-3 {
   overflow: hidden;
-  background-color: var(--pink-4);
+  /* background-color: var(--pink-4); */
   padding-top: 60px;
 }
 
@@ -14642,12 +14642,13 @@ img {
 .blog__title, .blog__title-3, .blog__title-2 {
   display: block;
   font-weight: 500;
-  font-size: 26px;
+  font-size: 18px;
   line-height: 1.2;
   color: var(--black-2);
   border-bottom: 1px solid var(--gray-5);
   margin-bottom: 10px;
   padding-bottom: 20px;
+  
 }
 .blog__title:hover, .blog__title-3:hover, .blog__title-2:hover {
   color: var(--black-3);
@@ -22908,7 +22909,7 @@ main {
   height: 100%;
   top: 0;
   left: 0;
-  background: var(--white-2);
+  /* background: var(--white-2); */
 }
 .line-col-4 div:nth-child(2) {
   left: 33.33%;
@@ -24330,7 +24331,7 @@ main {
   }
 }
 .testimonial__slide-4 {
-  background-color: var(--gray-22);
+  /* background-color: var(--gray-22); */
   padding: 50px 50px 44px 50px;
   text-align: left;
 }

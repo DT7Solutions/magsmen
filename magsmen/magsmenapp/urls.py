@@ -10,5 +10,5 @@ urlpatterns = [
     path('personalbrand/', PersonalBrand , name='personalbrand'),
     path('imageconsulting/', imageconsulting , name='imageconsulting'),
     path('corporaterebranding/', corporaterebranding , name='corporaterebranding'),
-    path('blogdetails/<int:id>', Blogdetails , name='blogdetails'),
+    path('blog/<str:slug>', Blogdetails , name='blog'),
 ]

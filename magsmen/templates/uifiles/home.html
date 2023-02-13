@@ -398,7 +398,7 @@
 
 
         <!-- Workflow area start -->
-        <section class="workflow__area-3" style="background-color: #e9ece6;">
+        <section class="workflow__area-3">
           <div class="workflow__wrapper-3">
             <div class="choose-wrapper wf_panel" >
               <div class="container">
@@ -564,16 +564,16 @@
                   <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4">
                     <article class="blog__item">
                       <div class="blog__img-wrapper">
-                        <a href="/blogdetails/{{blogitem.Id}}">
+                        <a href="/blog/{{blogitem.Sluglink}}">
                           <div class="img-box">
                             <img class="image-box__item" src="/media/{{blogitem.Image1}}" alt="Blog Thumbnail">
                             <img class="image-box__item" src="/media/{{blogitem.Image1}}" alt="BLog Thumbnail">
                           </div>
                         </a>
                       </div>
-                      <h4 class="blog__meta"><a href="#"></h4>
-                      <h5><a href="blog-details.html" class="blog__title">{{blogitem.Title}}</a></h5>
-                      <a href="/blogdetails/{{blogitem.Id}}" class="blog__btn">Read More <span><i
+                      <h4 class="blog__meta"><a href="#">{{blogitem.Create_at}}</a>//{{blogitem.CreatedName}} </h4>
+                      <h6 style="display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;"><a href="/blog/{{blogitem.Sluglink}}" class="blog__title">{{blogitem.Title}}</a></h6>
+                      <a href="/blog/{{blogitem.Sluglink}}" class="blog__btn">Read More <span><i
                             class="fa-solid fa-arrow-right"></i></span></a>
                     </article>
                   </div>
