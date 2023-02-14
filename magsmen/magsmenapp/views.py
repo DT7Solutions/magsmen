@@ -30,6 +30,9 @@ def imageconsulting(request):
 def corporaterebranding(request):
     return render(request, 'uifiles/corporaterebranding.html')
 
+def service_home(request):
+    return render(request, 'uifiles/service.html')
+
 
 
 def Blogdetails(request,slug):
