@@ -24392,8 +24392,8 @@ main {
 .testimonial__img-4 {
   margin-bottom: 42px;
   border-radius: 0px;
-  width: 125px;
-  height: 125px;
+  width: 155px;
+  height: 155px;
   /* margin-left: 45%; */
 }
 .testimonial__feedback-4 {
@@ -26868,9 +26868,9 @@ main {
 .showcase__items-4 {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 90px 1fr 90px 1fr 90px 1fr;
+  -ms-grid-columns: 1fr 80px 1fr 80px 1fr 80px 1fr;
   grid-template-columns: repeat(7, 1fr);
-  grid-gap: 90px;
+  grid-gap: 80px;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .showcase__items-4 {
