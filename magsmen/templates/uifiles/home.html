@@ -240,12 +240,14 @@
 
             <div class="row">
               <div class="col-xxl-12">
-                <div class="testimonial__sec-title text-anim">
-                  <!-- <h2 class="sec-subtile-6">Testimonials</h2> -->
+                <!-- <div class="testimonial__sec-title text-anim">
                   <h3 class="sec-title-6 title-anim pt-5">Here's what our clients tell about us</h3>
-                </div>
+                </div> -->
               </div>
               <div class="swiper testimonial__slider-4">
+                <div class="testimonial__sec-title text-anim">
+                  <h3 class="sec-title-6 title-anim pt-5">Here's what our clients tell about us</h3>
+                </div>
                 <div class="swiper-wrapper">
                   <div class="swiper-slide testimonial__slide-4">
                     <div class="d-flex justify-content-center">
@@ -437,11 +439,11 @@
                     </div>
                    
                     <ul class="research__tools">
-                      <li><a href="https://www.linkedin.com/company/magsmen/?originalSubdomain=in">Linkedin</a></li>
-                      <li><a href="https://www.instagram.com/magsmenindia/">Instagram</a></li>
-                      <li><a href="https://www.facebook.com/magsmenindia">FaceBook</a></li>
-                      <li><a href="https://www.youtube.com/channel/UCG3agq3IYZmQifQeM2xFNbQ">YouTube</a></li>
-                      <li><a href="https://twitter.com/magsmenindia">Twitter</a></li>
+                      <li><a href="https://www.linkedin.com/company/magsmen/?originalSubdomain=in" target="_blank">Linkedin</a></li>
+                      <li><a href="https://www.instagram.com/magsmenindia/" target="_blank">Instagram</a></li>
+                      <li><a href="https://www.facebook.com/magsmenindia" target="_blank">FaceBook</a></li>
+                      <li><a href="https://www.youtube.com/channel/UCG3agq3IYZmQifQeM2xFNbQ" target="_blank">YouTube</a></li>
+                      <li><a href="https://twitter.com/magsmenindia" target="_blank">Twitter</a></li>
                     </ul>
                   </div>
                   <div class="col-xxl-6 col-xl-6 col-lg-6">
@@ -572,7 +574,7 @@
                           </div>
                         </a>
                       </div>
-                      <h4 class="blog__meta"><a href="#">{{blogitem.Create_at}}</a>//{{blogitem.CreatedName}} </h4>
+                      <h4 class="blog__meta"><a href="#">{{blogitem.Create_at}}</a> | {{blogitem.CreatedName}} </h4>
                       <h6 style="display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;"><a href="/blog/{{blogitem.Sluglink}}" class="blog__title">{{blogitem.Title}}</a></h6>
                       <a href="/blog/{{blogitem.Sluglink}}" class="blog__btn">Read More <span><i
                             class="fa-solid fa-arrow-right"></i></span></a>

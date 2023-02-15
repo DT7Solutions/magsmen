@@ -658,7 +658,7 @@ img {
   height: 100%;
   top: 0;
   left: 0;
-  background: var(--white-4);
+  /* background: var(--white-4); */
 }
 .line::after {
   position: absolute;
@@ -667,7 +667,7 @@ img {
   height: 100%;
   left: calc(50% - 1px);
   top: 0;
-  background: var(--white-4);
+  /* background: var(--white-4); */
 }
 .line-3 {
   position: absolute;
@@ -676,7 +676,7 @@ img {
   height: 100%;
   right: 0;
   top: 0;
-  background: var(--white-4);
+  /* background: var(--white-4); */
 }
 
 .shape {
@@ -2065,7 +2065,8 @@ img {
   height: 20px;
   left: 0;
   top: 0;
-  background-color: var(--primary);
+  /* background-color: var(--primary); */
+  background-color: #aaaca2;
   z-index: -1;
   border-radius: 100%;
   -webkit-transition: all 0.7s;
@@ -13605,7 +13606,7 @@ img {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   opacity: 0;
-  height: 250px;
+  height: 265px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .portfolio__service-item {
@@ -27459,3 +27460,13 @@ body {
     display: none;
   }
 }
+
+/* .line::after {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 100%;
+  left: calc(50% - 1px);
+  top: 0;
+  /* background: var(--white-4); */
+} */

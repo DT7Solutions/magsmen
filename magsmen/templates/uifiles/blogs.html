@@ -36,8 +36,8 @@
                       </div>
                     </a>
                   </div>
-                  <h4 class="blog__meta"><a href="#">{{blogitem.Create_at}}</a>//{{blogitem.CreatedName}} </h4>
-                  <h5><a href="blog-details.html" class="blog__title">{{blogitem.Title}}</a></h5>
+                  <h4 class="blog__meta"><a href="/blog/{{blogitem.Sluglink}}">{{blogitem.Create_at}}</a> | {{blogitem.CreatedName}} </h4>
+                  <h5><a href="/blog/{{blogitem.Sluglink}}" class="blog__title">{{blogitem.Title}}</a></h5>
                   <a href="/blog/{{blogitem.Sluglink}}" class="blog__btn">Read More <span><i
                         class="fa-solid fa-arrow-right"></i></span></a>
                 </article>
