@@ -136,7 +136,7 @@ else:
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 UPLOAD_ROOT = os.path.join(BASE_DIR, 'upload')
-# CKEDITOR_BASEPATH = "/staticfiles/ckeditor/ckeditor/"
+CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
