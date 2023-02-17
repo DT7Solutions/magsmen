@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import BlogPost
+from .models import BlogPost,ContactData
 # Create your views here.
 def Home(request):
     blog_list = BlogPost.objects.filter().order_by('-Id')[:3]     #filter(status=1).order_by('Create_at')
@@ -12,6 +12,14 @@ def FAQS(request):
     return render(request, 'uifiles/faqs.html')
 
 def Contact(request):
+    if request.method == "POST":
+        name = request.POST.get('name',"")
+        email = request.POST.get('email',"")
+        phone = request.POST.get('phone',"")
+        subject = request.POST.get('subject',"")
+        message = request.POST.get('message',"")
+        oContactinfo = ContactData(Email=email,Phone=phone,Subject=subject,Message=message)
+        oContactinfo.save()
     return render(request, 'uifiles/contact.html')
 
 def Blogs(request):

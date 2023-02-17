@@ -39,3 +39,14 @@ class BlogPost(models.Model):
     def __str__(self):
             return self.Title
     
+
+class ContactData(models.Model):
+    Name = models.CharField(max_length=100)
+    Email = models.EmailField(max_length=254)
+    Phone = models.CharField(max_length=10)
+    Subject = models.CharField(max_length=100)
+    Message = models.CharField(max_length=500)
+    Date = models.DateTimeField(default=datetime.now())
+
+    def __str__(self):
+        return self.Name
