@@ -1,4 +1,7 @@
 
+<title>Magsmen | The Best Way to Increase Your Brand Growth</title>
+<meta name="description" content="Magsmen is the best way to increase your brand growth. We offer brand consulting, Online brand management, and more. Contact us today and get a free audit for your brand">
+<meta name="keywords" content="brand consultent">
 {% extends 'uifiles/base.html' %}
 {% load static %}
 {% block content %}
@@ -105,7 +108,7 @@
 
         <!-- Service area start -->
         <section class="service__area service-v2 pt-110 pb-150" style="background-color: #fff; color:black">
-            <div class="container">
+            <div class="container-fluid">
               <div class="row">
                 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4">
                   <div class="sec-title-wrapper wrap">
@@ -124,21 +127,24 @@
   
               <div class="service__list-wrapper" >
                 <div class="row">
-                  <div class="col-xxl-4 col-xl-4 col-lg-0 col-md-0">
-                    <div class="service__img-wrapper">
+                  <div class="col-xxl-5 col-xl-5 col-lg-0 col-md-5">
+                    <div>
+                      <img src="{% static 'home/images/magsmen-home-about-image.jpg' %}" alt="Service Image" class="">
+                    </div>
+                    <!-- <div class="service__img-wrapper">
                       <img src="{% static 'home/images/magsmen-service-280x320_2.gif' %}" alt="Service Image" class="service__img img-1 active">
                       <img src="{% static 'home/images/magsmen-service-280x320_2.gif' %}" alt="Service Image" class="service__img img-2">
                       <img src="{% static 'home/images/magsmen-service-280x320_2.gif' %}" alt="Service Image" class="service__img img-3">
                       <img src="{% static 'home/images/magsmen-service-280x320_2.gif' %}" alt="Service Image" class="service__img img-4">
                       <img src="{% static 'home/images/magsmen-service-280x320_2.gif' %}" alt="Service Image" class="service__img img-5">
   
-                    </div>
+                    </div> -->
                   </div>
-                  <div class="col-xxl-8 col-xl-8 col-lg-12 col-md-12">
+                  <div class="col-xxl-7 col-xl-7 col-lg-12 col-md-7">
                     <div class="service__list">
                       <a href="/brandconsulting/">
-                        <div class="service__item animation_home1_service" data-service="1">
-                          <div class="service__number text-dark"><span>01</span></div>
+                        <div class="service__item animation_home1_service" >
+                          <div class="service__number text-dark text-dark"><span >01</span></div>
                           <div class="service__title-wrapper">
                             <h4 class="service__title text-dark">Brand Consulting</h4>
                           </div>
@@ -401,6 +407,11 @@
 
         <!-- Workflow area start -->
         <section class="workflow__area-3" style="background-color: #fbfafb;">
+          <div class="d-flex justify-content-center">
+            <div class="scroll-down">
+              <button  style="border: 1px solid black; padding:30px 10px; border-radius: 50px; -webkit-transition: all 0.3s; transition: all 0.3s;"><img src="{% static 'assets/imgs/icon/arrow-down-sm.png' %}" alt="arrow icon"></button>
+            </div>
+          </div>
           <div class="workflow__wrapper-3">
             <div class="choose-wrapper wf_panel" >
               <div class="container">

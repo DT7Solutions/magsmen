@@ -54,7 +54,7 @@
 /*  01. VARIBALES CSS START
 /*----------------------------------------*/
 :root {
-  --primary: #c9f31d;
+  --primary: #aaaca2;
   --secondary: #2c2c2c;
   --black: #000;
   --black-2: #121212;
@@ -2065,8 +2065,8 @@ img {
   height: 20px;
   left: 0;
   top: 0;
-  /* background-color: var(--primary); */
-  background-color: #aaaca2;
+  background-color: var(--primary);
+
   z-index: -1;
   border-radius: 100%;
   -webkit-transition: all 0.7s;
@@ -8729,7 +8729,7 @@ img {
     padding: 25px 0 10px;
   }
 }
-.service__item:hover .service__number span,
+/* .service__item:hover .service__number span, */
 .service__item:hover .service a {
   color: var(--white);
 }
@@ -8976,13 +8976,14 @@ img {
     display: none;
   }
 }
-.service__number span {
+.service__number{
   font-weight: 400;
   font-size: 28px;
-  line-height: 1.2;
+  color:#999999 !important;
+  /* line-height: 1.2;
   color: var(--gray-2);
   -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  transition: all 0.3s; */
 }
 .service__title {
   display: block;
@@ -9163,7 +9164,7 @@ img {
     margin-left: -15px;
   }
 }
-.service__list .active .service__number span,
+/* .service__list .active .service__number span, */
 .service__list .active .service__title,
 .service__list .active .service__link p {
   color: var(--white);
@@ -27468,5 +27469,14 @@ body {
   height: 100%;
   left: calc(50% - 1px);
   top: 0;
-  /* background: var(--white-4); */
+  background: var(--white-4);
 } */
+
+.servicenumber-text{
+  font-weight: 400 !important;
+  font-size: 28px !important;
+  line-height: 1.2;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  color:#999999
+}
