@@ -10145,7 +10145,8 @@ img {
 @media only screen and (max-width: 767px) {
   .workflow__area-3 {
     padding-top: 60px;
-    background-color: var(--pink-3);
+    /* background-color: var(--pink-3); */
+    background-color: #ffff ;
   }
 }
 .workflow__area-3 .wf_panel {
@@ -27484,5 +27485,12 @@ body {
 @media only screen and (max-width: 480px) {
     .portfolio__service{
        margin-top: 130px;
+    }
+    .chalanges-video{
+      width: 350px !important;
+      height: 600px;
+    }
+    .service-text h1{
+      font-size: 25px !important;
     }
 }
