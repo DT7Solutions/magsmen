@@ -8739,6 +8739,14 @@ img {
 .service__item:hover .service__link p {
   color: var(--white);
 }
+.service__link1 p i{
+  -webkit-transform: translate(0, 0) rotate(-45deg);
+  transform: translate(0, 0) rotate(-45deg);
+  font-weight: 900;
+  font-size: 50px;
+  opacity: 0.5;
+  padding-left: 25px;
+}
 .service__item:hover .service__link p i {
   -webkit-transform: translate(60px, -60px) rotate(-45deg);
           transform: translate(60px, -60px) rotate(-45deg);
@@ -27493,4 +27501,19 @@ body {
     .service-text h1{
       font-size: 25px !important;
     }
+}
+
+
+@media only screen and (min-width: 1024px) and (max-width: 1600px) {
+  .chalange-image {
+    margin-top: 105px;
+  
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+  .chalange-image img {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
 }
