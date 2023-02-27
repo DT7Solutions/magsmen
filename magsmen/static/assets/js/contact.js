@@ -19,7 +19,7 @@ $(document).on('submit', '#contactform', function(event){
    
    
      $.ajax({
-           url:"/contact/",
+           url:"/reach-us-out/",
            method: 'Post',
            processData:false,
            contentType:false,
