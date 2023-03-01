@@ -97,11 +97,17 @@
   --d-black-3: #1A1A1A;
 }
 
-@font-face {
+/* @font-face {
   font-family: newYork;
   src: url("/assets/fonts/newyork/FontsFree-Net-NewYork.ttf");
   font-weight: 400;
+} */
+@font-face {
+  font-family: proxima-nova;
+  src: url("/assets/fonts/proxima-nova/Fontspring-DEMO-proximanovacond-regular.otf");
+  font-weight: 400;
 }
+
 /*----------------------------------------*/
 /*  02. MIXIN CSS START
 /*----------------------------------------*/
@@ -583,7 +589,7 @@
 }
 
 body {
-  font-family: "Kanit", sans-serif;
+  font-family: "proxima-nova", sans-serif;
 }
 
 html {
@@ -27515,5 +27521,11 @@ body {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px){
+  .hero__area-3 .sec-title {
+      font-size: 95px !important;
   }
 }
