@@ -27528,6 +27528,10 @@ body {
   .hero__area-3 .sec-title {
       font-size: 95px !important;
   }
+  
+  .portfolio__service-item {
+    padding: 20px;
+  }
 }
 
 /* service mobil view */
