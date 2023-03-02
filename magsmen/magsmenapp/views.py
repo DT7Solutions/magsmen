@@ -41,6 +41,8 @@ def corporaterebranding(request):
 def service_home(request):
     return render(request, 'uifiles/service.html')
 
+def launchpad(request):
+    return render(request, 'uifiles/launchpad.html')
 
 
 def Blogdetails(request,slug):

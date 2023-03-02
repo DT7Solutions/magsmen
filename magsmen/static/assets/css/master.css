@@ -27590,3 +27590,16 @@ div {
 }
 
   }
+
+
+  .how_works li::before{
+    /* content: "" !important; */
+    display: none;
+    /* left: 0;
+    font-size: 20px; */
+  }
+  .how_works li{
+    list-style: decimal;
+    margin-left: 25px;
+    text-align: justify;
+  }
