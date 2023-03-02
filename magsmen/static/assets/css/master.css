@@ -27548,4 +27548,41 @@ body {
   .myservice {
       margin-top: 135px;
   }
+
+  element.style {
+    position: relative;
+    display: inline-block;
+    translate: none;
+    rotate: none;
+    scale: none;
+    opacity: 1;
+    visibility: inherit;
+    transform: translate(0px, 0px);
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+.hero__area-3 .sec-title {
+  font-size: 30px !important;
+}
+.service__link1 i{
+  padding-top: 15px;
+}
+.choose-title {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.portfolio__service-item .ps-title {
+  font-weight: 600;
+  font-size: 20px;
+}
+
   }
