@@ -7567,7 +7567,7 @@ img {
   content: "";
   width: 1px;
   height: 100%;
-  left: 60%;
+  left: 58%;
   bottom: 0px;
   background-color: var(--black-5);
 }
@@ -27528,4 +27528,17 @@ body {
   .hero__area-3 .sec-title {
       font-size: 95px !important;
   }
+}
+
+/* service mobil view */
+@media only screen and (max-width: 767px){
+.service-v5.pt-140 {
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+}
+@media only screen and (max-width: 480px){
+.portfolio__service {
+    margin-top: 0px;
+}
 }
