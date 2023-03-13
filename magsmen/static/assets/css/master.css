@@ -27604,13 +27604,4 @@ div {
     text-align: justify;
   }
 
-  @media only screen and (min-width: 320px) and (max-width: 480px) {
-    .footer__logo-3 img{
-      margin-left: 28px;
-    }
-    .footer__logo-3 p{
-     margin-left: 18px;
-     text-align: justify;
-    }
-  }
 
