@@ -27641,3 +27641,10 @@ div {
 }
 }
 
+@media only screen and (min-width: 720px) and (max-width: 1024px){
+  .showcase__items-4 {
+    grid-gap: 60px;
+    -ms-grid-columns: 1fr 15px 1fr;
+    grid-template-columns: repeat(4, 1fr);
+}
+}
