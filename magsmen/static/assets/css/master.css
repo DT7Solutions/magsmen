@@ -103,10 +103,17 @@
   font-weight: 400;
 } */
 @font-face {
-  font-family: proxima-nova;
+  font-family: 'proxima-nova';
   src: url("/assets/fonts/proxima-nova/Fontspring-DEMO-proximanovacond-regular.otf");
   font-weight: 400;
 }
+/* @font-face {
+  font-family: helvetica;
+  src: url("/assets/fonts/helvetica/Helvetica.ttf");
+  font-weight: 400;
+} */
+
+
 
 /*----------------------------------------*/
 /*  02. MIXIN CSS START
@@ -589,7 +596,8 @@
 }
 
 body {
-  font-family: "proxima-nova", sans-serif;
+  font-family: Helvetica;
+  /* font-family:"Helvetica",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; */
 }
 
 html {
@@ -643,6 +651,7 @@ p {
   color: var(--black-3);
   position: relative;
   z-index: 1;
+  font-family: "Helvetica";
 }
 
 video,
