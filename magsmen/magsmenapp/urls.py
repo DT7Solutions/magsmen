@@ -14,5 +14,5 @@ urlpatterns = [
     path('launchpad/', launchpad , name='launchpad'),
     path('corporaterebranding/', corporaterebranding , name='corporaterebranding'),
     path('blog/<str:slug>', Blogdetails , name='blog'),
-    path('questions', Questionsform , name='questions'),
+    path('questions/', Questionsform , name='questions'),
 ]

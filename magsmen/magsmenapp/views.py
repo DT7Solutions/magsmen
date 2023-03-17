@@ -59,4 +59,4 @@ def Blogdetails(request,slug):
 
 
 def Questionsform(request):
-    return render(request, 'uifiles/multiform.html')
+    return render(request, 'uifiles/multistepform.html')
