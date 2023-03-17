@@ -505,14 +505,14 @@
                 </div>
               </div>
   
-              <div class="row reset-grid">
+              <!-- <div class="row reset-grid">
                 {% for blogitem in blog_list %} 
-                  <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4">
+                  <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 pb-4">
                     <article class="blog__item">
                       <div class="blog__img-wrapper">
                         <a href="/blog/{{blogitem.Sluglink}}">
                           <div class="img-box">
-                            <img class="image-box__item" src="/media/{{blogitem.Image1}}" alt="Blog Thumbnail">
+                            <img class="image-box__item card-img-top" src="/media/{{blogitem.Image1}}" alt="Blog Thumbnail">
                             <img class="image-box__item" src="/media/{{blogitem.Image1}}" alt="BLog Thumbnail">
                           </div>
                         </a>
@@ -524,9 +524,25 @@
                     </article>
                   </div>
                 {% endfor %}
-  
-               
+              </div> -->
+              <!-- dummy -->
+              <div class="row reset-grid pb-4 pt-5">
+                {% for blogitem in blog_list %} 
+                  <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 pb-4">
+                    <div class="card">
+                      <img src="/media/{{blogitem.Image1}}" class="card-img-top image-box__item" alt="...">
+                      <div class="card-body">
+                        <h6 class="card-title">{{blogitem.Create_at}}</a> | {{blogitem.CreatedName}}</h6>
+                        <h5 class="card-title">{{blogitem.Title}}</h5>
+                        <p class="card-text"></p>
+                        <a href="/blog/{{blogitem.Sluglink}}" class="blog__btn">Read More <span><i
+                          class="fa-solid fa-arrow-right"></i></span></a>
+                      </div>
+                    </div>
+                  </div>
+                {% endfor %}
               </div>
+               <!-- enddummy -->
               <div class="row ">
                 <div class="col-xxl-12 d-flex justify-content-center">
                   <div class="sec-title-wrapper ">

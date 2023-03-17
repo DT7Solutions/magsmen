@@ -1,5 +1,8 @@
 from django.shortcuts import render
 from .models import BlogPost,ContactData
+
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
+
 # Create your views here.
 def Home(request):
     blog_list = BlogPost.objects.filter().order_by('-Id')[:3]     #filter(status=1).order_by('Create_at')
@@ -24,7 +27,11 @@ def Contact(request):
 
 def Blogs(request):
     blog = BlogPost.objects.filter().order_by('-Id')
-    return render(request, 'uifiles/blogs.html',{'blog':blog})
+    # allposts = BlogPost.objects.all()
+    paginator = Paginator(blog, 9) # paginate 10 posts per page
+    page = request.GET.get('page')
+    posts = paginator.get_page(page)
+    return render(request, 'uifiles/blogs.html',{'blog':posts,'posts':posts,'page':page})
 
 def Service(request):
     return render(request, 'uifiles/brandconsulting.html')
@@ -48,3 +55,8 @@ def launchpad(request):
 def Blogdetails(request,slug):
     selectpost = BlogPost.objects.get(Sluglink=slug)
     return render(request, 'uifiles/blog-details.html',{'selectpost':selectpost})
+
+
+
+def Questionsform(request):
+    return render(request, 'uifiles/multiform.html')

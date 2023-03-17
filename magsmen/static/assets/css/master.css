@@ -27661,6 +27661,9 @@ div {
 .blog__area-6 .sec-title-wrapper {
   padding-top: 0px;
 }
+.contact__text10{
+  padding-top: 13px;
+}
 }
 
 
@@ -27671,4 +27674,33 @@ div {
     -ms-grid-columns: 1fr 15px 1fr;
     grid-template-columns: repeat(4, 1fr);
 }
+}
+
+
+/* new blogs create  */
+.reset-grid .card{
+  border: none;
+}
+.reset-grid .card img{
+  -webkit-transition: 0.5s;
+  transition: 0.5s; 
+}
+
+.blog-detail-title{
+  font-size: 45px!important;
+}
+
+.page-nav-link{
+  color: rgb(231, 225, 225);
+  background-color: black;
+  padding: 10px;
+  border-radius: 10px;
+}
+.no-of-page{
+   color: black;
+   font-weight: 900;
+   color: rgb(231, 225, 225);
+   background-color: black;
+   padding: 10px;
+   border-radius: 10px;
 }

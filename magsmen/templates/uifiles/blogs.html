@@ -26,7 +26,19 @@
 
             <div class="row reset-grid">
               {% for blogitem in blog %} 
-              <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4">
+              <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 pb-4">
+                <div class="card">
+                  <img src="/media/{{blogitem.Image1}}" class="card-img-top image-box__item" alt="...">
+                  <div class="card-body">
+                    <h6 class="card-title">{{blogitem.Create_at}}</a> | {{blogitem.CreatedName}}</h6>
+                    <h5 class="card-title">{{blogitem.Title}}</h5>
+                    <p class="card-text"></p>
+                    <a href="/blog/{{blogitem.Sluglink}}" class="blog__btn">Read More <span><i
+                      class="fa-solid fa-arrow-right"></i></span></a>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4">
                 <article class="blog__item">
                   <div class="blog__img-wrapper">
                     <a href="/blog/{{blogitem.Sluglink}}">
@@ -41,18 +53,28 @@
                   <a href="/blog/{{blogitem.Sluglink}}" class="blog__btn">Read More <span><i
                         class="fa-solid fa-arrow-right"></i></span></a>
                 </article>
-              </div>
+              </div> -->
               
             {% endfor %}
-            <nav aria-label="Page navigation conatiner" style="background-color: aqua;">
-              <ul class="pagination justify-content-center">
-                {% if post.has_previous %}
-                  <li><a href="?page={{ post.previous_page_number }}" class="page-link" >&laquo; PREV </a></li>
-                {% endif %}
-                {% if post.has_next %}
-                  <li><a href="?page={{ post.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-                {% endif %}
-              </ul>
+
+            <nav aria-label="Page navigation conatiner text-center">
+              <div class="pagination d-flex justify-content-center">
+                <span class="step-links">
+                    {% if posts.has_previous %}
+                        <!-- <a href="?page=1">&laquo; first</a> -->
+                        <a href="?page={{ posts.previous_page_number }}" class="page-nav-link">previous</a>
+                    {% endif %}
+            
+                    <span class="current-page">
+                       <span class="no-of-page">{{ posts.number }} </span>of {{ posts.paginator.num_pages }}.
+                    </span>
+            
+                    {% if posts.has_next %}
+                        <a href="?page={{ posts.next_page_number }}" class="page-nav-link">next</a>
+                        <!-- <a href="?page={{ posts.paginator.num_pages }}">last &raquo;</a> -->
+                    {% endif %}
+                </span>
+              </div>
             </nav>
             
 
