@@ -24428,10 +24428,11 @@ main {
 .testimonial__img-4 {
   margin-bottom: 42px;
   border-radius: 0px;
-  width: 155px;
+  max-width: 200px;
   height: 155px;
   /* margin-left: 45%; */
 }
+
 .testimonial__feedback-4 {
   font-size: 14px;
   font-weight: 400;
