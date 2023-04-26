@@ -60,3 +60,6 @@ def Blogdetails(request,slug):
 
 def Questionsform(request):
     return render(request, 'uifiles/multistepform.html')
+
+def Policy(request):
+    return render(request,'uifiles/privacy-policy.html')
