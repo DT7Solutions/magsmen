@@ -27628,7 +27628,7 @@ div {
     margin-left: 25px;
     text-align: justify;
   }
-  @media only screen and (min-width: 480px) and (max-width: 992px){
+  @media only screen and (max-width: 992px){
     .portfolio__service-item {
       min-height: 400px!important;
     }
