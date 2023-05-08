@@ -8,4 +8,12 @@
     font-weight: 500;
     
 }
+.whatsapp{
+    position: fixed;
+    
+    right: 1.5%;
+    bottom: 90px;
+    z-index: 99;
+
+}
 
