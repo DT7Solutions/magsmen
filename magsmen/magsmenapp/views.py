@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from .models import BlogPost,ContactData
+from django.core.mail import send_mail,EmailMessage
+from django.contrib import messages
 
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
@@ -23,6 +25,17 @@ def Contact(request):
         message = request.POST.get('message',"")
         oContactinfo = ContactData(Email=email,Phone=phone,Subject=subject,Message=message)
         oContactinfo.save()
+        
+        message ='''
+        Subject:{}
+        Message:{}
+        From:{}
+        '''.format(subject,message,email)
+        try:
+            send_mail(subject, message,'noreplaybadugudinesh94@gmail.com',recipient_list=['connect@magsmen.in']) 
+            messages.success(request,'Message has been sucesfully send')
+        except:
+            messages.error(request,'Your message has been failed, Please Try Agian')
     return render(request, 'uifiles/contact.html')
 
 def Blogs(request):

@@ -51,18 +51,18 @@
                     {% csrf_token %}
                     <div class="row g-3">
                       <div class="col-xxl-6 col-xl-6 col-12">
-                        <input type="text" id="name" name="name" placeholder="Name *">
+                        <input type="text" id="name" name="name" required placeholder="Name *">
                       </div>
                       <div class="col-xxl-6 col-xl-6 col-12">
-                        <input type="email" id="email" name="email" placeholder="Email *">
+                        <input type="email" id="email" name="email" required placeholder="Email *">
                       </div>
                     </div>
                     <div class="row g-3">
                       <div class="col-xxl-6 col-xl-6 col-12">
-                        <input type="tel" id="phone" name="phone" placeholder="Phone">
+                        <input type="tel" id="phone" name="phone"  required placeholder="Phone">
                       </div>
                       <div class="col-xxl-6 col-xl-6 col-12">
-                        <input type="text" id="subject" name="subject" placeholder="Subject *">
+                        <input type="text" id="subject" name="subject"  required  placeholder="Subject *">
                       </div>
                     </div>
                     <div class="row g-3">
