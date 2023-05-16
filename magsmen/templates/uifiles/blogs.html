@@ -28,10 +28,10 @@
               {% for blogitem in blog %} 
               <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 pb-4">
                 <div class="card">
-                  <img src="/media/{{blogitem.Image1}}" class="card-img-top image-box__item" alt="...">
+                  <a href="/blog/{{blogitem.Sluglink}}" class="blog__btn"><img src="/media/{{blogitem.Image1}}" class="card-img-top image-box__item" alt="..."></a>
                   <div class="card-body">
                     <h6 class="card-title">{{blogitem.Create_at}}</a> | {{blogitem.CreatedName}}</h6>
-                    <h5 class="card-title">{{blogitem.Title}}</h5>
+                    <a href="/blog/{{blogitem.Sluglink}}" class="blog__btn"><h5 class="card-title">{{blogitem.Title}}</h5></a>
                     <p class="card-text"></p>
                     <a href="/blog/{{blogitem.Sluglink}}" class="blog__btn">Read More <span><i
                       class="fa-solid fa-arrow-right"></i></span></a>
