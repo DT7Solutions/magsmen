@@ -76,3 +76,8 @@ def Questionsform(request):
 
 def Policy(request):
     return render(request,'uifiles/privacy-policy.html')
+
+def Works(request):
+    return render(request,'uifiles/works.html')
+def Tdh(request):
+    return render(request,'uifiles/tdh.html')

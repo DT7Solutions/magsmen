@@ -135,6 +135,7 @@
           <!-- <li class="has-megamenu"><a href="#">Case Studies</a></li> -->
           <li class="has-megamenu"><a href="/ideas/">ideas</a></li>
           <li class="has-megamenu"><a href="/reach-us-out/">Reach us out</a></li>
+          <li><a href="/works/">Works </a></li>
         
          
         </ul>
@@ -199,6 +200,7 @@
               <!-- <li class=""><a href="#">CaseStudy</a></li> -->
               <li class="h"><a href="/ideas/">ideas</a></li>
               <li class=""><a href="/reach-us-out/">Reach us out</a></li>
+              <li><a href="/works/">Works </a></li>
             </ul>
           </nav>
         </div>
@@ -308,6 +310,15 @@
   <script src="{% static 'assets/js/jquery.meanmenu.min.js' %}"></script>
   <script src="{% static 'assets/js/main.js' %}"></script>
   <script src="{% static 'assets/js/contact.js' %}"></script>
+  <script>
+    document.getElementById("video_check").addEventListener("change", function() {
+      if (this.checked) {
+        document.querySelector(".sec-title-wrapper").style.display = "none";
+      } else {
+        document.querySelector(".sec-title-wrapper").style.display = "block";
+      }
+    });
+  </script>
 
 </body>
 
