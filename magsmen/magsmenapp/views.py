@@ -16,6 +16,7 @@ def About(request):
 def FAQS(request):
     return render(request, 'uifiles/faqs.html')
 
+
 def Contact(request):
     if request.method == "POST":
         name = request.POST.get('name',"")
@@ -81,3 +82,5 @@ def Works(request):
     return render(request,'uifiles/works.html')
 def Tdh(request):
     return render(request,'uifiles/tdh.html')
+def Carrers(request):
+    return render(request,'uifiles/carrers.html')

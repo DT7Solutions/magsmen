@@ -1306,7 +1306,7 @@
       duration: 1
     })
     portfolioline.to(".portfolio__text", {
-      scale: 3,
+      scale: 2,
       duration: 1
     })
     portfolioline.to(".portfolio__text", {

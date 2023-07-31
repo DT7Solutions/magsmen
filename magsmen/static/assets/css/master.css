@@ -2236,6 +2236,7 @@ img {
   .sec-title {
     font-size: 45px;
   }
+
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .sec-title {
@@ -2262,6 +2263,9 @@ img {
   .sec-title-2 {
     font-size: 90px;
   }
+  .award__video-8 {
+   height:700px!important;
+}
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .sec-title-2 {
@@ -7578,7 +7582,7 @@ img {
   height: 100%;
   left: 58%;
   bottom: 0px;
-  background-color: var(--black-5);
+  /* background-color: var(--black-5); */
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .about__area-3::after {
@@ -11464,7 +11468,7 @@ img {
 /*----------------------------------------*/
 .portfolio__text {
   text-align: center;
-  font-size: 150px;
+  font-size: 100px;
   font-weight: 500;
   color: var(--white);
   text-transform: uppercase;
@@ -12240,6 +12244,7 @@ img {
   gap: 0px 30px;
   position: relative;
   margin-bottom: 0;
+  
 }
 @media only screen and (max-width: 767px) {
   .portfolio__list-1 {
