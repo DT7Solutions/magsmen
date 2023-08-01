@@ -319,6 +319,38 @@
       }
     });
   </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const videoCheck = document.getElementById('video_check');
+      const heroImgAni = document.querySelector('.hero3-img-ani');
+
+      videoCheck.addEventListener('change', function() {
+        if (this.checked) {
+          heroImgAni.style.display = 'none';
+        } else {
+          heroImgAni.style.display = 'block';
+        }
+      });
+    });
+  </script>
+  
+<!-- modal script -->
+
+<script>
+  window.addEventListener("load", function () {
+    var modal_testimonial = document.querySelector("#modal_testimonial");
+    var modal_close = document.querySelector("#modal_close");
+
+    modal_testimonial.classList.add("modal-show");
+
+    modal_close.addEventListener("click", function () {
+      modal_testimonial.classList.remove("modal-show");
+    });
+  });
+</script>
+
+
+
 
 </body>
 

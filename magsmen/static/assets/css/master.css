@@ -5981,13 +5981,13 @@ img {
 @media only screen and (min-width: 1400px) and (max-width: 1919px) {
   .hero__area-3 {
     padding-top: 160px;
-    padding-bottom: 110px;
+    padding-bottom: 250px;
   }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .hero__area-3 {
     padding-top: 140px;
-    padding-bottom: 110px;
+    padding-bottom: 250px;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -6188,8 +6188,10 @@ img {
 .hero__area-3 .video-info {
   width: 300px;
   position: relative;
-  left: 500px;
-  top: -115px;
+  /* left: 500px; */
+  left: -200px;
+  /* top: -1px; */
+  bottom: -100px;
   height: 200px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -6225,7 +6227,7 @@ img {
   top: 55px;
   left: 100px;
 }
-.hero__area-3 .video::before {
+/* .hero__area-3 .video::before {
   position: absolute;
   top: -20px;
   left: -20px;
@@ -6235,7 +6237,7 @@ img {
   content: "";
   z-index: 999999999999;
   background-size: 100%;
-}
+} */
 .hero__area-3 .video video {
   position: fixed;
   top: 0;
@@ -6243,7 +6245,7 @@ img {
   min-width: 100%;
   min-height: auto;
   width: auto;
-  height: auto;
+  height:auto;
 }
 .hero__area-3 .intro-title {
   position: relative;
@@ -27737,3 +27739,21 @@ div {
 .hero__area-3 .title-right{
   font-size: 80px !important;
 } */
+
+
+.position-img{
+  position: absolute!important;
+  bottom: 11rem!important;
+  right: 0!important;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px){
+  .position-img{
+    position: absolute!important;
+    bottom: 5rem!important;
+    right: 0!important;
+  }
+  .hero__area-3 img {
+    height: 100px!important; 
+ 
+}
