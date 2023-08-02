@@ -6227,17 +6227,22 @@ img {
   top: 55px;
   left: 100px;
 }
-/* .hero__area-3 .video::before {
+.hero__area-3 .video::before {
   position: absolute;
-  top: -20px;
+  /* top: -20px; */
   left: -20px;
   width: 40px;
   height: 40px;
+ 
+  /* background: url(../imgs/icon/play-icon.png); */
   background: url(../imgs/icon/play-icon.png);
   content: "";
   z-index: 999999999999;
   background-size: 100%;
-} */
+  display: block;
+}
+
+
 .hero__area-3 .video video {
   position: fixed;
   top: 0;
@@ -6270,7 +6275,7 @@ img {
   margin: auto;
   position: absolute;
   left: 0;
-  top: 0;
+  top: -30%;
   right: 0;
   border-radius: 40px;
   outline: none;
@@ -6280,6 +6285,9 @@ img {
           appearance: none;
   cursor: pointer;
   z-index: 9999999;
+}
+.hero__area-3 .video.hide-play-icon::before {
+  background: none; 
 }
 .hero__area-3 #video_check:focus {
   outline: 0;

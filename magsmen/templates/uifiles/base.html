@@ -322,18 +322,42 @@
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const videoCheck = document.getElementById('video_check');
+    
+     
       const heroImgAni = document.querySelector('.hero3-img-ani');
 
       videoCheck.addEventListener('change', function() {
         if (this.checked) {
           heroImgAni.style.display = 'none';
+          
+         
+        
         } else {
           heroImgAni.style.display = 'block';
         }
       });
     });
   </script>
+  <!-- icon -->
+  <script> 
+  document.addEventListener('DOMContentLoaded', function() {
+    const videoCheck = document.getElementById('video_check');
+    const videoElement = document.getElementById('video');
+    const videoContainer = document.querySelector('.video');
   
+    videoCheck.addEventListener('change', function() {
+      if (this.checked) {
+        // Hide the play icon when the video starts playing
+        videoContainer.classList.add('hide-play-icon');
+        // Pause the video if the checkbox is checked
+        videoElement.pause();
+      } else {
+        // Show the play icon when the video is not playing
+        videoContainer.classList.remove('hide-play-icon');
+      }
+    });
+  });
+</script>
 <!-- modal script -->
 
 <script>
