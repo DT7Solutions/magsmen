@@ -1,9 +1,12 @@
+from django.conf import settings
+from django.http import FileResponse
 from django.shortcuts import render
 from .models import BlogPost,ContactData
 from django.core.mail import send_mail,EmailMessage
 from django.contrib import messages
 
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
+import os 
 
 # Create your views here.
 def Home(request):
@@ -84,3 +87,16 @@ def Tdh(request):
     return render(request,'uifiles/tdh.html')
 def Carrers(request):
     return render(request,'uifiles/carrers.html')
+
+def Newsletter(request):
+   
+    pdf_filename = 'news-letter-august-2023.pdf'
+    pdf_path = os.path.join(settings.MEDIA_ROOT, pdf_filename)
+    
+    response = FileResponse(open(pdf_path, 'rb'), content_type='application/pdf')
+    response['Content-Disposition'] = f'inline; filename="{pdf_filename}"'
+    return response
+
+
+
+    

@@ -1,6 +1,6 @@
 from django.urls import path
 from .views import Home,About,Contact,FAQS,Blogs,Service,PersonalBrand,imageconsulting,corporaterebranding,\
-                   Blogdetails,service_home,launchpad,Policy,Questionsform,Works,Tdh,Carrers
+                   Blogdetails,service_home,launchpad,Policy,Questionsform,Works,Tdh,Carrers,Newsletter
 
 urlpatterns = [
     path('', Home , name='home'),
@@ -20,6 +20,7 @@ urlpatterns = [
     path('works/', Works , name='works'),
     path('tenali-double-horse/', Tdh , name='tenali-double-horse'),
     path('carrerspage/', Carrers , name='carrerspage'),
+    path('news-letter-august-2023/',Newsletter,name='news-letter-august-2023'),
    
     
 ]

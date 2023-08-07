@@ -18,6 +18,7 @@ from .jazzmin import JAZZMIN_SETTINGS
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR,'templates')
 STATIC_DIR = os.path.join(BASE_DIR,'static')
+PDF_DIR  = os.path.join(BASE_DIR,"pdf")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
