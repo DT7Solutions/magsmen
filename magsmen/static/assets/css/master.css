@@ -21669,10 +21669,10 @@ img {
   }
 }
 .footer__logo {
-  margin-bottom: 30px;
+  margin-bottom:0px;
 }
 .footer__logo-3 img {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 .footer__logo-3 p {
   max-width: 310px;
