@@ -5974,7 +5974,7 @@ img {
   background-position: right top;
 }
 .hero__area-3 {
-  padding-top: 190px;
+  padding-top: 90px;
   padding-bottom: 125px;
   position: relative;
   overflow: hidden;
@@ -5982,7 +5982,7 @@ img {
 @media only screen and (min-width: 1400px) and (max-width: 1919px) {
   .hero__area-3 {
     padding-top: 100px!important;
-    padding-bottom: 250px;
+    padding-bottom: 350px;
   }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
@@ -6988,6 +6988,7 @@ img {
 @media only screen and (max-width: 767px) {
   .hero__about-video {
     height: auto;
+    width: 100% !important;
   }
 }
 .hero__about-video iframe,
@@ -27816,15 +27817,22 @@ div {
 }
 
 
-.hero__area-3 .responsive-video {
+.hero__area-3 .hero-sec-video {
   width:100%;
   height:auto;
 }
 
+@media only screen and (min-width: 1400px) and (max-width: 1600px){
+  .hero__area-3 .hero-sec-video {
+    width:100%;
+    height:auto;
+  }
+}
 
-@media only screen and(max-width:768px){
-.hero__area-3 .responsive-video{
-    max-width: 100%;
+
+@media only screen and(max-width:767px){
+.hero__area-3 .hero-sec-video{
+    max-width: 100px;
     height:auto;
   }
 }
@@ -27839,7 +27847,7 @@ div {
 
 @media only screen and (min-width: 320px) and (max-width: 1199px){
   .hero__area-3 {
-      padding-top: 100px!important;
+      padding-top: 80px!important;
       padding-bottom: 10px;
   }
 }
