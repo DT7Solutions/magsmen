@@ -53,6 +53,7 @@
 /*----------------------------------------*/
 /*  01. VARIBALES CSS START
 /*----------------------------------------*/
+
 :root {
   --primary: #aaaca2;
   --secondary: #2c2c2c;
@@ -729,10 +730,10 @@ img {
 }
 
 @media only screen and (max-width: 767px) {
-  .g-0 {
+  /* .g-0 {
     padding-right: 15px;
     padding-left: 15px;
-  }
+  } */
   br {
     display: none;
   }
@@ -795,8 +796,8 @@ img {
 }
 @media only screen and (max-width: 767px) {
   .scroll-top {
-    right: 5px;
-    bottom: 55px;
+    right: 1%;
+    bottom: 5%;
   }
 }
 
@@ -2080,7 +2081,7 @@ img {
   height: 20px;
   left: 0;
   top: 0;
-  background-color: var(--primary);
+  /* background-color: var(--primary); */
 
   z-index: -1;
   border-radius: 100%;
@@ -5980,7 +5981,7 @@ img {
 }
 @media only screen and (min-width: 1400px) and (max-width: 1919px) {
   .hero__area-3 {
-    padding-top: 160px;
+    padding-top: 100px!important;
     padding-bottom: 250px;
   }
 }
@@ -5988,6 +5989,7 @@ img {
   .hero__area-3 {
     padding-top: 140px;
     padding-bottom: 250px;
+   
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -6556,12 +6558,12 @@ img {
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .hero__text-3 {
-    padding-top: 50px;
+    padding-top: 260px;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .hero__text-3 {
-    padding-top: 20px;
+    padding-top: 250px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -7582,7 +7584,7 @@ img {
   background-image: url(../imgs/shape/7.png);
   background-repeat: no-repeat;
   background-position: 100% 30%;
-  background-color: var(--black-2);
+  background-color: #000000;
   position: relative;
 }
 .about__area-3::after {
@@ -12261,6 +12263,7 @@ img {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     gap: 0px;
+    
   }
 }
 .portfolio__list-6 {
@@ -15408,8 +15411,8 @@ img {
   font-size: 14px;
   line-height: 1.3;
   text-transform: uppercase;
-  color: var(--black-3);
-  border: 1px solid var(--gray);
+  color: var(--black);
+  /* border: 1px solid var(--gray); */
   display: inline-block;
   padding: 5px 17px;
   border-radius: 30px;
@@ -15720,7 +15723,7 @@ img {
   font-weight: 500;
   font-size: 24px;
   line-height: 1.3;
-  color: var(--white);
+  color: var(--black);
   padding-top: 20px;
 }
 .team__member-name-6 {
@@ -15774,7 +15777,7 @@ img {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.3;
-  color: var(--gray-2);
+  color: var(--black);
 }
 .team__member-role-6 {
   color: var(--black-3);
@@ -26917,6 +26920,40 @@ main {
     --bs-gutter-x: 30px;
   }
 }
+
+.showcase__items-5 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 80px 1fr 80px 1fr 80px 1fr;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 80px;
+  
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .showcase__items-5 {
+    grid-gap: 30px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .showcase__items-5 {
+    grid-gap: 20px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .showcase__items-5 {
+    grid-gap: 15px;
+    -ms-grid-columns: 1fr 15px 1fr 15px 1fr;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (max-width: 767px) {
+  .showcase__items-5 {
+    grid-gap: 15px;
+    -ms-grid-columns: 1fr 15px 1fr;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .showcase__items-4 {
   display: -ms-grid;
   display: grid;
@@ -27761,8 +27798,130 @@ div {
     bottom: 5rem!important;
     right: 0!important;
   }
+
   .hero__area-3 img {
     height: 100px!important; 
  
+}
+}
+
+/* ========================= Home Page ================= */
+
+.about-pt-140{
+  padding-top:50px;
+}
+
+.about-pt-110{
+  padding-bottom:30px;
+}
+
+
+.hero__area-3 .responsive-video {
+  width:100%;
+  height:auto;
+}
+
+
+@media only screen and(max-width:768px){
+.hero__area-3 .responsive-video{
+    max-width: 100%;
+    height:auto;
+  }
+}
+
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px){
+    .hero__area-3 {
+        padding-top: 100px!important;
+        padding-bottom: 10px;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1199px){
+  .hero__area-3 {
+      padding-top: 100px!important;
+      padding-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width:480px){
+  .service__list-wrapper .chalange-image img{
+    width:100%;
+    height:auto;
+    margin-left:-45px;
+  }
+}
+
+/* ====================== Home page end  =================== */
+
+
+
+
+.service-title-brand {
+  font-size:25px !important;
+}
+
+.sec-title-wrapper b{
+  font-weight:700;
+}
+
+.cta__area .title-anim-1{
+  font-size:40px !important;
+}
+
+.sec-title-wrapper .blog-title{
+  padding-left:15px;
+}
+
+.blog__text{
+  padding:0px 15px;
+}
+
+/* ================= Works Page =============*/
+
+.portfolio-text-size{
+  font-size:70px;
+}
+.award-sec-area{
+  margin-top:95px;
+}
+.btn-bg-dark{
+  height:170px;
+  width:170px;
+  background-color: black;
+  border-radius: 50%;
+  margin-top: 10px;
+  margin-left:15px;
+  position: relative;
+}
+.btn-bg-dark .my-btn{
+  position: absolute;
+}
+
+/* ========================== Whatsapp styles =================== */
+.whatsapp-img{
+  position: fixed;
+  left: 1%!important;
+  bottom: 2%!important;
+  z-index: 99;
+}
+@media only screen and (max-width:767px) {
+  .whatsapp-img{
+    position: fixed!important;
+    right:1%!important;
+    bottom: 4% !important;  
+  }
+}
+@media screen  and (min-width:768px) and (max-width:991px) {
+  .whatsapp-img{
+      bottom: 60px !important;
+      left:10px !important;  
+  }
+}
+
+@media screen  and (min-width:992px) and (max-width:1199px) {
+  .whatsapp-img{
+      bottom: 80px !important;  
+  }
 }
 
