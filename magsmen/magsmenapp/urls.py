@@ -21,7 +21,7 @@ urlpatterns = [
     path('tenali-double-horse/', Tdh , name='tenali-double-horse'),
     path('carrerspage/', Carrers , name='carrerspage'),
     path('news-letter-august-2023/',Newsletter,name='news-letter-august-2023'),
-    path('brandcorner/octoberedition/',Newslettertwo,name='the-name-of-the-article-indian-brand-success-stories'),
+    path('brand-corner-october-edition/',Newslettertwo,name='the-name-of-the-article-indian-brand-success-stories'),
    
     
 ]
