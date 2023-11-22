@@ -104,6 +104,15 @@ def Newslettertwo(request):
     response = FileResponse(open(pdf_path, 'rb'), content_type='application/pdf')
     response['Content-Disposition'] = f'inline; filename="{pdf_filename_two}"'
     return response
+def Newsletterthree(request):
+   
+    pdf_filename_two = 'brand-corner-november-edition.pdf'
+    pdf_path = os.path.join(settings.MEDIA_ROOT, pdf_filename_two)
+    
+    response = FileResponse(open(pdf_path, 'rb'), content_type='application/pdf')
+    response['Content-Disposition'] = f'inline; filename="{pdf_filename_two}"'
+    return response
+
 
 
 
