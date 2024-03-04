@@ -22,6 +22,7 @@ python manage.py startapp "APP NAME"
 # create super user 
 python manage.py createsuperuser
 # migration process 
+
 python manage.py makemigrations 
 
 # run migrations 

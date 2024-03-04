@@ -4,6 +4,9 @@ from django.shortcuts import render
 from .models import BlogPost,ContactData
 from django.core.mail import send_mail,EmailMessage
 from django.contrib import messages
+from django.http import HttpResponse
+import requests
+
 
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 import os 
@@ -104,17 +107,31 @@ def Newslettertwo(request):
     response = FileResponse(open(pdf_path, 'rb'), content_type='application/pdf')
     response['Content-Disposition'] = f'inline; filename="{pdf_filename_two}"'
     return response
-def Newsletterthree(request):
+# def Newsletterthree(request):
    
-    pdf_filename_two = 'brand-corner-november-edition.pdf'
-    pdf_path = os.path.join(settings.MEDIA_ROOT, pdf_filename_two)
+#     pdf_filename_two = 'brand-corner-november-edition.pdf'
+#     pdf_path = os.path.join(settings.MEDIA_ROOT, pdf_filename_two)
     
-    response = FileResponse(open(pdf_path, 'rb'), content_type='application/pdf')
-    response['Content-Disposition'] = f'inline; filename="{pdf_filename_two}"'
+#     response = FileResponse(open(pdf_path, 'rb'), content_type='application/pdf')
+#     response['Content-Disposition'] = f'inline; filename="{pdf_filename_two}"'
+#     return response
+
+def Newsletterthree(request):
+    pdf_url = 'https://krysta-asset.s3.ap-south-1.amazonaws.com/Papers/aadhar.jpg'
+
+    # Fetch the image content from the URL
+    try:
+        response = requests.get(pdf_url)
+        response.raise_for_status()  # Raise an exception for HTTP errors
+    except requests.RequestException as e:
+        return HttpResponse(f'Error fetching image: {e}', status=500)
+
+    # Set the Content-Type header based on the image type
+    content_type = response.headers.get('Content-Type', 'image/jpeg')
+
+    # Set the Content-Disposition header to force download
+    filename = pdf_url.split('/')[-1]
+    response = HttpResponse(response.content, content_type=content_type)
+    response['Content-Disposition'] = f'attachment; filename="{filename}"'
+    
     return response
-
-
-
-
-
-    
