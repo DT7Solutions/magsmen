@@ -4,8 +4,8 @@ from django.shortcuts import render
 from .models import BlogPost,ContactData
 from django.core.mail import send_mail,EmailMessage
 from django.contrib import messages
-from django.http import HttpResponse
-import requests
+
+
 
 
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
