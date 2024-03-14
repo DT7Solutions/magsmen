@@ -58,6 +58,16 @@ def Service(request):
 
 def PersonalBrand(request):
     return render(request, 'uifiles/personalbranding.html')
+def Triplex(request):
+    return render(request, 'uifiles/triplex.html')
+
+def Zavaine(request):
+    return render(request, 'uifiles/zavaine.html')
+def Rishikatdh(request):
+    return render(request, 'uifiles/rishikatdh.html')
+
+def Vsb(request):
+    return render(request, 'uifiles/vsb.html')
 
 def imageconsulting(request):
     return render(request, 'uifiles/imageconsulting.html')
@@ -90,6 +100,10 @@ def Tdh(request):
     return render(request,'uifiles/tdh.html')
 def Carrers(request):
     return render(request,'uifiles/carrers.html')
+def Suryacolours(request):
+    return render(request,'uifiles/suryaccolours.html')
+def Tenalidoublehorse(request):
+    return render(request,'uifiles/tenalidoublehorse.html')
 
 def Newsletter(request):
    
