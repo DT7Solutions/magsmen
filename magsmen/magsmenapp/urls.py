@@ -1,6 +1,6 @@
 from django.urls import path
 from .views import Home,About,Contact,FAQS,Blogs,Service,PersonalBrand,imageconsulting,corporaterebranding,\
-                   Blogdetails,service_home,launchpad,Policy,Questionsform,Works,Tdh,Carrers,Newsletter,Newslettertwo,Newsletterthree,Tenalidoublehorse,Suryacolours,Zavaine,Triplex,Rishikatdh,Vsb
+                   Blogdetails,service_home,launchpad,Policy,Questionsform,Works,Tdh,Carrers,Newsletter,Newslettertwo,Brand,Newsletterthree,Tenalidoublehorse,Suryacolours,Zavaine,Triplex,Rishikatdh,Vsb
 from django.contrib.sitemaps.views import sitemap
 from magsmenapp.sitemap import PostSitemap,StaticPagesSitemap
 from django.views.generic.base import TemplateView
@@ -30,6 +30,7 @@ urlpatterns = [
     path('tenali-double-horse/', Tdh , name='tenali-double-horse'),
     path('carrerspage/', Carrers , name='carrerspage'),
     path('news-letter-august-2023/',Newsletter,name='news-letter-august-2023'),
+    path('brand-architecture/',Brand,name='brand-architecture'),
     path('brand-corner-october-edition/',Newslettertwo,name='the-name-of-the-article-indian-brand-success-stories'),
     path('brand-corner-november-edition/',Newsletterthree,name='brand-corner-november-edition'),  
     path('suryacolours/',Suryacolours,name='suryacolours'),  

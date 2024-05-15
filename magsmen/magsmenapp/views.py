@@ -129,6 +129,14 @@ def Newsletterthree(request):
     response = FileResponse(open(pdf_path, 'rb'), content_type='application/pdf')
     response['Content-Disposition'] = f'inline; filename="{pdf_filename_two}"'
     return response
+def Brand(request):
+   
+    pdf_filename_two = 'brand_architecture.pdf'
+    pdf_path = os.path.join(settings.MEDIA_ROOT, pdf_filename_two)
+    
+    response = FileResponse(open(pdf_path, 'rb'), content_type='application/pdf')
+    response['Content-Disposition'] = f'inline; filename="{pdf_filename_two}"'
+    return response
 
 # def Newsletterthree(request):
 #     pdf_url = 'https://krysta-asset.s3.ap-south-1.amazonaws.com/Papers/aadhar.jpg'
