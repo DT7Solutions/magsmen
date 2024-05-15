@@ -1,6 +1,7 @@
 from django.db import models
 from datetime import datetime
 from ckeditor.fields import RichTextField
+from django.urls import reverse
 
 # Create your models here.
 
@@ -32,6 +33,9 @@ class BlogPost(models.Model):
     CreatedName =  models.CharField(max_length=100)
     Create_at = models.DateTimeField(default=datetime.now)
     status = models.IntegerField(choices=STATUS, default=0)
+
+    def get_absolute_url(self):
+        return reverse('blog', args=[str(self.Sluglink)])
 
     class Meta:
         ordering = ['-Create_at']

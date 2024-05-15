@@ -1,6 +1,15 @@
 from django.urls import path
 from .views import Home,About,Contact,FAQS,Blogs,Service,PersonalBrand,imageconsulting,corporaterebranding,\
                    Blogdetails,service_home,launchpad,Policy,Questionsform,Works,Tdh,Carrers,Newsletter,Newslettertwo,Newsletterthree,Tenalidoublehorse,Suryacolours,Zavaine,Triplex,Rishikatdh,Vsb
+from django.contrib.sitemaps.views import sitemap
+from magsmenapp.sitemap import PostSitemap,StaticPagesSitemap
+from django.views.generic.base import TemplateView
+
+sitemaps = {
+    'posts': PostSitemap,
+    'static_pages': StaticPagesSitemap,
+}
+
 
 urlpatterns = [
     path('', Home , name='home'),
@@ -28,9 +37,9 @@ urlpatterns = [
     path('triplex/',Triplex,name='triplex'),  
     path('zavaine/',Zavaine,name='zavaine'),
     path('rishikatdh/',Rishikatdh,name='rishikatdh'),  
-    path('vsb/',Vsb,name='vsb'),    
-        
-    
+    path('vsb/',Vsb,name='vsb'), 
+    path('sitemap.xml/',sitemap,{'sitemaps':sitemaps},name='django.contrib.sitemaps.views.sitemap'),   
+    path('robots.txt',TemplateView.as_view(template_name="uifiles/robots.txt", content_type="text/plain"))  
 
     
 ]

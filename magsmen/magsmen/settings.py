@@ -34,6 +34,8 @@ ALLOWED_HOSTS = ['*']
 
 
 # Application definition
+SITE_ID = 1
+
 INSTALLED_APPS = [
     'jazzmin',
     'django.contrib.admin',
@@ -44,6 +46,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'magsmenapp',
     'ckeditor',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
+
 ]
 
 MIDDLEWARE = [
