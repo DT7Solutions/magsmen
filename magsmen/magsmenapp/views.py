@@ -105,6 +105,9 @@ def Suryacolours(request):
 def Tenalidoublehorse(request):
     return render(request,'uifiles/tenalidoublehorse.html')
 
+def media(request):
+    return render(request,'uifiles/media.html')
+
 def Newsletter(request):
    
     pdf_filename = 'news-letter-august-2023.pdf'
