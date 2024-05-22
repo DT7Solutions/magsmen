@@ -1,7 +1,7 @@
 from django.conf import settings
 from django.http import FileResponse
 from django.shortcuts import render
-from .models import BlogPost,ContactData
+from .models import BlogPost,ContactData,Media
 from django.core.mail import send_mail,EmailMessage
 from django.contrib import messages
 
@@ -106,7 +106,12 @@ def Tenalidoublehorse(request):
     return render(request,'uifiles/tenalidoublehorse.html')
 
 def media(request):
-    return render(request,'uifiles/media.html')
+    media = Media.objects.filter().order_by('-Id')
+    paginator = Paginator(media, 9)
+    page = request.GET.get('page')
+    posts = paginator.get_page(page)
+    return render(request,'uifiles/media.html',{'media':posts,'posts':posts,'page':page})
+
 
 def Newsletter(request):
    

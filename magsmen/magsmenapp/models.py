@@ -44,6 +44,23 @@ class BlogPost(models.Model):
             return self.Title
     
 
+
+class Media(models.Model):
+    Id = models.AutoField(primary_key=True)
+    Title = models.CharField(max_length=200)
+    Slug = models.SlugField(max_length=300,blank=True,null=True)
+    Url = models.URLField(max_length=300,default="",null=True)
+    Image = models.ImageField(upload_to='uploads/')
+    CreatedPaperName = models.CharField(max_length=100,null=True)
+    CreatedAt = models.DateField(default=datetime.now)
+
+    def __str__(self):
+            return self.Title
+
+
+
+    
+
 class ContactData(models.Model):
     Name = models.CharField(max_length=100)
     Email = models.EmailField(max_length=254)
@@ -54,3 +71,5 @@ class ContactData(models.Model):
 
     def __str__(self):
         return self.Name
+    
+
