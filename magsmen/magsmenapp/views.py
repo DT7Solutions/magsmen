@@ -105,7 +105,7 @@ def Suryacolours(request):
 def Tenalidoublehorse(request):
     return render(request,'uifiles/tenalidoublehorse.html')
 
-def media(request):
+def Ourmedia(request):
     media = Media.objects.filter().order_by('-Id')
     paginator = Paginator(media, 9)
     page = request.GET.get('page')
