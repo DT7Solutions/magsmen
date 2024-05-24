@@ -13,7 +13,7 @@ import os
 
 # Create your views here.
 def Home(request):
-    blog_list = BlogPost.objects.filter().order_by('-Id')[:3]     #filter(status=1).order_by('Create_at')
+    blog_list = BlogPost.objects.filter().order_by('-Id')[:2]     #filter(status=1).order_by('Create_at')
     return render(request, 'uifiles/home.html',{'blog_list':blog_list})
 
 def About(request):
@@ -105,7 +105,7 @@ def Suryacolours(request):
 def Tenalidoublehorse(request):
     return render(request,'uifiles/tenalidoublehorse.html')
 
-def media(request):
+def Ourmedia(request):
     media = Media.objects.filter().order_by('-Id')
     paginator = Paginator(media, 9)
     page = request.GET.get('page')
