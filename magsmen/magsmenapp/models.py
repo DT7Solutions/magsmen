@@ -73,3 +73,25 @@ class ContactData(models.Model):
         return self.Name
     
 
+
+class StepformData(models.Model):
+     Name = models.CharField(max_length=100,null=True)
+     Email = models.EmailField(max_length=50,null=True)
+     Phone = models.CharField(max_length=10,null=True)
+     Brandmarketposition = models.CharField(max_length=100)
+     BrandCorevalue = models.CharField(max_length=500)
+     Brandperceive_targetaudience = models.CharField(max_length=100)
+     CustomerFeedback = models.CharField(max_length=100)
+     BrandPerformence = models.CharField(max_length=500)
+     Challenges_Obstacles = models.CharField(max_length=500)
+     Brand_Motivation = models.CharField(max_length=500)
+     Goals_Achieves = models.CharField(max_length=500)
+     Expectations = models.CharField(max_length=500)
+
+
+     def __str__(self):
+          return self.Name
+
+
+
+

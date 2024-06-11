@@ -2187,7 +2187,7 @@ img {
 }
 
 .btn-item {
-  position: absolute;
+  /* position: absolute; */
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -3524,6 +3524,7 @@ img {
   .mega-menu, .mega-menu-2 {
     padding: 40px 100px;
   }
+  
 }
 .mega-menu li, .mega-menu-2 li {
   padding: 0;
@@ -16045,6 +16046,7 @@ img {
     height: auto;
   }
 }
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .team__member-img {
     position: relative;
@@ -27931,6 +27933,10 @@ div {
 @media screen  and (min-width:992px) and (max-width:1199px) {
   .whatsapp-img{
       bottom: 80px !important;  
+  }
+  .cta__area-3 .pt-150 {
+    padding-top: 0px !important;
+    margin: 0px !important;
   }
 }
 

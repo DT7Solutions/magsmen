@@ -39,9 +39,10 @@ urlpatterns = [
     path('zavaine/',Zavaine,name='zavaine'),
     path('rishikatdh/',Rishikatdh,name='rishikatdh'),  
     path('vsb/',Vsb,name='vsb'),
-    path('gallery/',Ourmedia,name='gallery'),  
+    path('gallery/',Ourmedia,name='gallery'),
     path('sitemap.xml/',sitemap,{'sitemaps':sitemaps},name='django.contrib.sitemaps.views.sitemap'),   
     path('robots.txt',TemplateView.as_view(template_name="uifiles/robots.txt", content_type="text/plain")),
+  
 
     
 ]

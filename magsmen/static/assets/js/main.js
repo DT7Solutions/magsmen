@@ -3399,8 +3399,5 @@ var testimonial_slider_4 = new Swiper(".testimonial__slider-4", {
 });
 /////////////////////////////////////////////////////
 
-
-
-
 })(jQuery);
 

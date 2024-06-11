@@ -1,7 +1,9 @@
+from datetime import date
+import json
 from django.conf import settings
-from django.http import FileResponse
+from django.http import FileResponse, JsonResponse
 from django.shortcuts import render
-from .models import BlogPost,ContactData,Media
+from .models import BlogPost,ContactData,Media,StepformData
 from django.core.mail import send_mail,EmailMessage
 from django.contrib import messages
 
@@ -14,6 +16,8 @@ import os
 # Create your views here.
 def Home(request):
     blog_list = BlogPost.objects.filter().order_by('-Id')[:2]     #filter(status=1).order_by('Create_at')
+
+
     return render(request, 'uifiles/home.html',{'blog_list':blog_list})
 
 def About(request):
@@ -87,9 +91,35 @@ def Blogdetails(request,slug):
     return render(request, 'uifiles/blog-details.html',{'selectpost':selectpost})
 
 
-
 def Questionsform(request):
+    if request.method == 'POST':
+        storedFormData = request.POST.get('storedFormData')
+        
+        # Convert JSON string to dictionary
+        stored_form_data = json.loads(storedFormData)
+        
+        # name=request.POST.get('name')
+        # email=request.POST.get('email')
+        # phone=request.POST.get('phone')
+        # storedFormData = request.POST.get('storedFormData')
+        brandposition = request.POST.get('brandposition')
+        corevalue = request.POST.get('corevalue')
+        brandtarget = request.POST.get('brandtarget')
+        customerfeedback = request.POST.get('customerfeedback')
+        brandperform = request.POST.get('brandperform')
+        brandchallenge = request.POST.get('brandchallenge')
+        brandmotivation = request.POST.getlist('brandcheck')
+        achieve = request.POST.get('achieve')
+        brandexpectation = request.POST.get('brandexpectation')
+        
+        oQuestion_data = StepformData(Name=stored_form_data.get('name'),Email=stored_form_data.get('email'),Phone=stored_form_data.get('phone'),Brandmarketposition=brandposition,BrandCorevalue=corevalue,Brandperceive_targetaudience=brandtarget,CustomerFeedback=customerfeedback,BrandPerformence=brandperform,Challenges_Obstacles=brandchallenge,Brand_Motivation=brandmotivation,Goals_Achieves=achieve,Expectations=brandexpectation)
+        oQuestion_data.save()
+        
+        return JsonResponse({'success': True})
+    
     return render(request, 'uifiles/multistepform.html')
+
+
 
 def Policy(request):
     return render(request,'uifiles/privacy-policy.html')
@@ -145,6 +175,8 @@ def Brand(request):
     response = FileResponse(open(pdf_path, 'rb'), content_type='application/pdf')
     response['Content-Disposition'] = f'inline; filename="{pdf_filename_three}"'
     return response
+
+
 
 # def Newsletterthree(request):
 #     pdf_url = 'https://krysta-asset.s3.ap-south-1.amazonaws.com/Papers/aadhar.jpg'

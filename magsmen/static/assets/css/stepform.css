@@ -42,7 +42,7 @@ h2 {
     display: none;
 }
 .form-step {
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 0px solid rgba(0, 0, 0, 0.1);
     border-radius: 20px;
     padding: 3rem;
 }
@@ -162,7 +162,31 @@ ul.form-stepper li a .form-stepper-circle {
 }
 
 .form-control{
-    width: 45% !important;
+    width: 55% !important;
 }
 
-  
+.form_check{
+    border: 2px solid rgb(233, 231, 231) !important;
+    width: 38%;
+    padding: 10px;
+    background-color: rgb(255, 254, 254);
+    border-radius: 5px;
+}
+
+.progress {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .progress-bar {
+    flex: 1;
+    margin: 0 10px;
+  }
+
+  .question-container {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+
+
