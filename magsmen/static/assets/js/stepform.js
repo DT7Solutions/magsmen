@@ -72,14 +72,14 @@ $(document).ready(function(){
             success:function(data, status,xhr){
                 $('#userAccountSetupForm')[0].reset();
                 if(data.success === true){
-                    window.location.href = '/';
-                } else{
+                    window.location.href='/';
+                }else{
                     alert(data.error)
-                    window.location.href ='/questions/'
+                    window.location.href = '/questions/'
                 }
             },
             error:function(data){
-                alert("Fail, submitted data");
+                alert("fail, submitted data")
             }
             
         })
