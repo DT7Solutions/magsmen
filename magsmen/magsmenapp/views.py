@@ -167,14 +167,25 @@ def Newsletterthree(request):
     response = FileResponse(open(pdf_path, 'rb'), content_type='application/pdf')
     response['Content-Disposition'] = f'inline; filename="{pdf_filename_two}"'
     return response
+
 def Brand(request):
-   
     pdf_filename_three = 'brand-architecture.pdf'
     pdf_path = os.path.join(settings.MEDIA_ROOT, pdf_filename_three)
     
     response = FileResponse(open(pdf_path, 'rb'), content_type='application/pdf')
     response['Content-Disposition'] = f'inline; filename="{pdf_filename_three}"'
     return response
+
+
+def BrandRefresh(request):
+    pdf_filename_four = 'brand-refresh-rebranding-june.pdf'
+    pdf_path = os.path.join(settings.MEDIA_ROOT, pdf_filename_four)
+    
+    response = FileResponse(open(pdf_path, 'rb'), content_type='application/pdf')
+    response['Content-Disposition'] = f'inline; filename="{pdf_filename_four}"'
+    return response
+
+
 
 
 
