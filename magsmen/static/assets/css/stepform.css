@@ -189,4 +189,123 @@ ul.form-stepper li a .form-stepper-circle {
     font-size: 18px;
   }
 
+  
+
+
+/* ============================= stepform ========================================= */
+
+.form-submission{
+    width: 50% !important;
+    margin: auto !important;
+}
+
+.form-control {
+    width: 100% !important;
+}
+
+.right-arrow {
+    display: none !important;
+}
+.btn-prev{
+    background-color: black !important;
+    color: #fff !important;
+    font-weight: 700 !important;
+}
+.btn-next{
+    background-color: black !important;
+    color: #fff !important;
+    font-weight: 700 !important;
+}
+.submit-btn{
+    background-color: black !important;
+    color: #fff !important;
+    font-weight: 700 !important;
+}
+.question-arrow-actions{
+    display: flex !important;
+    justify-content: baseline !important;
+    align-items: center !important;
+    margin-bottom: 20px !important;
+   
+}
+.main-body .progress-bar{
+    padding: 0px !important;
+    margin: 0px !important;
+    overflow:  hidden !important;
+}
+
+.progress-line{
+    height: 5px !important;
+}
+
+.star{
+    text-align: center !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+    margin-right: 3px !important;
+    font-size: 20px !important;
+    color:red !important;
+  }
+
+  .form-logo{
+    position: fixed;
+    bottom: 20px !important;
+    right: 40px !important;
+  }
+
+
+@media screen and (min-width:300px) and (max-width:480px) {
+    .form-submission {
+        width: 100% !important;
+        margin: auto !important;
+    }
+    .btn-prev{
+        display: none !important;
+    }
+    .btn-next{
+        width: 100% !important;
+        background-color: black !important;
+        color: #fff !important;
+        font-weight: 700 !important;
+    }
+    .submit-btn{
+        width: 100% !important;
+        background-color: black !important;
+        color: #fff !important;
+        font-weight: 700 !important;
+    }
+    .right-arrow {
+        display: block !important;
+    }
+    .question-arrow-actions{
+        display: flex !important;
+        justify-content: baseline !important;
+        align-items: center !important;
+        margin-bottom: 20px !important;
+        margin-left: 30px !important;
+    }
+    .question-arrow-actions .right-arrow-icon{
+        font-size: 50px !important;
+        color: red !important;
+    }
+    .main-body .progress-bar{
+        padding: 0px !important;
+        margin: 0px !important;
+        overflow:  hidden !important;
+    }
+    .application-form form .form-title{
+        margin-top: 40px !important;
+        color: #fff !important;
+      }  
+    
+    .form-logo img{
+        position: absolute;
+        bottom: -25px !important;
+        right: 2px !important;
+       
+    }
+    #multi-step-form-container {
+        margin-top: 3rem !important;
+    }
+}
 

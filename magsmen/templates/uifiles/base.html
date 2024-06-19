@@ -23,8 +23,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+ 
+  
 
   <!-- All CSS files -->
   <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
@@ -33,6 +34,7 @@
   <link rel="stylesheet" href="{% static 'assets/css/progressbar.css' %}">
   <link rel="stylesheet" href="{% static 'assets/css/meanmenu.min.css' %}">
   <link rel="stylesheet" href="{% static 'assets/css/master.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/intelinput.css' %}">
   <link rel="stylesheet" href="{% static 'admin.css' %}">
   <link rel="stylesheet" href="{% static 'style.css' %}">
   <link rel="stylesheet" href="{% static 'home/home.css' %}">
@@ -333,6 +335,9 @@
   <script src="{% static 'assets/js/main.js' %}"></script>
   <script src="{% static 'assets/js/contact.js' %}"></script>
   <script src="{% static 'assets/js/stepform.js' %}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+  
   <script>
     document.getElementById("video_check").addEventListener("change", function() {
       if (this.checked) {
@@ -416,6 +421,39 @@
     video.play(); 
   });
 </script>
+
+
+
+
+<!-- county code in phone numbers -->
+<script>
+const phoneInputField = document.querySelector("#phone");
+const info = document.querySelector(".alert-info");
+
+// Initialize intlTelInput with initial country set to India
+const phoneInput = window.intlTelInput(phoneInputField, {
+  initialCountry: "in",  // Set initial country to India (ISO 3166-1 alpha-2 code for India is "in")
+  utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+});
+
+function process(event) {
+  event.preventDefault();
+
+  const phoneNumber = phoneInput.getNumber();
+
+  info.style.display = "";
+  info.innerHTML = `Phone number in E.164 format: <strong>${phoneNumber}</strong>`;
+}
+
+// Optionally, you can set the default flag to India's flag
+const selectedFlag = phoneInputField.parentElement.querySelector(".iti__selected-flag");
+// selectedFlag.style.backgroundImage = "url('https://flagpedia.net/data/flags/h80/in.png')";
+</script>
+
+
+
+
+
 
 </body>
 

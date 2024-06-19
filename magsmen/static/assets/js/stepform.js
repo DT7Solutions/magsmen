@@ -2,9 +2,33 @@
 
 function writetous(){
 
-    let name = document.getElementById('name').value;
-    let email = document.getElementById('email').value;
-    let phone = document.getElementById('phone').value;
+    let name = document.getElementById('name').value.trim();
+    let email = document.getElementById('email').value.trim();
+    let phone = document.getElementById('phone').value.trim();
+
+
+    if (name === ''){
+        alert('Name field required');
+        return; // Stop execution if validation fails
+    }
+    if (email === ''){
+        alert('Email field required');
+        return; // Stop execution if validation fails
+    }
+    if (!isValidEmail(email)) {
+        alert('Invalid email format');
+        return; // Stop execution if validation fails
+    }
+
+    if (phone === ''){
+        alert('Phone number required');
+        return; // Stop execution if validation fails
+    }
+    if (!isValidPhone(phone)) {
+        alert('Invalid phone number format');
+        return; // Stop execution if validation fails
+    }
+
 
     let formdata = {
         name: name,
@@ -18,6 +42,17 @@ function writetous(){
 
 }
 
+function isValidEmail(email) {
+    // This regex is a simple check and may not cover all cases
+    let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+function isValidPhone(phone) {
+    // This regex checks for 10 digits with optional dashes or spaces
+    let phoneRegex = /^\d{10}$/;
+    return phoneRegex.test(phone);
+}
 
 
 
@@ -25,7 +60,6 @@ function writetous(){
 $(document).ready(function(){
     $('#allformssubmit').click(function(event){
         event.preventDefault();
-        alert("its working")
         let brandpositionradio = $('input[name="brandpositionradio"]:checked').val();
         let mission = $('#mission').val()
         let brandtargetradio = $('input[name="brandtargetradio"]:checked').val();
@@ -72,7 +106,8 @@ $(document).ready(function(){
             success:function(data, status,xhr){
                 $('#userAccountSetupForm')[0].reset();
                 if(data.success === true){
-                    window.location.href='/';
+                    alert("All Done.Thank You")
+                    window.location.href ='/';
                 }else{
                     alert(data.error)
                     window.location.href = '/questions/'
@@ -89,79 +124,27 @@ $(document).ready(function(){
 })
 
 
-
-document.getElementById('getformdata').addEventListener('submit', function (event) {
-    var nameInput = document.getElementById('name');
-    var emailInput = document.getElementById('email');
-    var phoneInput = document.getElementById('phone');
-
-    // Name validation
-    if (!nameInput.value.trim()) {
-        nameInput.classList.add('is-invalid');
-        document.getElementById('name-feedback').style.display = 'block';
-        event.preventDefault();
-    } else {
-        nameInput.classList.remove('is-invalid');
-        document.getElementById('name-feedback').style.display = 'none';
-    }
-
-    // Email validation
-    if (!emailInput.value.trim() || !isValidEmail(emailInput.value.trim())) {
-        emailInput.classList.add('is-invalid');
-        document.getElementById('email-feedback').style.display = 'block';
-        event.preventDefault();
-    } else {
-        emailInput.classList.remove('is-invalid');
-        document.getElementById('email-feedback').style.display = 'none';
-    }
-
-    // Phone validation
-    if (!phoneInput.value.trim() || !isValidPhone(phoneInput.value.trim())) {
-        phoneInput.classList.add('is-invalid');
-        document.getElementById('phone-feedback').style.display = 'block';
-        event.preventDefault();
-    } else {
-        phoneInput.classList.remove('is-invalid');
-        document.getElementById('phone-feedback').style.display = 'none';
-    }
-});
-
-// Email validation function
-function isValidEmail(email) {
-    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-}
-
-// Phone validation function
-function isValidPhone(phone) {
-    var phoneRegex = /^\d{10}$/;
-    return phoneRegex.test(phone);
-}
-
-
-//country codes changes
-document.getElementById('country-code').addEventListener('change', function() {
-    var selectedOption = this.options[this.selectedIndex];
-    var countryCode = selectedOption.value;
-    document.getElementById('phone').value = countryCode;
+// Select all checkboxes
+document.getElementById('checkall').addEventListener('change', function () {
+    const checkboxes = document.querySelectorAll('input[name="brandcheck"]');
+    checkboxes.forEach((checkbox) => {
+        checkbox.checked = this.checked;
+    });
 });
 
 
-// flgs code 
-document.addEventListener("DOMContentLoaded", function() {
-    var select = document.getElementById('country-code');
-    var options = select.getElementsByTagName('option');
 
-    for (var i = 0; i < options.length; i++) {
-        var countryCode = options[i].getAttribute('data-flag');
-        var flagImage = 'url(/static/assets/imgs/flags/' + countryCode + '.png)';
-        options[i].style.backgroundImage = flagImage;
-        options[i].style.backgroundRepeat = 'no-repeat';
-        options[i].style.backgroundPosition = 'left center'; // Adjust as needed
-        options[i].style.paddingLeft = '25px'; // Adjust as needed
-    }
+// Enable/disable Next button based on input validation
+document.querySelectorAll('input[type="text"], textarea').forEach((input) => {
+    input.addEventListener('input', function () {
+        const nextBtn = document.querySelector(`button[step_number="${currentStep + 1}"]`);
+        if (this.value.trim() !== '') {
+            nextBtn.disabled = true;
+        } else {
+            nextBtn.disabled = false;
+        }
+    });
 });
-
 
 
 

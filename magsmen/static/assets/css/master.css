@@ -28086,3 +28086,88 @@ min-height:430px!important;
 .bg-test{
   background-color: #212529;
 }
+
+
+
+
+
+/* ====================== get started form ================================= */
+
+.star{
+  text-align: center !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+  margin-right: 3px !important;
+  font-size: 20px !important;
+  color:red !important;
+}
+
+.application-form form .form-title{
+  margin-bottom: 40px !important;
+  color: #fff !important;
+}
+
+.application-form form .form-control{
+  width: 60% !important;
+  height: 35px;
+  margin-bottom: 15px !important;
+}
+
+.application-form .form-group label{
+  color: #fff !important;
+}
+#btn_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 250px;
+  width: 250px;
+  border-radius: 100%;
+  margin-left:0px !important;
+}
+
+.application-form form #phone{
+  width: 315px !important;
+  height: 37px !important;
+  border-radius: 7px !important;
+  border: 0px !important;
+  outline: 0px !important;
+}
+
+
+
+
+
+@media (min-width:300px) and (max-width:480px){
+  .application-form form .form-title{
+      margin-top: 40px !important;
+      color: #fff !important;
+    }
+  .application-form form input{
+      width: 100%;
+      height: 35px;
+      margin-bottom: 15px !important;
+    }
+
+    #userAccountSetupForm .form-step .form_check input{
+      border: 2px solid rgb(233, 231, 231) !important;
+      width: 100% !important;
+      padding: 10px;
+      background-color: rgb(255, 254, 254);
+      border-radius: 5px;
+  }
+  .application-form form #phone{
+      width: 315px !important;
+      height: 37px !important;
+      border-radius: 7px !important;
+      border: 0px !important;
+      outline: 0px !important;
+  }
+  .application-form form .form-control{
+      width: 90% !important;
+      height: 35px;
+      margin-bottom: 15px !important;
+  }
+}
+

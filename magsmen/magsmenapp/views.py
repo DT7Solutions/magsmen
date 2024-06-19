@@ -1,5 +1,6 @@
 from datetime import date
 import json
+from xml.dom.minidom import Document
 from django.conf import settings
 from django.http import FileResponse, JsonResponse
 from django.shortcuts import render
@@ -111,11 +112,35 @@ def Questionsform(request):
         brandmotivation = request.POST.getlist('brandcheck')
         achieve = request.POST.get('achieve')
         brandexpectation = request.POST.get('brandexpectation')
-        
+
         oQuestion_data = StepformData(Name=stored_form_data.get('name'),Email=stored_form_data.get('email'),Phone=stored_form_data.get('phone'),Brandmarketposition=brandposition,BrandCorevalue=corevalue,Brandperceive_targetaudience=brandtarget,CustomerFeedback=customerfeedback,BrandPerformence=brandperform,Challenges_Obstacles=brandchallenge,Brand_Motivation=brandmotivation,Goals_Achieves=achieve,Expectations=brandexpectation)
         oQuestion_data.save()
         
-        return JsonResponse({'success': True})
+         # Send email notification
+        subject = 'Form Submission Notification'
+        message = 'A form has been submitted with the following details:\n\n' \
+                  f'Name: {stored_form_data.get("name")}\n' \
+                  f'Email: {stored_form_data.get("email")}\n' \
+                  f'Phone: {stored_form_data.get("phone")}\n\n' \
+                  'Additional form details:\n' \
+                  f'Brand Position: {brandposition}\n' \
+                  f'Core Value: {corevalue}\n' \
+                  f'Target Audience: {brandtarget}\n' \
+                  f'Customer Feedback: {customerfeedback}\n' \
+                  f'Brand Performance: {brandperform}\n' \
+                  f'Brand Challenge: {brandchallenge}\n' \
+                  f'Brand Motivation: {", ".join(brandmotivation)}\n' \
+                  f'Achievements: {achieve}\n' \
+                  f'Brand Expectation: {brandexpectation}'
+        
+        from_email = 'connectmagsmen@gmail.com'  # Update with your sender email
+        to_email = ['connect@magsmen.in']  # Update with recipient email(s)
+        
+        try:
+            send_mail(subject, message,'connectmagsmen@gmail.com', recipient_list=['connect@magsmen.in'])
+            return JsonResponse({'success': True})
+        except Exception as e:
+            return JsonResponse({'success': False, 'error': str(e)})
     
     return render(request, 'uifiles/multistepform.html')
 
