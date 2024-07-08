@@ -46,7 +46,7 @@ urlpatterns = [
     path('applyform/',applyjobform,name='applyform'),
     path('sitemap.xml/',sitemap,{'sitemaps':sitemaps},name='django.contrib.sitemaps.views.sitemap'),   
     path('robots.txt',TemplateView.as_view(template_name="uifiles/robots.txt", content_type="text/plain")),
-    path('myexpertise/',myexpertise,name="myexpertise"),
+    # path('myexpertise/',myexpertise,name="myexpertise"),
   
 
     
