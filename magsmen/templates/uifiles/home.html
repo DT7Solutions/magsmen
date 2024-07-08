@@ -988,17 +988,33 @@
               {% for blogitem in blog_list %} 
               <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 main-blog">
                 <article class="blog__item-4 shadow p-3 mb-5 bg-white rounded blog-sec">
-                  <div class="blog-content">
+                  <!-- <div class="blog-content order-0">
                     <h4 class="blog__meta-4"><a href="category.html">{{blogitem.CreatedName}}</a> <span>{{blogitem.Create_at}}</span></h4>
                     <h2><a href=/blog/{{blogitem.Sluglink}} class="blog__title-4">{{blogitem.Title}}</a></h2>
                     <a href=/blog/{{blogitem.Sluglink}} class="blog__btn-4" id="blog-item">Read More 
-                      <!-- <span><i class="fa-solid fa-arrow-right mb-3"></i></span> -->
                     </a>
                   </div>
                   <div class="blog__img-4 blog-img">
                     <a style="border: 1px solid #fff;" href=/blog/{{blogitem.Sluglink}}>
                       <img src="/media/{{blogitem.Image1}}" alt="Blog Image">
                     </a>
+                  </div> -->
+                  <div class="row">
+                    <!-- Image on top for mobile, right for desktop -->
+                    <div class="col-md-12 col-lg-4 order-lg-2">
+                      <div class="blog__img-4 blog-img">
+                        <a style="border: 1px solid #fff;" href="/blog/{{blogitem.Sluglink}}">
+                          <img src="/media/{{blogitem.Image1}}" alt="Blog Image">
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-md-12 col-lg-8 order-lg-1 pb-2">
+                      <div class="blog-content">
+                        <h4 class="blog__meta-4"><a href="category.html">{{blogitem.CreatedName}}</a> <span>{{blogitem.Create_at}}</span></h4>
+                        <h2><a href="/blog/{{blogitem.Sluglink}}" class="blog__title-4">{{blogitem.Title}}</a></h2>
+                      </div>
+                      <a href="/blog/{{blogitem.Sluglink}}" class="blog__btn-4" id="blog-item">Read More</a>
+                    </div>
                   </div>
                 
                 </article>

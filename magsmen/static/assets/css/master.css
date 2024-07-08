@@ -28496,7 +28496,7 @@ min-height:430px!important;
 }
 .blog-img a img{
   border-radius: 30px !important;
-  width:500px !important;
+  /* width:500px !important; */
 }
 .more-buzz-btn{
   background-color: #fff;
@@ -28802,7 +28802,7 @@ min-height:430px!important;
   .blog-img a img{
     border-radius: 30px !important;
     width:100% !important;
-    margin-top: 20px !important;
+    /* margin-top: 20px !important; */
   }
   .blog__title-4{
     font-size: 25px !important;
@@ -28869,6 +28869,9 @@ min-height:430px!important;
   width: 100% !important;
   height: 30vh !important;
 }
+/* .blog-content #blog-item{
+  margin: 120px 0px !important;
+} */
   
 }
 
