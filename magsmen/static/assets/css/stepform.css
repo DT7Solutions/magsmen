@@ -207,14 +207,32 @@ ul.form-stepper li a .form-stepper-circle {
     display: none !important;
 }
 .btn-prev{
-    background-color: black !important;
-    color: #fff !important;
+    background-color: rgb(111, 111, 111,0.2) !important;
+    color: #000 !important;
     font-weight: 700 !important;
+    border-radius:10px !important;
+    border: 2px solid #aaa;
+}
+.btn-prev:focus{
+    background-color: rgb(111, 111, 111,0.2) !important;
+    color: #000 !important;
+    font-weight: 700 !important;
+    border-radius:10px !important;
+    border: 2px solid #000;
 }
 .btn-next{
-    background-color: black !important;
-    color: #fff !important;
+    background-color: rgb(111, 111, 111,0.2) !important;
+    color: #000 !important;
     font-weight: 700 !important;
+    border-radius:10px !important;
+    border: 2px solid #aaa;
+}
+.btn-next:focus{
+    background-color: rgb(111, 111, 111,0.2) !important;
+    color: #000 !important;
+    font-weight: 700 !important;
+    border-radius:10px !important;
+    border: 2px solid #000;
 }
 .submit-btn{
     background-color: black !important;
@@ -264,9 +282,14 @@ ul.form-stepper li a .form-stepper-circle {
     }
     .btn-next{
         width: 100% !important;
-        background-color: black !important;
-        color: #fff !important;
         font-weight: 700 !important;
+        background-color: rgb(111, 111, 111,0.2) !important;
+        color: #000 !important;
+        border-radius:10px !important;
+        border: 2px solid #aaa;
+    }
+    .btn-next:hover{
+        border: 2px solid #000 !important;
     }
     .submit-btn{
         width: 100% !important;
@@ -309,3 +332,169 @@ ul.form-stepper li a .form-stepper-circle {
     }
 }
 
+/* ===================================== stepform new design ================================================= */
+/* .mt-3{
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #aaa !important;
+    border-radius: 50px !important;
+    width: 60%;
+    padding: 0px 15px !important;
+    
+}
+.mt-3 label{
+   color: #fff;
+}
+.mt-3 input{
+    background-color: #aaa !important;
+    
+}
+input[type="radio"]{
+    height: 35px !important;
+    width: px !important;
+    padding: 20px !important;
+    background-color: black !important;
+    border: 2px solid #fff !important;
+    border-radius: 50px !important;
+    display: flex !important;
+    align-items: baseline !important; 
+}
+
+ */
+
+
+
+ /* @import url("https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300;400;700&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+}
+ul {
+	list-style-type: none;
+}
+body {
+	font-family: "Averia Serif Libre", cursive;
+	background-color: rgb(19, 18, 21);
+	color: #ffffff;
+}
+
+/* .radio-section {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+h1 {
+	margin-bottom: 20px;
+} */
+/* .radio-item [type="radio"] {
+	display: none;
+}
+.radio-item + .radio-item {
+	margin-top: 15px;
+}
+.radio-item label {
+	display: block;
+	padding: 20px 60px;
+	background-color: rgb(111, 111, 111,0.2);
+	border: 2px solid #aaa;
+	border-radius: 30px;
+	cursor: pointer;
+	font-size: 18px;
+	font-weight: 400;
+	min-width: 250px;
+	white-space: nowrap;
+	position: relative;
+	transition: 0.4s ease-in-out 0s;
+    color: #000;
+}
+.radio-item label:after,
+.radio-item label:before {
+	content: "";
+	position: absolute;
+	border-radius: 50%;
+    
+}
+.radio-item label:after {
+	height: 19px;
+	width: 19px;
+	border: 2px solid #aaa;
+	left: 19px;
+	top: calc(50% - 12px);
+}
+.radio-item label:before {
+	background: #000;
+	height: 20px;
+	width: 20px;
+	left: 21px;
+	top: calc(50%-5px);
+	transform: scale(5);
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.4s ease-in-out 0s;
+}
+
+
+
+.radio-item [type="radio"]:checked ~ label {
+	border-color: #000;
+
+}
+.radio-item [type="radio"]:checked ~ label::before {
+	opacity: 1;
+	visibility: visible;
+	transform: scale(1);
+} */
+
+
+.item-radio {
+	border: 1px solid #aaa;
+    background-color: rgb(111, 111, 111,0.2);
+    padding: 18px;
+    border-radius: 30px;
+}
+.item-radio label{
+    padding-left: 20px;
+    
+}
+.item-radio [type="radio"]{
+    border: 2px solid #aaa;
+    background-color: rgba(190, 188, 188, 0.2);
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+}
+.item-radio [type="radio"]:focus{
+    border: 2px solid #000; 
+}
+
+.item-radio [type="radio"]:checked{
+    border-color: #000;
+    background-color: #000 !important;
+    outline: 0px !important;
+    border: 0px !important;
+}
+.item-radio [type="radio"]:checked{
+    opacity: 1;
+	visibility: visible;
+	transform: scale(1);
+    box-shadow: 0px 0px 15px #000;
+}
+.mt-3 input[type="text"]{
+    border: 1px solid #aaa;
+    background-color: rgb(111, 111, 111,0.2);
+    border-radius: 30px;
+    padding: 18px;
+    width: 100%;
+}
+.item-radio [type="checkbox"]:checked{
+    border-color: #000;
+    background-color: #000 !important;
+    outline: 0px !important;
+    border: 0px !important;
+}

@@ -14,16 +14,20 @@
 
   <!-- Fav Icon -->
   <link rel="icon" type="image/x-icon" href="{% static 'assets/imgs/logo/favicon.png' %}">
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  
+
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-bRy4DgiTOsFSW9G7xNGzhwSHpP4HXVBNr0vWBE/bfS5eWvONqZnlg0hx0Ktq3XvKQlnbWj7Ytq/e0SDfw/dgFg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
  
   
 
@@ -118,18 +122,17 @@
   <!-- Google tag (gtag.js) -->
 
   <header class="header__area-3">
-    
     <div class="header__inner-3">
       <div class="header__logo-2">
         <a href="/" class="logo-dark"><img src="{% static 'assets/imgs/logo/magsmen-new-version.png' %}" height="55" alt="Site Logo"></a>
         <a href="/" class="logo-light"><img src="{% static 'assets/imgs/logo/magsmensidebase-mobial-logo-45x200.png' %}" alt="Site Logo"></a>
       </div>
       <div class="header__nav-2">
-        <ul class="main-menu-3 menu-anim " style="padding-left: 10px!important;">
-          <li class="has-megamenu"><a href="/">home</a></li>
-          <li><a href="/ourstory/">our story </a></li>
+        <ul class="main-menu-3 menu-anim header-navbar">
+          <li class="has-megamenu"><a href="/" class="{% if request.path == '/' %}active{% endif %}">Home</a></li>
+          <li><a href="/ourstory/" class="{% if request.path == '/ourstory/' %}active{% endif %}">Our story </a></li>
           <!-- <li><a href="/services/">Services</a></li> -->
-          <li><a href="/expertise/">Expertise </a>
+          <li><a href="/expertise/" class="{% if request.path == '/expertise/' %}active{% endif %}">Expertise </a>
             <ul class="main-dropdown">
               <li><a href="/brandconsulting/">Brand Consulting</a></li>
               <li><a href="/personalbrand/">Personal Brand Consulting</a></li>
@@ -138,16 +141,20 @@
               <li><a href="/launchpad/">Launchpad</a></li>
             </ul>
           </li>
-          <li><a href="/works/">Works </a></li>
-          <!-- <li class="has-megamenu"><a href="/carrerspage/">Carrers</a></li> -->
-          <li class="has-megamenu"><a href="/ideas/">ideas</a></li>
-          <li class="has-megamenu"><a href="/reach-us-out/">Reach us out</a></li>
-         
-        
-         
+          <li><a href="/works/" class="{% if request.path == '/works/' %}active{% endif %}">Works </a></li>
+          <li class="has-megamenu"><a href="/blogs/" class="{% if request.path == '/blogs/' %}active{% endif %}">Blogs</a></li>
+          <li class="has-megamenu"><a href="/carrerspage/"class="{% if request.path == '/carrerspage/' %}active{% endif %}">Careers</a></li>
+          <!-- <li class="has-megamenu"><a href="/reach-us-out/">Reach us out</a></li> -->
         </ul>
       </div>
-      <div class="header__nav-icon-3">
+
+      <div class="react-out-us-icon">
+        <a href="/reach-us-out/">REACH US OUT
+          <div class="icon-box"><i class="fa-solid fa-arrow-right arrow-right"></i></div>
+        </a>
+      </div>
+
+      <div class="header__nav-icon-3 menu-bar-icon">
         <button class="search-icon" id="search_icon"></button>
         <button class="search-icon" id="search_close"></i></button>
         <button id="open_offcanvas"><img src="{% static 'assets/imgs/icon/menu-black.png' %}" alt="Menubar Icon"></button>
@@ -192,8 +199,8 @@
         <div class="offcanvas__menu-wrapper">
           <nav class="offcanvas__menu">
             <ul class="menu-anim">
-              <li><a href="/">home</a></li>
-              <li><a href="/ourstory/">our story</a></li>
+              <li><a href="/">Home</a></li>
+              <li><a href="/ourstory/">Our story</a></li>
               <!-- <li><a href="/services/">Services</a></li> -->
               <li><a href="/expertise/">Expertise </a>
                 <ul>
@@ -205,9 +212,11 @@
                 </ul>
               </li>
               <!-- <li class=""><a href="#">CaseStudy</a></li> -->
-              <li class="h"><a href="/ideas/">ideas</a></li>
-              <li class=""><a href="/reach-us-out/">Reach us out</a></li>
               <li><a href="/works/">Works </a></li>
+              <li class="h"><a href="/blogs/">Blogs</a></li>
+              <li><a href="/carrerspage/">Careers</a></li>
+              <li class=""><a href="/reach-us-out/">Reach us out</a></li>
+              
             </ul>
           </nav>
         </div>
@@ -257,52 +266,83 @@
 
       <!-- Footer area start -->
       <footer class="footer__area-3">
-        <div class="footer__top-3">
-          <div class="footer__top-wrapper-3">
-            <div class="footer__logo-3 pt-60" style="display: flex; justify-content: center;">
-              <div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-5">
+              <div class="footer-content">
                 <!-- <img src="{% static 'assets/imgs/logo/magsmen-footer-logo-trail (2).png' %}" alt="Footer Logo2"> -->
                 <img src="{% static 'assets/imgs/logo/magsmen-footer-logo.png' %}" alt="Footer Logo">
-                <p style="text-align: justify;">As one of the leading brand consulting firms, Magsmen is a great choice for businesses that want to turn themselves into a brand. With 9 awards on brand strategy, Magsmen partnered with some of the industry's leading brands in India.</p>
+                <p style="text-align: justify;" class="pt-4 text-white">As one of the leading brand consulting firms, Magsmen is a great choice for
+                  businesses that want to turn themselves into a brand. With 9 awards on brand strategy, Magsmen partnered with some
+                  of the industry's leading brands in India.</p>
                 <img src="{% static 'assets/imgs/logo/magsmen-footer-logo-trail (2).png' %}" alt="Footer Logo2">
               </div>
-              <div>
-               
-              </div>
-              </div>
-              
-            <div class="footer__social-3">
-              <ul>
-                <li><a href="https://www.linkedin.com/company/magsmen/?originalSubdomain=in" target="_blank">Linkedin</a></li>
-                <li><a href="https://www.instagram.com/magsmenindia/" target="_blank">Instagram</a></li>
-                <li><a href="https://www.facebook.com/magsmenindia" target="_blank">facebook</a></li>
-                <li><a href="https://www.youtube.com/channel/UCG3agq3IYZmQifQeM2xFNbQ" target="_blank">YouTube</a></li>
-                <li><a href="https://twitter.com/magsmenindia" target="_blank">Twitter</a></li>
-              </ul>
             </div>
-            <div class="footer__contact-3 mt-5">
-              <a class="end" href="/reach-us-out/">Let’s talk</a>
+            <div class="col-lg-2">
+                <ul class="main-menu-3 menu-anim footer-navbar">
+                  <li><h3 class="pb-4" style="color:#DBBD7D;">LINKS</h3></li>
+                  <li class="has-megamenu"><a href="/">home</a></li>
+                  <li><a href="/ourstory/">our story </a></li>
+                  <!-- <li><a href="/services/">Services</a></li> -->
+                  <li><a href="/expertise/">Expertise </a>
+                  </li>
+                  <li><a href="/works/">Works </a></li>
+                  <li class="has-megamenu"><a href="/blogs/">Blogs</a></li>
+                  <li class="has-megamenu"><a href="/carrerspage/">Careers</a></li>
+                  <li class="has-megamenu"><a href="/reach-us-out/">Reach us out</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2">
+              <ul class="main-menu-3 menu-anim footer-navbar">
+                <li><h3 class="pb-4" style="color:#DBBD7D;">SUPPORT</h3></li>
+                <li class="has-megamenu"><a href="/gallery/">MEDIA</a></li>
+                <li><a href="/privacy-policy/">PRIVACY POLICY</a></li>
+                <li class="has-megamenu"><a href="/reach-us-out/">REACH US OUT</a></li>
+                <li><a href="/faqs/">FAQ</a></li>
+                
+              </ul>
+          </div>
+          <div class="col-lg-3">
+            <div class="footer__subscribe">
+              <form action="#">
+                <input type="email" name="email" placeholder="Enter your email">
+                <button type="submit" class="subs-btn"><i class="fa-solid fa-paper-plane"></i></button>
+              </form>
+            </div>
+            <!-- <div class="subscribe-email">
+              <input type="text" name="email" id="email" placeholder=" Enter Your Email">
+              <button type="button" id="email-subscribe">SUBSCRIBE</button>
+            </div> -->
+            <div class="mail-text mt-5">
+              <a href="mailto:text@gmail.com"><i class="fas fa-envelope" style="color: #DBBD7D;margin-right: 10px;"></i>text@gmail.com</a>
+            </div>
+            <div class="mail-text mt-5">
+              <a href="tel:+91 1234567890"><i class="fas fa-phone" style="color: #DBBD7D;margin-right: 10px;"></i>+91 1234567890</a>
             </div>
           </div>
+          </div>
         </div>
+
 
         <div class="footer__btm-3">
           <div class="container-fluid">
             <div class="row">
-              <div class="col-xxl-3 col-xl-3 col-lg-3">
+              <div class="col-xxl-6 col-xl-6 col-lg-6">
                 <div class="footer__copyright-3">
-                  <p>© 2023  &nbsp; All rights reserved by Magsmen | Crafted by <a href="https://dt7.agency/" target="_blank">Dt7.agency</a>
+                  <p>© 2023  All rights reserved by Magsmen | Crafted by <a href="https://dt7.agency/" target="_blank">Dt7.agency</a>
                   </p>
                 </div>
               </div>
-              <div class="col-xxl-9 col-xl-9 col-lg-9">
+              <div class="col-xxl-6 col-xl-6 col-lg-6">
+                
                 <div class="footer__nav-2">
-                  <ul class="footer-menu-2 menu-anim">
-                    <li><a href="/gallery/">media</a></li>
-                    <li><a href="/privacy-policy/">Privacy Policy</a></li>
-                    <li><a href="/reach-us-out/">Reach us out</a></li>
-                    <!-- <li><a href="/">Career</a></li> -->
-                    <li><a href="/faqs/">FAQs</a></li>
+                  <ul class="research__tools research-social-icons d-flex justify-content-center align-items-center">
+                    <h5 class="text-white follow-text" style="color: #DBBD7D !important;">FOLLOW US</h5>
+                    <li class="text-white "><a href="https://www.linkedin.com/company/magsmen/?originalSubdomain=in" target="_blank" class="text-white" style="border:1px solid #fff"><i class="fab fa-linkedin"></i></a></li>
+                    <li class="text-white "><a href="https://www.instagram.com/magsmenindia/" target="_blank" class="text-white" style="border:1px solid #fff"><i class="fab fa-instagram"></i></a></li>
+                    <li class="text-white"><a href="https://www.facebook.com/magsmenindia" target="_blank" class="text-white" style="border:1px solid #fff"><i class="fab fa-facebook"></i></a></li>
+                    <li class="text-white"><a href="https://www.youtube.com/channel/UCG3agq3IYZmQifQeM2xFNbQ" target="_blank"style="border:1px solid #fff" class="text-white"><i class="fab fa-youtube"></i></a></li>
+                    <li class="text-white"><a href="https://twitter.com/magsmenindia" target="_blank" class="text-white" style="border:1px solid #fff"><i class="fab fa-twitter"></i></a></li>
                   </ul>
                 </div>
               </div>
@@ -335,7 +375,11 @@
   <script src="{% static 'assets/js/main.js' %}"></script>
   <script src="{% static 'assets/js/contact.js' %}"></script>
   <script src="{% static 'assets/js/stepform.js' %}"></script>
+  <script src="{% static 'assets/js/owlcarousel.js' %}"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  
+
 
   
   <script>

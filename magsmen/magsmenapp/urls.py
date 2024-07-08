@@ -1,6 +1,6 @@
 from django.urls import path
 from .views import Home,About,Contact,FAQS,Blogs,Service,PersonalBrand,imageconsulting,corporaterebranding,\
-                   Blogdetails,service_home,launchpad,Policy,Questionsform,Works,Tdh,Carrers,Newsletter,Newslettertwo,Brand,Newsletterthree,Tenalidoublehorse,Suryacolours,Zavaine,Triplex,Rishikatdh,Vsb,Ourmedia,BrandRefresh
+                   Blogdetails,service_home,launchpad,Policy,Questionsform,Works,Tdh,Carrers,Newsletter,Newslettertwo,Brand,Newsletterthree,Tenalidoublehorse,Suryacolours,Zavaine,Triplex,Rishikatdh,Vsb,Ourmedia,BrandRefresh,applyjobform,jobdetails,myexpertise,workdetails
 from django.contrib.sitemaps.views import sitemap
 from magsmenapp.sitemap import PostSitemap,StaticPagesSitemap
 from django.views.generic.base import TemplateView
@@ -17,7 +17,7 @@ urlpatterns = [
     path('faqs/', FAQS , name='faqs'),
     path('reach-us-out/', Contact , name='reach-us-out'),
     path('expertise/', service_home , name='expertise'),
-    path('ideas/', Blogs , name='ideas'),
+    path('blogs/', Blogs , name='blogs'),
     path('brandconsulting/', Service , name='brandconsulting'),
     path('personalbrand/', PersonalBrand , name='personalbrand'),
     path('imageconsulting/', imageconsulting , name='imageconsulting'),
@@ -27,6 +27,7 @@ urlpatterns = [
     path('questions/', Questionsform , name='questions'),
     path('privacy-policy/', Policy , name='privacy-policy'),
     path('works/', Works , name='works'),
+    path('work-details/<str:slug>',workdetails,name="work-details"),
     path('tenali-double-horse/', Tdh , name='tenali-double-horse'),
     path('carrerspage/', Carrers , name='carrerspage'),
     path('news-letter-august-2023/',Newsletter,name='news-letter-august-2023'),
@@ -41,8 +42,11 @@ urlpatterns = [
     path('rishikatdh/',Rishikatdh,name='rishikatdh'),  
     path('vsb/',Vsb,name='vsb'),
     path('gallery/',Ourmedia,name='gallery'),
+    path('job-details/<str:slug>',jobdetails,name='jobdetails'),
+    path('applyform/',applyjobform,name='applyform'),
     path('sitemap.xml/',sitemap,{'sitemaps':sitemaps},name='django.contrib.sitemaps.views.sitemap'),   
     path('robots.txt',TemplateView.as_view(template_name="uifiles/robots.txt", content_type="text/plain")),
+    path('myexpertise/',myexpertise,name="myexpertise"),
   
 
     

@@ -3397,6 +3397,41 @@ var testimonial_slider_4 = new Swiper(".testimonial__slider-4", {
     }
   }
 });
+
+// 62. Works Slider
+
+
+var works_slider = new Swiper(".works_slider_info", {
+  spaceBetween: 20,
+  loop: true,
+  freemode: true,
+  slidesPerView: 1,
+  speed: 2000,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: true,
+  },
+  pagination: {
+    el: ".pagination",
+    type: "fraction",
+  },
+  navigation: {
+    nextEl: ".next-button",
+    prevEl: ".prev-button",
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 1,
+    }
+  }
+});
+
 /////////////////////////////////////////////////////
 
 })(jQuery);

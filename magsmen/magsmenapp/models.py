@@ -95,3 +95,55 @@ class StepformData(models.Model):
 
 
 
+
+class ApplyForm(models.Model):
+    Name = models.CharField(max_length=100)
+    Email = models.EmailField(max_length=50)
+    Phone = models.CharField(max_length=10)
+    SelectCategory = models.CharField(max_length=100)
+    Location = models.CharField(max_length=100)
+    Uploadfile = models.FileField(upload_to='uploads/')
+   
+
+    def __str__(self):
+         return self.Name
+    
+    
+
+
+Active_form =(
+    (0,"active"),
+    (1, "inactive")
+)
+class CareerInfo(models.Model):
+    ExpertiseId = models.CharField(max_length=10,primary_key=True)
+    ExpertiseName = models.CharField(max_length=100)
+    Location = models.CharField(max_length=100)
+    CreatedAt = models.DateField(default=datetime.now)
+    JobType = models.CharField(max_length=100)
+    Description = models.CharField(max_length=1000)
+    Body = RichTextField()
+    Experience = models.CharField(max_length=50)
+    WorkingHours = models.CharField(max_length=100)
+    WorkingDays = models.CharField(max_length=50)
+    Salary = models.CharField(max_length=50)
+    Vacancy = models.IntegerField(default="")
+    DeadLine = models.CharField(max_length=50)
+    Sluglink = models.SlugField(unique=True, null=True)
+    Active_status = models.IntegerField(choices=Active_form,default=1)
+
+    def __str__(self):
+        return self.ExpertiseName
+
+
+class WorkPost(models.Model):
+    Title = models.CharField(max_length=200, null=True)
+    Image = models.ImageField(upload_to='uploads/')
+    Body = RichTextField(null=True)
+    CreateAt = models.DateField(default=datetime.now, null=True)
+    CreateName = models.CharField(max_length=100, null=True)
+    Slug = models.SlugField(unique=True,max_length=200)
+
+
+    def __str__(self):
+         return self.Title

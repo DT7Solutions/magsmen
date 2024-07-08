@@ -13,13 +13,40 @@
      <section class="hero__area-3 pb-5">
           <div class="container-fluid g-0">
             <div class="row hero__about-row">
-              <div class="col-xxl-12">
-                <div class="hero__about-video hero_area-video">
+              <div class="col-xxl-12 owl-carousel owl-theme">
+                <!---slider one -->
+                <div class="slider-one item">
+                  <img src="/static/assets/imgs/sliders/chakkrasidh.jpg" alt="sliderimg1">
+                  <!-- <div class="container">
+                    <div class="row align-center">
+                        <div class="col-xl-7 ">
+                            <div class="content">
+                                <h4>The Best Way to Increase Your Brand Growth</h4>
+                                <h2>Brand Consultant</h2>
+                                <p>
+                                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur qui dolorum assumenda exercitationem dicta, illum velit nesciunt dolore fugit amet.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                </div>
+
+                <div class="slider-two item">
+                  <img src="/static/assets/imgs/sliders/svatri.jpg" alt="sliderimg2">
+                </div>
+                <div class="slider-three item">
+                  <img src="/static/assets/imgs/sliders/tenali-double-horse.jpg" alt="sliderimg3">
+                </div>
+                <div class="slider-three item">
+                  <img src="/static/assets/imgs/sliders/ddk.jpg" alt="sliderimg3">
+                </div>
+                <!-- <div class="hero__about-video hero_area-video">
                   <video loop id="myVideo" muted autoplay playsinline >
                     <source src="{% static 'home/images/Magsmen-homepage-topsection-video.mp4' %}" type="video/mp4">
                   </video>
                
-                </div>
+                </div> -->
                 
               </div>
             </div>
@@ -70,6 +97,7 @@
           <div class="hero3-img-ani">
             <img src="{% static 'home/images/three-years.jpg' %}"  alt="Hero Image"  class="img-fluid position-img pe-lg-4">
           </div> -->
+          </div>
         </section> 
         
        
@@ -130,37 +158,45 @@
  <!-- About area start -->
  <section class="about__area-3 bg-white">
   <div class="container pt-140 pb-110 about-pt-140 about-pt-110">
-    <div class="sec-title-wrapper mt-3 px-3">
-      <h4 class="sec-title title-anim text-center" style="font-size:30px;"><b>ELEVATE YOUR BRAND BEYOND THE ORDINARY.</b></h4>
+    <div class="hero__title-wrapper main-heading">
+      <h1 class="hero__title text-dark title_hero" style="font-size: 30px;text-align: center;">ELEVATE YOUR BRAND BEYOND THE ORDINARY.</h1>
     </div>
+    <!-- <div class="sec-title-wrapper mt-3 px-3">
+      <h4 class="sec-title title-anim text-center" style="font-size:30px;"><b>ELEVATE YOUR BRAND BEYOND THE ORDINARY.</b></h4>
+    </div> -->
+
     <div class="sec-title-wrapper mt-3 px-3">
       <div class="sec-text text-anim about-text pt-0">
         <p class="sec-text text-anim about-text m-auto text-center text-brand">We breathe new life into identities, crafting elevated expressions that leave a lasting impact.</p>
       </div>
     </div>
-
+    <div class="about-sec-title text-center pt-5">
+      <h2 class="sec-subtile-6"><img src="/static/assets/imgs/icon/double-icons.png" class="icons-img" alt="double-icons">ABOUT US</h2>
+    </div>
     <div class="sec-title-wrapper mt-5">
       <h4 class="sec-title title-anim text-center" style="font-size:30px;">YOUR BRAND'S SECRET WEAPON?</b></h4>
-      <h4 class="sec-title title-anim text-center" style="font-size:30px;">THE RIGHT STRATEGY.</b></h4>
+      <h4 class="sec-title title-anim text-center" style="font-size:30px;">THE <b class="bold-word">RIGHT</b> STRATEGY.</b></h4>
     </div>
     <div class="row">
       <div class="col-xxl-5 col-xl-5 col-lg-6 col-md-5 d-flex align-items-center">
-        <div class="about__img">
+        <div class="about__img img-about">
           <img src="{% static 'home/images/resize.png' %}" alt="About Thumbnail" data-speed="auto">
         </div>
       </div>
 
       <div class="col-xxl-7 col-xl-7 col-lg-6 col-md-7">
-        
         <div class="sec-text-wrapper">
           <div class="sec-text text-anim about-text p-3 my-auto">
             <p >Get more from your brand. We're your strategic partner, offering expert guidance to propel your brand forward.</p><br>
             <p>Already have marketing muscle? We complement your team, providing the missing piece for a truly impactful brand strategy.</p><br>
             <p >We combine in-depth analysis with powerful storytelling to ensure your brand stands out in the market.</p><br>
             <div class="mt-3">
-              
-                  <a class="btn-started bg-dark" href="/ourstory/">Explore Us<span><i
-                    class="fa-solid fa-arrow-right"></i></span></a>
+                  <a class="btn-started  white-text-btn" href="/ourstory/">EXPLORE US
+                      <div class="icon-box">
+                        <i class="fa-solid fa-arrow-right arrow-right"></i>
+                      </div>
+                  
+                  </a>
             </div>
           </div>
         </div>
@@ -171,10 +207,18 @@
 <!-- About area end -->
 
         <!-- Service area start -->
-        <section class="service__area service-v2 pt-100 pb-150" style="background-color: #FEFCFE; color:black">
+        <section class="service__area service-v2 pt-100 pb-150" style="background-color:black; color:#FEFCFE">
             <div class="container">
+              <div class="about-sec-title pt-5">
+                <h2 class="sec-subtile-6" style="color: #DBBD7D;"><img src="/static/assets/imgs/icon/double-icons.png" class="icons-img" alt="double-icons">OUR EXPERTISES</h2>
+              </div>
               <div class="row">
-                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4">
+                <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12">
+                  <div class="sec-title-wrapper wrap p-3">
+                    <h3 class="sec-title title-anim text-dark pb-3 text-white">From Hurdles to <b class="bold-word">Highlights</b></h3>
+                  </div>
+                </div>
+                <!-- <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4">
                   <div class="sec-title-wrapper wrap p-3">
                     <h3 class="sec-title title-anim text-dark pb-3">From Hurdles to Highlights</b></h3>
                   </div>
@@ -186,8 +230,30 @@
                       game-changing insights about your brand, your customers, your industry, and the ever-evolving culture around you.
                     </p>
                   </div>
+                </div> -->
+
+              </div>
+
+              <div class="row services-content-sec">
+                <div class="col-lg-8 pr-lg-5">
+                  <div class="text-anim p-2">
+                    <p class="text-dark text-white" style="font-size: 20px;">We get it—customer expectations are soaring, and the business world is
+                      always changing. That's why we team up with brands as true partners, using our expertise and creativity to uncover
+                      game-changing insights about your brand, your customers, your industry, and the ever-evolving culture around you.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="mt-3 explore-btn">
+                    <a class="btn-started  white-text-btn service-text-btn" href="/expertise/">EXPLORE SERVICES
+                      <div class="icon-box">
+                        <i class="fa-solid fa-arrow-right arrow-right"></i>
+                      </div>
+                    </a>
+                  </div>
                 </div>
               </div>
+              
   
               <div class="service__list-wrapper" >
                 <div class="row">
@@ -207,82 +273,112 @@
   
                     </div> -->
                   </div>
-                  <div class="col-xxl-7 col-xl-7 col-lg-12 col-md-7">
-                    <div class="service__list p-3">
+                  <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12">
+                    <div class="service__list p-3 pt-5">
                       <a href="/brandconsulting/">
-                        <div class="service__item animation_home1_service" >
-                          <div class="service__number text-dark text-dark"><span >01</span></div>
+                        <div class="service__item animation_home1_service services-content" >
+                          <div class="service__number text-dark text-dark dark-text"><span >01</span></div>
                           <div class="service__title-wrapper">
-                            <h4 class="service__title text-dark">Brand Consulting</h4>
+                            <h4 class="service__title text-dark"><img src="/static/assets/imgs/icon/brandconsulting.png" alt="brand-consulting"></h4>
                           </div>
-                          <div class="service__textm servicetext">
-                            <p class="text-dark " style="text-align: justify;">Transform your business into a brand powerhouse with Magsmen. Because in this game, strategy is everything.</p>
+                          <div class="service__textm servicetext text-service">
+                            <p class="text-dark text-white" style="text-align: justify;">Transform your business into a brand powerhouse with Magsmen. Because in this game, strategy is everything.</p>
                           </div>
-                          <div class="service__link1">
-                            <p><i class="fa-solid fa-arrow-right" style="color:#dbbf7e!important;"></i></p>
+                          <div class="service__link1 services-arrow">
+                            <p><i class="fa-solid fa-arrow-right" style="color:#DBBD7D!important;"></i></p>
                           </div>
                         </div>
                       </a>
   
                       <a href="/personalbrand/">
-                        <div class="service__item  animation_home1_service" data-service="2">
-                          <div class="service__number text-dark text-dark"><span>02</span></div>
+                        <div class="service__item  animation_home1_service services-content" data-service="2">
+                          <div class="service__number text-dark text-dark dark-text"><span>02</span></div>
                           <div class="service__title-wrapper">
-                            <h4 class="service__title text-dark">Personal Brand Consulting</h4>
+                            <h4 class="service__title text-dark"><img src="/static/assets/imgs/icon/personal-brand-consulting.png" alt="personal-brand-consulting"></h4>
                           </div>
-                          <div class="service__text">
-                            <p class="text-dark" style="text-align: justify;">Harness the magic of your personal brand with Magsmen by your side. Because even kings have their royal advisors.
+                          <div class="service__text text-service">
+                            <p class="text-dark text-white">Harness the magic of your personal brand with Magsmen by your side. Because even kings have their royal advisors.
                               </p>
                           </div>
-                          <div class="service__link1">
-                            <p><i class="fa-solid fa-arrow-right" style="color:#dbbf7e!important;"></i></p>
+                          <div class="service__link1 services-arrow">
+                            <p><i class="fa-solid fa-arrow-right" style="color:#DBBD7D!important;"></i></p>
                           </div>
                         </div>
                       </a>
   
                       <a href="/imageconsulting/">
-                        <div class="service__item  animation_home1_service" data-service="3">
-                          <div class="service__number text-dark"><span>03</span></div>
+                        <div class="service__item  animation_home1_service services-content" data-service="3">
+                          <div class="service__number text-dark dark-text"><span>03</span></div>
                           <div class="service__title-wrapper">
-                            <h4 class="service__title text-dark">Image Consulting</h4>
+                            <h4 class="service__title text-dark"><img src="/static/assets/imgs/icon/imageconsulting.png" alt="image-consulting"></h4>
                           </div>
-                          <div class="service__text">
-                            <p class="text-dark" style="text-align: justify;">Dress for success with Magsmen's image consulting. Because let's be honest, first impressions are made in a flash. Let's ensure yours shines.
+                          <div class="service__text text-service">
+                            <p class="text-dark text-white">Dress for success with Magsmen's image consulting. Because let's be honest, first impressions are made in a flash. Let's ensure yours shines.
                               </p>
                           </div>
-                          <div class="service__link1">
-                            <p><i class="fa-solid fa-arrow-right" style="color:#dbbf7e!important;"></i></p>
+                          <div class="service__link1 services-arrow">
+                            <p><i class="fa-solid fa-arrow-right" style="color:#DBBD7D!important;"></i></p>
                           </div>
                         </div>
                       </a>
   
                       <a href="/corporaterebranding/">
-                        <div class="service__item  animation_home1_service" data-service="4">
-                          <div class="service__number text-dark"><span>04</span></div>
+                        <div class="service__item  animation_home1_service services-content" data-service="4">
+                          <div class="service__number text-dark dark-text"><span>04</span></div>
                           <div class="service__title-wrapper">
-                            <h4 class="service__title text-dark">Corporate<br> Rebranding</h4>
+                            <h4 class="service__title text-dark"><img src="/static/assets/imgs/icon/corporaterebranding.png" alt="corporate-rebranding"></h4>
                           </div>
-                          <div class="service__text">
-                            <p class="text-dark" style="text-align: justify;">Give your brand a facelift with Magsmen's corporate rebranding services. It's not just about a new look; it's about a whole new vibe that speaks to your audience.
+                          <div class="service__text text-service">
+                            <p class="text-dark text-white">Give your brand a facelift with Magsmen's corporate rebranding services. It's not just about a new look; it's about a whole new vibe that speaks to your audience.
                               </p>
                           </div>
-                          <div class="service__link1">
-                            <p><i class="fa-solid fa-arrow-right" style="color:#dbbf7e!important;"></i></p>
+                          <div class="service__link1 services-arrow">
+                            <p><i class="fa-solid fa-arrow-right" style="color:#DBBD7D!important;"></i></p>
                           </div>
                         </div>
                       </a>
                       
                       <a href="/launchpad/">
-                        <div class="service__item  animation_home1_service" data-service="5">
-                          <div class="service__number text-dark"><span>05</span></div>
+                        <div class="service__item  animation_home1_service services-content" data-service="5">
+                          <div class="service__number text-dark dark-text"><span>05</span></div>
                           <div class="service__title-wrapper">
-                            <h4 class="service__title text-dark">Launchpad</h4>
+                            <h4 class="service__title text-dark"><img src="/static/assets/imgs/icon/startupbrand-partnership.png" alt="startupbrand-partnership"></h4>
                           </div>
-                          <div class="service__text">
-                            <p class="text-dark" style="text-align: justify;">Launch your business into the stratosphere with Launchpad by MAGSMEN. We're here to provide the fuel, guidance, and support you need to soar in the market. Ready to soar?</p>
+                          <div class="service__text text-service">
+                            <p class="text-dark text-white">Launch your business into the stratosphere with Launchpad by MAGSMEN. We're here to provide the fuel, guidance, and support you need to soar in the market. Ready to soar?</p>
                           </div>
-                          <div class="service__link1">
-                            <p><i class="fa-solid fa-arrow-right" style="color:#dbbf7e!important;"></i></p>
+                          <div class="service__link1 services-arrow">
+                            <p><i class="fa-solid fa-arrow-right" style="color:#DBBD7D!important;"></i></p>
+                          </div>
+                        </div>
+                      </a>
+
+                      <a href="#">
+                        <div class="service__item  animation_home1_service services-content" data-service="5">
+                          <div class="service__number text-dark dark-text"><span>06</span></div>
+                          <div class="service__title-wrapper">
+                            <h4 class="service__title text-dark"><img src="/static/assets/imgs/icon/brand-expresso.png" alt="brand-expresso" width="275px"></h4>
+                          </div>
+                          <div class="service__text text-service">
+                            <p class="text-dark text-white">Transform Your Brand in Just 90 Days! Imagine giving your brand a complete makeover to kickstart an impactful comeback. With Brand Expresso, we'll rejuvenate your brand’s identity, enhance its presence, and ensure it stands out in the market—all in just 90 days. It's like hitting the refresh button and emerging with a bold, new look that captivates your audience.</p>
+                          </div>
+                          <div class="service__link1 services-arrow">
+                            <p><i class="fa-solid fa-arrow-right" style="color:#DBBD7D!important;"></i></p>
+                          </div>
+                        </div>
+                      </a>
+
+                      <a href="#">
+                        <div class="service__item  animation_home1_service services-content" data-service="5">
+                          <div class="service__number text-dark dark-text"><span>07</span></div>
+                          <div class="service__title-wrapper">
+                            <h4 class="service__title text-dark"><img src="/static/assets/imgs/icon/brand-creation.png" alt="brand-expresso"></h4>
+                          </div>
+                          <div class="service__text text-service">
+                            <p class="text-dark text-white">Turn Your Ideas into Reality! Have a brilliant idea but don’t know where to start? Welcome to your dream destination! At Brand Creation, we'll craft your brand from A to Z within 90 days. From concept to launch, we'll handle everything to bring your vision to life, ensuring you have a strong, compelling brand ready to make waves in the market.</p>
+                          </div>
+                          <div class="service__link1 services-arrow">
+                            <p><i class="fa-solid fa-arrow-right" style="color:#DBBD7D!important;"></i></p>
                           </div>
                         </div>
                       </a>
@@ -294,6 +390,96 @@
             </div>
             
           </section>
+
+
+        <section class="market-success-sec">
+          <div class="container">
+            <div class="about-sec-title pt-5">
+              <h2 class="sec-subtile-6"><img src="/static/assets/imgs/icon/double-icons.png" class="icons-img" alt="double-icons">SELECTED WORK</h2>
+            </div>
+            <div class="row">
+              <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12">
+                <div class="sec-title-wrapper wrap p-3">
+                  <h3 class="sec-title title-anim text-dark pb-3">Guiding Brands to Market  <b class="bold-word">Success</b></h3>
+                </div>
+              </div>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="text-anim p-2">
+                    <p class="text-dark pb-5" style="font-size: 20px;">We get it—customer expectations are soaring, and the business world is
+                      always changing. That's why we team up with brands as true partners, using our expertise and creativity to uncover
+                      game-changing insights about your brand, your customers, your industry, and the ever-evolving culture around you.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+
+            <div class="row">
+              <div class="col-lg-6 col-md-6  brand-item-info">
+                <div class="brand-item">
+                  <img src="/static/assets/imgs/brand/tdh-group.jpg" alt="brand-consultant" data-speed="auto">
+                </div>
+                <h4 class="pt-2"><b>Branding Consultant</b></h4>
+              </div>
+        
+              <div class="col-lg-6 col-md-6 brand-item-info">
+                <div class="brand-item">
+                  <img src="/static/assets/imgs/brand/image-consulting.jpg" alt="image-consultant" data-speed="auto">
+                </div>
+                 <h4 class="pt-2"><b>Image Consultant</b></h4>
+              </div>
+
+              <div class="col-lg-6 col-md-6 brand-item-info">
+                <div class="brand-item">
+                  <img src="/static/assets/imgs/brand/brand-expresso.jpg" alt="brand-expresso" data-speed="auto">
+                 
+                </div>
+                <h4 class="pt-2"><b>Brand Expresso</b></h4>
+                
+              </div>
+
+              <div class="col-lg-6 col-md-6 brand-item-info">
+                <div class="brand-item">
+                  <img src="/static/assets/imgs/brand/startup-brand-partnership.jpg" alt="startup-brand-partnership" data-speed="auto">
+                  
+                </div>
+                <h4 class="pt-2"><b>Startup Brand Partnership</b></h4>
+                
+              </div>
+
+              <div class="col-lg-6 col-md-6 brand-item-info">
+                <div class="brand-item">
+                  <img src="/static/assets/imgs/brand/brand-creation.jpg" alt="brand-creation" data-speed="auto">
+                  
+                </div>
+                <h4 class="pt-2"><b>Brand Creation</b></h4>
+                
+              </div>
+
+              <div class="col-lg-6 col-md-6 brand-item-info">
+                <div class="brand-item">
+                  <img src="/static/assets/imgs/brand/corporate-rebranding.jpg" alt="corporate-rebranding" data-speed="auto">
+                 
+                </div>
+                <h4 class="pt-2"><b>Corporate Rebranding</b></h4>
+                
+              </div>
+
+            </div>
+          </div>
+          <div class="mt-3">
+            <a class="btn-started  white-text-btn  view-all-projects-btn" href="/expertise/">VIEW ALL PROJECTS
+              <div class="icon-box">
+                <i class="fa-solid fa-arrow-right arrow-right"></i>
+              </div>
+            </a>
+          </div>
+        </section>
+        
+       
 
         <!-- Service area end -->
 
@@ -416,7 +602,7 @@
         </section> -->
         
   <!-- Testimonial area start -->
-  <section class="testimonial__area-4 ">
+  <section class="testimonial__area-4 testimonial-sec pt-5 mt-5 mb-5">
     <div class="container g-0 line_4">
       <div class="line-col-4">
         <div></div>
@@ -425,89 +611,130 @@
         <div></div>
       </div>
 
-      <div class="row">
-        <div class="col-xxl-12">
-          <div class="testimonial__sec-title text-anim">
-            <h2 class="sec-subtile-6">Testimonials</h2>
+      <div class="row our-clients-sec">
+        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 our-client-main">
+          <div class="about-sec-title">
+            <h2 class="sec-subtile-6"><img src="/static/assets/imgs/icon/double-icons.png" class="icons-img" alt="double-icons">Testimonials</h2>
+          </div>
+          <div class="sec-title-wrapper text-anim">
             <h3 class="sec-title-6 title-anim">Clients feedback</h3>
             <p>Here's what our clients tell about us</p>
-          </div>
-        </div>
-        <div class="swiper testimonial__slider-4 pt-5">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide testimonial__slide-4  p-3">
-              <img class="testimonial__img-4" src="{% static 'home/images/testimonial/tenali-double-horse-200x100.png' %}" alt="Testimonial Image">
-              <div class="testimonial__info-4">
-                <h4 class="testimonial__feedback-4">Tenali Double Horse</h4>
-                <p class="content-align text-light">We've hired Magsmen as our brand consultants in March 2021. Thanks to their wonderful
-                  strategy on bringing a new phase to the brand. We've seen a whole new Tenali Double Horse, a
-                  redefined vision for the brand. </p>
-                <h5 class="testimonial__name-4 text-light">Krishna Prasad.N.V</h5>
-                <h6 class="testimonial__role-4 text-light">General Manager </h6>
-              </div>
-            </div>
-            <div class="swiper-slide testimonial__slide-4  p-3 ">
-              <img class="testimonial__img-4" src="{% static 'home/images/testimonial/homepage-testimonial-telugufoods-168x168.png' %}" alt="Testimonial Image">
-              <div class="testimonial__info-4">
-                <h4 class="testimonial__feedback-4">Telugu Foods</h4>
-                <p class="content-align text-light" >Telugu Foods is a renowed brand in over 24+ countries with more than a million happy
-                  customers. We hired Magsmen for brand consulting and help us in build a digital strategy for
-                  Telugu Foods.</p>
-                <h5 class="testimonial__name-4 text-light">Nikitha Muvva</h5>
-                <h6 class="testimonial__role-4 text-light">Business Analyst</h6>
-              </div>
-            </div>
-            <div class="swiper-slide testimonial__slide-4  p-3 ">
-              <img class="testimonial__img-4" src="{% static 'home/images/testimonial/xxx.png' %}" alt="Testimonial Image">
-              <div class="testimonial__info-4">
-                <h4 class="testimonial__feedback-4">Triplex</h4>
-                <p class="content-align text-light">We are associated with Magsmen from the last two years. They helped our brand Triplex, a
-                  pioneer in the detergent market from the last 30 years enter into digital space and proposed us
-                  a digital strategy. </p>
-                <h5 class="testimonial__name-4 text-light">Manickavel</h5>
-                <h6 class="testimonial__role-4 text-light">Chairman & Managing Director</h6>
-              </div>
-            </div>
-            <div class="swiper-slide testimonial__slide-4  p-3 ">
-              <img class="testimonial__img-4" src="{% static 'home/images/testimonial/homepage-testimonial-vsb-168-150.png' %}" alt="Testimonial Image">
-              <div class="testimonial__info-4">
-                <h4 class="testimonial__feedback-4">Vsb</h4>
-                <p class="content-align text-light" >Thanks to Magsmen. They've introduced the concept of brand architecture and a whole new
-                  strategy for VSB. Starting with corporate Rebranding, we've experienced a new phase for VSB
-                  Group with their impeccable initiatives on branding and also tailored strategy on linkedin which
-                  have tripled our followers </p>
-                <h5 class="testimonial__name-4 text-light">Kranthi Kiran</h5>
-                <h6 class="testimonial__role-4 text-light">International Business Manager</h6>
-              </div>
-            </div>
-            <div class="swiper-slide testimonial__slide-4  p-3 ">
-              <img class="testimonial__img-4" src="{% static 'home/images/bhramara.png' %}" alt="Testimonial Image">
-              <div class="testimonial__info-4">
-                <h4 class="testimonial__feedback-4 text-light">Sri Bhramara</h4>
-                <p class="content-align text-light" >The education and insight Magsmen provided for our brand's identity, placement and  modifications were beyond what any consulting firm has offered us. They are the true problem-solvers in consulting, effortlessly addressing our challenges and transforming our brand</p>
-                <!-- <h5 class="testimonial__name-4">Kranthi Kiran</h5>
-                <h6 class="testimonial__role-4">International Business Manager</h6> -->
-              </div>
-            </div>
-            <div class="swiper-slide testimonial__slide-4  p-3 ">
-              <img class="testimonial__img-4" src="{% static 'home/images/suma.png' %}" alt="Testimonial Image">
-              <div class="testimonial__info-4">
-                <h4 class="testimonial__feedback-4 text-light">Suma Kanakala </h4>
-                <p class="content-align text-light">Television Actor: 'Magsmen is my go to solution for my reputation management. The depth of validation and research they conduct is unparalleled. Collaborating with them has not only transformed my  personal brand but also revolutionized my ideology on business strategies.Additionally, their rebranding of Suma Filmy Arts and the creation of the new production house, Maheswari Movies, are nothing short of stunning. Their innovative approaches and meticulous attention to detail have truly set a new standard in the industry. </p>
-                <!-- <h5 class="testimonial__name-4">Kranthi Kiran</h5>
-                <h6 class="testimonial__role-4">International Business Manager</h6> -->
-              </div>
-            </div>
           </div>
           <div class="testimonial__btn-4">
             <div class="next-button swipper-btn"><i class="fa-solid fa-arrow-left"></i></div>
             <div class="prev-button swipper-btn"><i class="fa-solid fa-arrow-right"></i></div>
-            <div class="pagination testimonial__pagination-4">
+            <!-- <div class="pagination testimonial__pagination-4">
               <div class="pag"></div>
+            </div> -->
+          </div>
+        </div>
+        <div class="swiper testimonial__slider-4 pt-5">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide col-xl-4 col-lg-4 col-md-4">
+              <article class="card client-card">
+                <div class="blog__img-4 flip-front p-4">
+                      <img src="/static/assets/imgs/logo/telugu-foods-logo.jpg" alt="Blog Image">
+                    <h4 style="color: #000 !important;text-align: center !important;font-weight: 500;">Telugu Foods</h4>  
+                </div>
+                <div class="flip-back">
+                    <h4 class="text-white pt-5">Telugu foods</h4>
+                    <p class="text-white pt-5 text-justify">Telugu Foods is a renowed brand in over 24+ countries with more than a million happy
+                      customers. We hired Magsmen for brand consulting and help us in build a digital strategy for
+                      Telugu Foods.</p>
+                    <h5 class="testimonial__name-4 text-light pt-5">Nikitha Muvva</h5>
+                    <h6 class="testimonial__role-4 text-light pb-5">Business Analyst</h6>
+                    <!-- <a href="blog-details.html" class="read-btn">Read More </a> -->
+                </div>
+              </article>
+            </div>
+            <div class="swiper-slide col-xxl-4 col-xl-4 col-lg-4 col-md-4">
+              <article class="card  client-card">
+                <div class="blog__img-4 flip-front p-4">
+                      <img src="/static/assets/imgs/logo/tenali-doiuble-horse.png" alt="Blog Image">
+                    <h4 style="color: #000 !important;text-align: center !important;font-weight: 500;">Tenali Double Horse</h4>  
+                </div>
+                <div class="flip-back">
+                    <h4 class="text-white pt-5">Tenali Double Horse</h4>
+                    <p class="text-white pt-5 text-justify">We've hired Magsmen as our brand consultants in March 2021. Thanks to their wonderful
+                      strategy on bringing a new phase to the brand. We've seen a whole new Tenali Double Horse, a
+                      redefined vision for the brand.</p>
+                    <h5 class="testimonial__name-4 text-light pt-5">Krishna Prasad.N.V</h5>
+                    <h6 class="testimonial__role-4 text-light pb-5">General Manager </h6>
+                    <!-- <a href="blog-details.html" class="read-btn">Read More </a> -->
+                </div>
+              </article>
+            </div>
+            <div class="swiper-slide col-xxl-4 col-xl-4 col-lg-4 col-md-4">
+              <article class="card  client-card">
+                <div class="blog__img-4 flip-front p-4">
+                      <img src="/static/assets/imgs/logo/Triplex.png" alt="Blog Image">
+                    <h4 style="color: #000 !important;text-align: center !important;font-weight: 500;">Triplex</h4>  
+                </div>
+                <div class="flip-back">
+                    <h4 class="text-white pt-5">Triplex</h4>
+                    <p class="text-white pt-5 text-justify">We are associated with Magsmen from the last two years. They helped our brand Triplex, a
+                      pioneer in the detergent market from the last 30 years enter into digital space and proposed us
+                      a digital strategy.</p>
+                    <h5 class="testimonial__name-4 text-light pt-5">Manickavel</h5>
+                    <h6 class="testimonial__role-4 text-light pb-5">Chairman & Managing Director</h6>
+                    <!-- <a href="blog-details.html" class="read-btn">Read More </a> -->
+                </div>
+              </article>
+            </div>
+            <div class="swiper-slide col-xxl-4 col-xl-4 col-lg-4 col-md-4">
+              <article class="card  client-card">
+                <div class="blog__img-4 flip-front p-4">
+                      <img src="/static/assets/imgs/logo/vsb.png" alt="Blog Image">
+                    <h4 style="color: #000 !important;text-align: center !important;font-weight: 500;">Vsb</h4>  
+                </div>
+                <div class="flip-back">
+                    <h4 class="text-white pt-5">Vsb</h4>
+                    <p class="text-white pt-5 text-justify">Thanks to Magsmen. They've introduced the concept of brand architecture and a whole new
+                      strategy for VSB. Starting with corporate Rebranding, we've experienced a new phase for VSB
+                      Group with their impeccable initiatives on branding and also tailored strategy on linkedin which
+                      have tripled our followers.</p>
+                    <h5 class="testimonial__name-4 text-light pt-5">Kranthi Kiran</h5>
+                    <h6 class="testimonial__role-4 text-light pb-5">International Business Manager</h6>
+                    <!-- <a href="blog-details.html" class="read-btn">Read More </a> -->
+                </div>
+              </article>
+            </div>
+            <div class="swiper-slide col-xxl-4 col-xl-4 col-lg-4 col-md-4">
+              <article class="card  client-card">
+                <div class="blog__img-4 flip-front p-4">
+                      <img src="/static/assets/imgs/logo/sri-bramara.png" alt="Blog Image">
+                    <h4 style="color: #000 !important;text-align: center !important;font-weight: 500;">Sri Bhramara</h4>  
+                </div>
+                <div class="flip-back">
+                    <h4 class="text-white pt-5">Sri Bhramara</h4>
+                    <p class="text-white pt-5 text-justify">The education and insight Magsmen provided for our brand's identity, placement and  modifications were beyond what any consulting firm has offered us. They are the true problem-solvers in consulting, effortlessly addressing our challenges and transforming our brand</p>
+                    <h5 class="testimonial__name-4 text-light pt-5">Kranthi Kiran</h5>
+                    <h6 class="testimonial__role-4 text-light pb-5">International Business Manager</h6>
+                    <!-- <a href="blog-details.html" class="read-btn">Read More </a> -->
+                </div>
+              </article>
+            </div>
+            <div class="swiper-slide col-xxl-4 col-xl-4 col-lg-4 col-md-4">
+              <article class="card  client-card">
+                <div class="blog__img-4 flip-front p-4">
+                      <img src="/static/assets/imgs/logo/suma-kanakala.png" alt="Blog Image">
+                    <h4 style="color: #000 !important;text-align: center !important;font-weight: 500;">Suma Kanakala</h4>  
+                </div>
+                <div class="flip-back">
+                    <h4 class="text-white pt-3">Suma Kanakala</h4>
+                    <p class="text-white pt-3 text-justify">Television Actor: 'Magsmen is my go to solution for my reputation management. The depth of validation and research they conduct is unparalleled. Collaborating with them has not only transformed my  personal brand but also revolutionized my ideology on business strategies.Additionally, their rebranding of Suma Filmy Arts and the creation of the new production house, Maheswari Movies, are nothing short of stunning. Their innovative approaches and meticulous attention to detail have truly set a new standard in the industry. </p>
+                    <h5 class="testimonial__name-4 text-light pt-4">Kranthi Kiran</h5>
+                    <h6 class="testimonial__role-4 text-light pb-5">International Business Manager</h6>
+                    <!-- <a href="blog-details.html" class="read-btn">Read More </a> -->
+                </div>
+              </article>
             </div>
           </div>
         </div>
       </div>
+
+
+
     </div>
   </section>
   <!-- Testimonial area end -->
@@ -525,18 +752,18 @@
                 <div class="row">
                   <div class="col-xxl-12" >
                     <div class="choose-title-wrapper">
-                      <h2 class="choose-title title-anim">why <br> choose us</h2>
+                      <h2 class="choose-title title-anim why-choose-title">why choose us</h2>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="research__area wf_panel pt-150 " style="background-color: #000000;">
+            <div class="research__area wf_panel pt-150 area-research" style="background-color: #000000;">
               <div class="container inner_content">
                 <div class="row">
-                  <div class="col-xxl-5 col-xl-5 col-lg-5 p-3">
-                    <div>
+                  <div class="col-xxl-12 col-xl-12 col-lg-12">
+                    <div class="why-choose-content">
                       <!-- <h2 class="sec-sub-title">why <br>choose us</h2> -->
                       <p class="text-white">At the core of our work lies a dedication to safeguarding brand reputation. With every
                         endeavour, we blend the perfect ingredients to transform obstacles into opportunities and concepts into tangible
@@ -544,101 +771,120 @@
                         guide the way ahead.
                       </p>
                     </div>
-                    <div class="sec-title-wrapper text-white">
+                    <div class="sec-title-wrapper text-white title-wrapper">
                       <!-- <h2 class="sec-sub-title">why <br>choose us</h2> -->
-                      <ul class="mylist">
-                        <li>•	Long-term strategy</li>
-                        <li>•	Proven methodologies</li>
-                        <li>•	Unbeatable brand track record</li>
-                        <li>•	Practical implementable roadmap for your brand</li>
-                        <li>•	Award-winning on-brand strategy</li>
-                        <li><img src="{% static 'home/images/two-award.png' %}" width="100%" alt ="awards"></li>
+                      <ul class="mylist d-flex justify-content-center align-items-center pt-3">
+                        <li><i class="fa-solid fa-plus"></i>Long-term strategy</li>
+                        <li><i class="fa-solid fa-plus"></i>Proven methodologies</li>
+                        <li><i class="fa-solid fa-plus"></i>Unbeatable brand track record</li>
                       </ul>
+
+                      <ul class="mylist d-flex justify-content-center align-items-center pt-2">
+                        <li><i class="fa-solid fa-plus"></i>Practical implementable roadmap for your brand</li>
+                        <li><i class="fa-solid fa-plus"></i>Award-winning on-brand strategy</li>
+                      </ul>
+                      <div class="service-img">
+                        <img src="{% static 'home/images/two-award.png' %}" class="service-img" alt ="awards">
+                      </div>
+                      
                       <!-- <h3 class="sec-title">Keword,Research Strategy, Survey, & Analytics</h3> -->
                       
                     </div>
-                   
-                    <ul class="research__tools p-2  ">
-                      <li class="text-white "><a href="https://www.linkedin.com/company/magsmen/?originalSubdomain=in" target="_blank" class="text-white" style="border:1px solid #fff">Linkedin</a></li>
-                      <li class="text-white "><a href="https://www.instagram.com/magsmenindia/" target="_blank" class="text-white" style="border:1px solid #fff">Instagram</a></li>
-                      <li class="text-white"><a href="https://www.facebook.com/magsmenindia" target="_blank" class="text-white" style="border:1px solid #fff">FaceBook</a></li>
-                      <li class="text-white"><a href="https://www.youtube.com/channel/UCG3agq3IYZmQifQeM2xFNbQ" target="_blank"style="border:1px solid #fff" class="text-white">YouTube</a></li>
-                      <li class="text-white"><a href="https://twitter.com/magsmenindia" target="_blank" class="text-white" style="border:1px solid #fff">Twitter</a></li>
-                    </ul>
                   </div>
-                  <div class="col-xxl-7 col-xl-7 col-lg-7 p-3 ">
-                    <div class="research__list">
-                      <div class="research__item">
-                        <div class="research__number">
-                          <span class="text-white ">100%</span>
+                </div>
+                <div class="row">
+                    <div class="col-xxl-12 col-xl-12 col-lg-12 p-3 rearch-sec">
+                      <div class="research__list list-research">
+                        <div class="research__item item-reaserch" style="display: block;">
+                          <div class="research__number number-reaserch pt-4">
+                            <span class="text-white ">100%</span>
+                          </div>
+                          <div class="research__info pt-4 text-center">
+                            <hr class="pt-2 break-line">
+                            <h4 class="research__title text-white">Growth</h4>
+                            <p class="text-white research-text ">Spotting growth chances and ways to acquire customers for maximum impact.</p>
+                          </div>
                         </div>
-                        <div class="research__info">
-                          <h4 class="research__title text-white">Growth</h4>
-                          <p class="text-white ">Spotting growth chances and ways to acquire customers for maximum impact.</p>
+  
+                        <div class="research__item item-reaserch" style="display: block;"">
+                          <div class="research__number number-reaserch pt-4">
+                            <span class="text-white ">85%</span>
+                          </div>
+                          <div class="research__info pt-4 text-center">
+                            <hr class="pt-2 break-line">
+                            <h4 class="research__title text-white">Performance</h4>
+                            <p class="text-white research-text">Turning brand moments into lasting connections through performance-driven tactics.</p>
+                          </div>
                         </div>
-                      </div>
-
-                      <div class="research__item">
-                        <div class="research__number">
-                          <span class="text-white ">85%</span>
-                        </div>
-                        <div class="research__info">
-                          <h4 class="research__title text-white">Performance</h4>
-                          <p class="text-white ">Turning brand moments into lasting connections through performance-driven tactics.</p>
-                        </div>
-                      </div>
-
-                      <div class="research__item">
-                        <div class="research__number">
-                          <span class="text-white ">75%</span>
-                        </div>
-                        <div class="research__info">
-                          <h4 class="research__title text-white">Strategy</h4>
-                          <p class="text-white ">Keeping tabs on brand health, making ad decisions count, and unveiling new paths for growth.</p>
+  
+                        <div class="research__item item-reaserch" style="display: block;">
+                          <div class="research__number number-reaserch pt-4">
+                            <span class="text-white ">75%</span>
+                          </div>
+                          <div class="research__info pt-4 text-center">
+                            <hr class="pt-2 break-line">
+                            <h4 class="research__title text-white">Strategy</h4>
+                            <p class="text-white research-text">Keeping tabs on brand health, making ad decisions count, and unveiling new paths for growth.</p>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
+                    <ul class="research__tools research-social-icons">
+                      <li class="text-white "><a href="https://www.linkedin.com/company/magsmen/?originalSubdomain=in" target="_blank" class="text-white" style="border:1px solid #fff"><i class="fab fa-linkedin"></i></a></li>
+                      <li class="text-white "><a href="https://www.instagram.com/magsmenindia/" target="_blank" class="text-white" style="border:1px solid #fff"><i class="fab fa-instagram"></i></a></li>
+                      <li class="text-white"><a href="https://www.facebook.com/magsmenindia" target="_blank" class="text-white" style="border:1px solid #fff"><i class="fab fa-facebook"></i></a></li>
+                      <li class="text-white"><a href="https://www.youtube.com/channel/UCG3agq3IYZmQifQeM2xFNbQ" target="_blank"style="border:1px solid #fff" class="text-white"><i class="fab fa-youtube"></i></a></li>
+                      <li class="text-white"><a href="https://twitter.com/magsmenindia" target="_blank" class="text-white" style="border:1px solid #fff"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
                 </div>
               </div>
             </div>
 
-            <div class="counter__area-3 wf_panel p-3">
+            <div class="counter__area-3 wf_panel">
               <div class="container">
                 <div class="row">
                   <div class="col-xxl-12">
                     <div class="sec-title-wrapper">
                       <!-- <h2 class="sec-sub-title ">Why <br>Choose Us</h2> -->
+                       
                     </div>
                   </div>
                 </div>
-                <div class="row justify-content-center">
-                  <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 pt-5">
-                    <div class="counter__wrapper-3">
-                      <div class="counter__item-3">
-                        <h2 class="counter__number ">11</h2>
-                        <p>Sectors<br></p>
-                      </div>
-                      <div class="counter__item-3">
-                        <h2 class="counter__number">312+</h2>
-                        <p>Brand Strategies Built</p>
-                      </div>
-                      <div class="counter__item-3">
-                        <h2 class="counter__number">14</h2>
-                        <p>Awards Achievement</p>
-                      </div>
-                      <div class="counter__item-3">
-                        <h2 class="counter__number">412M</h2>
-                        <p>Impressions Reached</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-7 pt-5">
-                    <div class="counter__img-3 d-flex justify-content-center">
+                <div class="row">
+                  <div class="col-xxl-7 col-xl-12 col-lg-12 col-md-12 mx-auto">
+                    <div class="counter__img-3 service-logo-img">
                       <!-- <video src="{% static 'home/images/magsmen-latest-video.mp4' %}" loop muted autoplay playsinline height="400"></video> -->
                       <img src="{% static 'home/images/magsmen-logo-bottom.png' %}" alt="Counter Image">
                     </div>
                   </div>
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12 mx-auto">
+                      <div class="counter__wrapper-3 d-flex justify-content-around align-items-center">
+                        <div class="counter__item-3 item-counter-3">
+                          <h2 class="counter__number ">11</h2>
+                          <p>Sectors<br></p>
+                        </div>
+                        <div class="counter__item-3 item-counter-3">
+                          <h2 class="counter__number">312+</h2>
+                          <p>Brand Strategies Built</p>
+                        </div>
+                        <div class="counter__item-3 item-counter-3" >
+                          <h2 class="counter__number">14</h2>
+                          <p>Awards Achievement</p>
+                        </div>
+                        <div class="counter__item-3 item-counter-3" >
+                          <h2 class="counter__number">412M</h2>
+                          <p>Impressions Reached</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 pt-5">
+                      <div class="counter__img-3">
+                      <video src="{% static 'home/images/magsmen-latest-video.mp4' %}" loop muted autoplay playsinline height="400"></video>
+                      <img src="{% static 'home/images/magsmen-logo-bottom.png' %}" alt="Counter Image">
+                    </div>
+                </div> -->
                 </div>
               </div>
             </div>
@@ -656,7 +902,8 @@
                   <div class="col-lg-5 col-sm-12">
                     <div class="application-form">
                         <form action="#" id="getformdata">
-                            <h2 class="form-title">Let’s get you started!</h2>
+                          <h2 class="sec-subtile-6 get-started-title" style="background-color:black;color: #DBBD7D;">GET STARTED!</h2>
+                            <h2 class="form-title">Access your brand strength in 2 minutes</h2>
                             <div class="form-group">
                                 
                                 <label for="name"><span class="star">*</span>Name</label>
@@ -689,7 +936,7 @@
                                 </select>
                             </div><br> -->
                             <div id="btn_wrapper" class="pb-5">
-                              <button type="button" class="wc-btn-black btn-hover btn-item bg-light" onclick="writetous()" id="getsubmitform"><span></span>Write to us<i class="fa-solid fa-arrow-right"></i></button>
+                              <button type="button" class="wc-btn-black btn-hover btn-item bg-light" onclick="writetous()" id="getsubmitform"><span></span> Apply Now<i class="fa-solid fa-arrow-right"></i></button>
                             </div>
                         </form>
                         
@@ -722,34 +969,51 @@
               <div></div>
               <div></div>
             </div>
-           
+            <div class="sec-title-wrapper text-anim text-center">
+              <h2 class="sec-subtile-6"><img src="/static/assets/imgs/icon/double-icons.png" class="icons-img" alt="double-icons">BLOGS</h2>
+              <h3 class="sec-title-6 title-anim">Brand Buzz</h3>
+              <!-- <a class="btn-started bg-dark" href="/ideas/">More Buzz<span><i
+                    class="fa-solid fa-arrow-right"></i></span></a> -->
+            </div>
             <div class="row ">
-              <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 p-5 p-lg-0">
+              <!-- <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 p-5 p-lg-0">
                 <div class="sec-title-wrapper text-anim">
-                  <h2 class="sec-subtile-6">Recent Blogs</h2>
-                  <h3 class="sec-title-6 title-anim">Brand <br> Buzz</h3>
+                  <h2 class="sec-subtile-6">BLOGS</h2>
+                  <h3 class="sec-title-6 title-anim">Brand Buzz</h3>
                   <p>Get a deeper understanding of various aspects a brand needs to have, according to our latest thinking</p>
                   <a class="btn-started bg-dark" href="/ideas/">More Buzz<span><i
                         class="fa-solid fa-arrow-right"></i></span></a>
                 </div>
-              </div>
+              </div> -->
               {% for blogitem in blog_list %} 
-              <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 main-blog">
-                <article class="blog__item-4 shadow p-3 mb-5 bg-white rounded">
-                  <div class="blog__img-4">
-                    <a href=/blog/{{blogitem.Sluglink}}>
+              <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 main-blog">
+                <article class="blog__item-4 shadow p-3 mb-5 bg-white rounded blog-sec">
+                  <div class="blog-content order-0">
+                    <h4 class="blog__meta-4"><a href="category.html">{{blogitem.CreatedName}}</a> <span>{{blogitem.Create_at}}</span></h4>
+                    <h2><a href=/blog/{{blogitem.Sluglink}} class="blog__title-4">{{blogitem.Title}}</a></h2>
+                    <a href=/blog/{{blogitem.Sluglink}} class="blog__btn-4" id="blog-item">Read More 
+                      <!-- <span><i class="fa-solid fa-arrow-right mb-3"></i></span> -->
+                    </a>
+                  </div>
+                  <div class="blog__img-4 blog-img">
+                    <a style="border: 1px solid #fff;" href=/blog/{{blogitem.Sluglink}}>
                       <img src="/media/{{blogitem.Image1}}" alt="Blog Image">
                     </a>
                   </div>
-                  <h4 class="blog__meta-4"><a href="category.html">{{blogitem.CreatedName}}</a> <span>{{blogitem.Create_at}}</span></h4>
-                  <h5><a href=/blog/{{blogitem.Sluglink}} class="blog__title-4">{{blogitem.Title}}</a></h5>
-                  <a href=/blog/{{blogitem.Sluglink}} class="blog__btn-4">Read More <span><i
-                        class="fa-solid fa-arrow-right"></i></span></a>
+                
                 </article>
+               
               </div>
               {% endfor %}
+
+             
              
             </div>
+            <a class="btn-started more-buzz-btn text-center text-dark" href="/ideas/">More Buzz
+              <div class="icon-box">
+                <i class="fa-solid fa-arrow-right arrow-right"></i>
+              </div>
+            </a>
           </div>
         </section>
         <!-- Blog area end -->

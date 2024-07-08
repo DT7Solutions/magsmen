@@ -14,12 +14,12 @@
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
 
 </head>
-<body class="main-body">
+<body class="main-body" style="background-image:url(/static/assets/imgs/sliders/slider-one.jpg);">
             <div id="multi-step-form-container">
                 <div class="question-arrow-actions pb-3">
                     <div class="right-arrow"><img class="right-arrow-icon" src="/static/assets/imgs/icon/right-arrow.jpg"
                             alt="right-arrow" width="25px" height="25px"></div>
-                    <div class="title" style="margin-left: 30px; font-size: 25px;">Question <span id="currentQuestion">1</span> /
+                    <div class="title text-dark question-title" style="margin-left: 30px; font-size: 25px;">Question <span id="currentQuestion">1</span> /
                         <span id="totalQuestions">9</span></div>
                 </div>
                 <div class="progress progress-bar progress-line bg-dark">
@@ -34,23 +34,22 @@
                 <form id="userAccountSetupForm" class="pt-5 pb-5 form-submission" name="userAccountSetupForm"
                     enctype="multipart/form-data" method="POST">
                     {% csrf_token %}
-                    <section id="step-1" class="form-step">
+                    <section id="step-1" class="form-step select-radio">
                         <h2 class="font-normal"><span class="star">*</span>How would you describe your brand’s current position in the market?</h2>
                         <!-- Step 1 input fields -->
-                        <div class="mt-3">
-                            <input type="radio" class="form-check-input" id="excellent" name="brandpositionradio" value="Excellent"
-                                checked>
+                        <div class="mt-3 item-radio">
+                            <input type="radio" class="form-check-input" id="excellent" name="brandpositionradio" value="Excellent" checked>
                             <label class="form-check-label" for="excellent">Excellent</label>
                         </div>
-                        <div class="mt-3">
+                        <div class="mt-3 item-radio">
                             <input type="radio" class="form-check-input" id="good" name="brandpositionradio" value="Good" checked>
                             <label class="form-check-label" for="good">Good</label>
                         </div>
-                        <div class="mt-3">
+                        <div class="mt-3 item-radio">
                             <input type="radio" class="form-check-input" id="bad" name="brandpositionradio" value="Bad" checked>
                             <label class="form-check-label" for="bad">Bad</label>
                         </div>
-                        <div class="mt-3">
+                        <div class="mt-3 item-radio">
                             <input type="radio" class="form-check-input" id="verybad" name="brandpositionradio" value="Very Bad"
                                 checked>
                             <label class="form-check-label" for="verybad">Very Bad</label>
@@ -61,11 +60,11 @@
                         </div>
                     </section>
             
-                    <section id="step-2" class="form-step d-none">
+                    <section id="step-2" class="form-step d-none select-radio">
                         <h2 class="font-normal"><span class="star">*</span>What are the core values and mission of your brand?</h2>
                         <!-- Step 2 input fields -->
                         <div class="mt-3">
-                            <input type="text" id="mission" name="mission" class="form-control" placeholder="" required>
+                            <input type="text" id="mission" name="mission" placeholder="" required>
                         </div>
                         <div class="mt-3 d-flex justify-content-between">
                             <button class="button btn-navigate-form-step btn-prev" type="button" onclick="prevStep()"
@@ -75,31 +74,29 @@
                         </div>
                     </section>
             
-                    <section id="step-3" class="form-step d-none">
+                    <section id="step-3" class="form-step d-none select-radio">
                         <h2 class="font-normal"><span class="star">*</span>How do you perceive your brand is viewed by your target audience?</h2>
                         <!-- Step 3 input fields -->
-                        <div class="mt-3">
-                            <input type="radio" class="form-check-input" id="radio1" name="brandtargetradio" value="Very Positively"
-                                checked>
+                        <div class="mt-3 item-radio">
+                            <input type="radio" class="form-check-input" id="very-positive" name="brandtargetradio" value="Very Positively" checked>
                             <label class="form-check-label" for="excellent">Very Positively</label>
                         </div>
-                        <div class="mt-3">
-                            <input type="radio" class="form-check-input" id="radio1" name="brandtargetradio"
+                        <div class="mt-3 item-radio">
+                            <input type="radio" class="form-check-input" id="somewhat-positive" name="brandtargetradio"
                                 value="Somewhat Positively" checked>
                             <label class="form-check-label" for="excellent">Somewhat Positively</label>
                         </div>
-                        <div class="mt-3">
-                            <input type="radio" class="form-check-input" id="radio1" name="brandtargetradio" value="Neutral"
-                                checked>
+                        <div class="mt-3 item-radio">
+                            <input type="radio" class="form-check-input" id="neutral" name="brandtargetradio" value="Neutral" checked>
                             <label class="form-check-label" for="excellent">Neutral</label>
                         </div>
-                        <div class="mt-3">
-                            <input type="radio" class="form-check-input" id="radio1" name="brandtargetradio"
+                        <div class="mt-3 item-radio">
+                            <input type="radio" class="form-check-input" id="somewhat-negative" name="brandtargetradio"
                                 value="Somewhat Negatively" checked>
                             <label class="form-check-label" for="excellent">Somewhat Negatively</label>
                         </div>
-                        <div class="mt-3">
-                            <input type="radio" class="form-check-input" id="radio1" name="brandtargetradio" value="Negatively"
+                        <div class="mt-3 item-radio">
+                            <input type="radio" class="form-check-input" id="negative" name="brandtargetradio" value="Negatively"
                                 checked>
                             <label class="form-check-label" for="excellent">Negatively</label>
                         </div>
@@ -111,21 +108,21 @@
                         </div>
                     </section>
             
-                    <section id="step-4" class="form-step d-none">
+                    <section id="step-4" class="form-step d-none select-radio">
                         <h2 class="font-normal"><span class="star">*</span>Describe the level of engagement your brand has with its audience (e.g., social
                             media interaction, customer feedback). </h2>
                         <!-- Step 3 input fields -->
-                        <div class="mt-3">
-                            <input type="radio" class="form-check-input" id="radio1" name="engagebrandradio" value="Good" checked>
+                        <div class="mt-3 item-radio">
+                            <input type="radio" class="form-check-input" id="step4-good" name="engagebrandradio" value="Good" checked>
                             <label class="form-check-label" for="excellent">Good</label>
                         </div>
-                        <div class="mt-3">
-                            <input type="radio" class="form-check-input" id="radio1" name="engagebrandradio"
+                        <div class="mt-3 item-radio">
+                            <input type="radio" class="form-check-input" id="step4-morechanges" name="engagebrandradio"
                                 value="Ok, but needs more changes" checked>
                             <label class="form-check-label" for="excellent">Ok, but needs more changes</label>
                         </div>
-                        <div class="mt-3">
-                            <input type="radio" class="form-check-input" id="radio1" name="engagebrandradio" value="Not at all"
+                        <div class="mt-3 item-radio">
+                            <input type="radio" class="form-check-input" id="step4-notatall" name="engagebrandradio" value="Not at all"
                                 checked>
                             <label class="form-check-label" for="excellent">Not at all</label>
                         </div>
@@ -137,6 +134,7 @@
                             <!-- <button class="button submit-btn" type="submit">Submit</button> -->
                         </div>
                     </section>
+                    
                     <section id="step-5" class="form-step d-none">
                         <h2 class="font-normal"><span class="star">*</span>How do you assess the current performance of your brand? (Consider sales, customer
                             loyalty, brand recognition, etc.) </h2>
@@ -165,49 +163,49 @@
             
                         </div>
                     </section>
-                    <section id="step-7" class="form-step d-none">
+                    <section id="step-7" class="form-step d-none section-radio">
                         <h2 class="font-normal"><span class="star">*</span>What motivated you to seek out a brand consultant? (Select all that apply)</h2>
                         <!-- Step 3 input fields -->
-                        <div class="mt-3">
+                        <div class="mt-3 item-radio">
                             <input class="form-check-input" type="checkbox" id="check1" name="brandcheck"
                                 value="Brand repositioning">
                             <label class="form-check-label">Brand repositioning</label>
                         </div>
-                        <div class="mt-3">
+                        <div class="mt-3 item-radio">
                             <input class="form-check-input" type="checkbox" id="check1" name="brandcheck"
                                 value="Improving brand recognition">
                             <label class="form-check-label">Improving brand recognition</label>
                         </div>
-                        <div class="mt-3">
+                        <div class="mt-3 item-radio">
                             <input class="form-check-input" type="checkbox" id="check1" name="brandcheck"
                                 value="Enhancing its presence and building digital engagement">
                             <label class="form-check-label">Enhancing its presence and building digital engagement</label>
                         </div>
-                        <div class="mt-3">
+                        <div class="mt-3 item-radio">
                             <input class="form-check-input" type="checkbox" id="check1" name="brandcheck"
                                 value="Expanding to new markets">
                             <label class="form-check-label">Expanding to new markets</label>
                         </div>
-                        <div class="mt-3">
+                        <div class="mt-3 item-radio">
                             <input class="form-check-input" type="checkbox" id="check1" name="brandcheck"
                                 value="Changing the projection of the brand">
                             <label class="form-check-label">Changing the projection of the brand</label>
                         </div>
-                        <div class="mt-3">
+                        <div class="mt-3 item-radio">
                             <input class="form-check-input" type="checkbox" id="check1" name="brandcheck"
                                 value="Rebranding the entire brand">
                             <label class="form-check-label">Rebranding the entire brand </label>
                         </div>
-                        <div class="mt-3">
+                        <div class="mt-3 item-radio">
                             <input class="form-check-input" type="checkbox" id="check1" name="brandcheck"
                                 value="Need to build how to communicate my brand and products">
                             <label class="form-check-label">Need to build how to communicate my brand and products</label>
                         </div>
-                        <div class="mt-3">
+                        <div class="mt-3 item-radio">
                             <input class="form-check-input" type="checkbox" id="check1" name="brandcheck" value="Others">
                             <label class="form-check-label">Others</label>
                         </div>
-                        <div class="mt-3">
+                        <div class="mt-3 item-radio">
                             <input class="form-check-input" type="checkbox" id="checkall" name="brandcheck" value="All the above">
                             <label class="form-check-label">All the above</label>
                         </div>
@@ -237,7 +235,7 @@
                             consultancy that you think is important for us to know?</h2>
                         <!-- Step 3 input fields -->
                         <div class="mt-3">
-                            <input type="text" name="brandexpectation" id="brandexpectation" class="form-control" placeholder=" ">
+                            <input type="text" name="brandexpectation" id="brandexpectation" placeholder=" ">
                         </div>
                         <div class="mt-3 d-flex justify-content-between">
                             <button class="button btn-navigate-form-step btn-prev" type="button" onclick="prevStep()"
@@ -266,9 +264,9 @@
                 </div>
 
             </div>
-            <div class="form-logo">
-                <img src="/static/assets/imgs/logo/favicon.png" alt="logo">
-            </div>
+            <!-- <div class="form-logo">
+                <img src="/static/assets/imgs/logo/monogram.png" alt="logo">
+            </div> -->
            
                 <!-- Form Steps / Progress Bar -->
                 <!-- <ul class="form-stepper form-stepper-horizontal text-center mx-auto pl-0"> -->
@@ -747,6 +745,10 @@ updateProgressBar(currentQuestion, totalQuestions);
         navigateMobile('prev');
     }
 </script>
+
+
+
+
 
 
 

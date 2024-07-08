@@ -20,16 +20,16 @@
               </div>
             </div>
             <div class="col-xxl-2 col-xl-3 col-lg-3 col-md-3">
-              <div id="btn_wrapper">
-                <a href="#job_list" class="wc-btn-secondary btn-hover btn-item"><span></span> Explore job
+              <!-- <div id="btn_wrapper">
+                <a href="#job_list" class="wc-btn-secondary btn-hover btn-item text-white"><span></span> Explore job
                   <br>vacancies <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
       </div>
 
-      <div class="career__thumb">
+      <!-- <div class="career__thumb">
         <div class="container g-0">
           <div class="row inherit">
             <div class="col-xxl-12">
@@ -42,12 +42,12 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- Career hero area end -->
 
 
     <!-- Career gallery start -->
-    <section class="career__gallery">
+    <!-- <section class="career__gallery">
       <div class="container g-0 line pt-140 pb-140">
         <span class="line-3"></span>
         <div class="row">
@@ -83,62 +83,35 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- Career gallery end -->
 
 
     <!-- Career area start -->
-    <section class="job__area pt-130 pb-150" id="job_list">
+    <section class="job__area pt-130 pb-150 bg-light" id="job_list">
       <div class="container">
         <div class="row">
           <div class="col-xxl-12">
-            <div class="sec-title-wrapper">
-              <h2 class="sec-title title-anim">We’re Currently <br>hiring</h2>
+            <div class="sec-title-wrapper ">
+              <h2 class="sec-title-2 animation__char_come" style="color: #000 !important;">We’re hiring</h2>
             </div>
           </div>
+          
           <div class="col-xxl-12">
+            
             <div class="job__list">
-              <a href="job-details.html">
+              {% for careerinfo in career_info %}
+              <a href="/applyform/">
                 <div class="job__item">
-                  <p class="job__no">01</p>
-                  <h3 class="job__title">UI/UX Designer</h3>
-                  <h4 class="job__open">(02 Open Roles)</h4>
+                  <p class="job__no">{{careerinfo.ExpertiseId}}</p>
+                  <h3 class="job__title">{{careerinfo.ExpertiseName}}</h3>
+                  <!-- <h4 class="job__open">(01 Open Roles)</h4> -->
                   <h5 class="job__link"><span><i class="fa-solid fa-arrow-right"></i></span></h5>
                 </div>
               </a>
-              <a href="job-details.html">
-                <div class="job__item">
-                  <p class="job__no">02</p>
-                  <h3 class="job__title">Frontend Developer</h3>
-                  <h4 class="job__open">(07 Open Roles)</h4>
-                  <h5 class="job__link"><span><i class="fa-solid fa-arrow-right"></i></span></h5>
-                </div>
-              </a>
-              <a href="job-details.html">
-                <div class="job__item">
-                  <p class="job__no">03</p>
-                  <h3 class="job__title">Product Manager</h3>
-                  <h4 class="job__open">(15 Open Roles)</h4>
-                  <h5 class="job__link"><span><i class="fa-solid fa-arrow-right"></i></span></h5>
-                </div>
-              </a>
-              <a href="job-details.html">
-                <div class="job__item">
-                  <p class="job__no">04</p>
-                  <h3 class="job__title">JavaScript Engineer</h3>
-                  <h4 class="job__open">(03 Open Roles)</h4>
-                  <h5 class="job__link"><span><i class="fa-solid fa-arrow-right"></i></span></h5>
-                </div>
-              </a>
-              <a href="job-details.html">
-                <div class="job__item">
-                  <p class="job__no">05</p>
-                  <h3 class="job__title">Joomla Developer</h3>
-                  <h4 class="job__open">(09 Open Roles)</h4>
-                  <h5 class="job__link"><span><i class="fa-solid fa-arrow-right"></i></span></h5>
-                </div>
-              </a>
+              {% endfor %}
             </div>
+           
           </div>
         </div>
       </div>
@@ -147,7 +120,7 @@
 
 
     <!-- Career benifit area start -->
-    <section class="career__benefits">
+    <!-- <section class="career__benefits">
       <div class="container line g-0 pt-140 pb-150">
         <span class="line-3"></span>
 
@@ -173,7 +146,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- Career benifit area end -->
 
 

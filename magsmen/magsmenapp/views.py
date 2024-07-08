@@ -4,9 +4,10 @@ from xml.dom.minidom import Document
 from django.conf import settings
 from django.http import FileResponse, JsonResponse
 from django.shortcuts import render
-from .models import BlogPost,ContactData,Media,StepformData
+from .models import BlogPost,ContactData,Media,StepformData,ApplyForm,WorkPost,CareerInfo
 from django.core.mail import send_mail,EmailMessage
 from django.contrib import messages
+
 
 
 
@@ -117,7 +118,7 @@ def Questionsform(request):
         oQuestion_data.save()
         
          # Send email notification
-        subject = 'Form Submission Notification'
+        subject = 'Step Form Submission Notification'
         message = 'A form has been submitted with the following details:\n\n' \
                   f'Name: {stored_form_data.get("name")}\n' \
                   f'Email: {stored_form_data.get("email")}\n' \
@@ -150,11 +151,20 @@ def Policy(request):
     return render(request,'uifiles/privacy-policy.html')
 
 def Works(request):
-    return render(request,'uifiles/works.html')
+    work_post = WorkPost.objects.filter().order_by('-id')
+    return render(request,'uifiles/works-two.html',{'work_post':work_post})
+
+def workdetails(request,slug):
+    work_info = WorkPost.objects.get(Slug=slug)
+    return render(request, 'uifiles/work-details.html',{'work_info':work_info})
+
+def Carrers(request):
+    career_info = CareerInfo.objects.all()
+    return render(request,'uifiles/carrers.html',{'career_info':career_info})
+
 def Tdh(request):
     return render(request,'uifiles/tdh.html')
-def Carrers(request):
-    return render(request,'uifiles/carrers.html')
+
 def Suryacolours(request):
     return render(request,'uifiles/suryaccolours.html')
 def Tenalidoublehorse(request):
@@ -166,6 +176,49 @@ def Ourmedia(request):
     page = request.GET.get('page')
     posts = paginator.get_page(page)
     return render(request,'uifiles/media.html',{'media':posts,'posts':posts,'page':page})
+
+def jobdetails(request,slug):
+    career_job = CareerInfo.objects.get(Sluglink=slug)
+    return render(request, 'uifiles/job-details.html',{'career_job':career_job})
+
+def applyjobform(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        phone = request.POST.get('phonenumber')
+        selectcategory = request.POST.get('selectcategory')
+        location = request.POST.get('location')
+        file = request.FILES.get('file')
+
+        oApplyformdata = ApplyForm(Name=name,Email=email,Phone=phone,SelectCategory=selectcategory,Location=location,Uploadfile=file)
+        oApplyformdata.save()
+
+        subject = 'Job Notification: {}'.format(name)
+        message = '''
+        New Job Notification:
+
+        Name: {}
+        Email: {}
+        Phone Number: {}
+        Selected Category: {}
+        Location: {}
+        
+        
+
+        '''.format(name, email, phone, selectcategory, location)
+
+        email_from = 'connectmagsmen@gmail.com'
+        recipient_list = ['kajasuresh522@gmail.com', ]
+        send_mail(subject, message, 'connectmagsmen@gmail.com', recipient_list=['kajasuresh522@gmail.com'])
+        
+        # if file:
+        #     email.attach('career-page.pdf', file.read(), file.content_type)
+        # email.send()
+        return JsonResponse({'success': True})
+
+    return render(request, 'uifiles/apply-form.html')
+
+
 
 
 def Newsletter(request):
@@ -210,7 +263,8 @@ def BrandRefresh(request):
     response['Content-Disposition'] = f'inline; filename="{pdf_filename_four}"'
     return response
 
-
+def myexpertise(request):
+    return render(request, 'uifiles/myexpertise.html')
 
 
 
