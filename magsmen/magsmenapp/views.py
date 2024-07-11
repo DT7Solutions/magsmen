@@ -211,6 +211,14 @@ def BrandRefresh(request):
     return response
 
 
+def DigitalTwin_BrandStrategy(request):
+    pdf_filename_five = 'digital-twin-brand-strategy.pdf'
+    pdf_path = os.path.join(settings.MEDIA_ROOT, pdf_filename_five)
+    
+    response = FileResponse(open(pdf_path, 'rb'), content_type='application/pdf')
+    response['Content-Disposition'] = f'inline; filename="{pdf_filename_five}"'
+    return response
+
 
 
 
