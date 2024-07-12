@@ -1,7 +1,7 @@
 from django.urls import path
 from .views import Home,About,Contact,FAQS,Blogs,Service,PersonalBrand,imageconsulting,corporaterebranding,\
                    Blogdetails,service_home,launchpad,Policy,Questionsform,Works,Tdh,Carrers,Newsletter,Newslettertwo,Brand,Newsletterthree,Tenalidoublehorse,Suryacolours,Zavaine,Triplex,Rishikatdh,Vsb,Ourmedia,BrandRefresh,\
-                   DigitalTwin_BrandStrategy
+                   DigitalTwin_BrandStrategy,brandexpresso,brandcreation
 from django.contrib.sitemaps.views import sitemap
 from magsmenapp.sitemap import PostSitemap,StaticPagesSitemap
 from django.views.generic.base import TemplateView
@@ -23,6 +23,8 @@ urlpatterns = [
     path('personalbrand/', PersonalBrand , name='personalbrand'),
     path('imageconsulting/', imageconsulting , name='imageconsulting'),
     path('launchpad/', launchpad , name='launchpad'),
+    path('brandexpresso/', brandexpresso , name='brandexpresso'),
+    path('brandcreation/', brandcreation , name='brandcreation'),
     path('corporaterebranding/', corporaterebranding , name='corporaterebranding'),
     path('blog/<str:slug>', Blogdetails , name='blog'),
     path('questions/', Questionsform , name='questions'),

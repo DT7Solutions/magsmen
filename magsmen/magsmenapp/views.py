@@ -86,6 +86,12 @@ def service_home(request):
 def launchpad(request):
     return render(request, 'uifiles/launchpad.html')
 
+def brandexpresso(request):
+    return render(request, 'uifiles/brandexpresso.html')
+
+def brandcreation(request):
+    return render(request, 'uifiles/brandcreation.html')
+
 
 def Blogdetails(request,slug):
     selectpost = BlogPost.objects.get(Sluglink=slug)
