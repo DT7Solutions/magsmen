@@ -28169,5 +28169,29 @@ min-height:430px!important;
       height: 35px;
       margin-bottom: 15px !important;
   }
+  .blog__detail-thumb {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 40vh !important;
+  }
+  .blog__detail-thumb img {
+    position: absolute;
+    bottom: 0;
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    height: 83% !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .blog__detail-content{
+    padding: 0px 15px !important;
+    text-align: justify !important;
+    margin-top: 50px !important;
+  }
+  .blog__detail-top{
+    padding:40px 15px 0px !important;
+  }
 }
 
