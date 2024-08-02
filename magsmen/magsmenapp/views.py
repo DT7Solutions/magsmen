@@ -174,6 +174,12 @@ def Ourmedia(request):
     return render(request,'uifiles/media.html',{'media':posts,'posts':posts,'page':page})
 
 
+def error404(request,exception):
+    return render(request, 'uifiles/404.html')
+
+
+
+
 def Newsletter(request):
    
     pdf_filename = 'news-letter-august-2023.pdf'
