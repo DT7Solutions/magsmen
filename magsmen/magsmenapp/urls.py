@@ -1,7 +1,7 @@
 from django.urls import path
 from .views import Home,About,Contact,FAQS,Blogs,Service,PersonalBrand,imageconsulting,corporaterebranding,\
                    Blogdetails,service_home,launchpad,Policy,Questionsform,Works,Tdh,Carrers,Newsletter,Newslettertwo,Brand,Newsletterthree,Tenalidoublehorse,Suryacolours,Zavaine,Triplex,Rishikatdh,Vsb,Ourmedia,BrandRefresh,\
-                   DigitalTwin_BrandStrategy,brandexpresso,brandcreation
+                   DigitalTwin_BrandStrategy,brandexpresso,brandcreation,Monochromatic_colors_in_branding
 from django.contrib.sitemaps.views import sitemap
 from magsmenapp.sitemap import PostSitemap,StaticPagesSitemap
 from django.views.generic.base import TemplateView
@@ -38,6 +38,7 @@ urlpatterns = [
     path('brand-corner-november-edition/',Newsletterthree,name='brand-corner-november-edition'), 
     path('brand-refresh-vs-rebranding/',BrandRefresh,name="brand-refresh-rebranding"),
     path('digital-twin-brand-strategy/',DigitalTwin_BrandStrategy,name="digital-twin-brand-strategy"),
+    path('monochromatic-colors-in-branding/',Monochromatic_colors_in_branding,name="monochromatic-colors-in-branding"),
     path('suryacolours/',Suryacolours,name='suryacolours'),  
     path('tenalidoublehorse/',Tenalidoublehorse,name='tenalidoublehorse'),
     path('triplex/',Triplex,name='triplex'),  
